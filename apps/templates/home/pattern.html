@@ -1,0 +1,182 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} User Profile {% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+<div class="content">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="title">Edit Tailored Patterns</h5>
+        </div>
+
+        <div class="card-body">
+          <form method="" action="" id="patternForm">
+            <div class="row">
+              <div class="col-md-6 pr-md-1">
+                <div class="form-group">
+                  <label>Pattern</label>
+                  <input type="text" class="form-control" id="id_pattern" name="pattern" placeholder="ex: FN.LN"
+                    value="FN.LN">
+                </div>
+              </div>
+              <div class="col-md-3 pl-md-1">
+                <div class="form-group">
+                  <label>Type</label>
+                  <input type="number" class="form-control" id="id_type" name="type" placeholder="Type" min="1" max="4"
+                    value="1">
+                </div>
+              </div>
+              <div class="col-md-3 pl-md-1">
+                <div class="form-group">
+                  <label>Priority</label>
+                  <input type="number" class="form-control" placeholder="Rank" id="id_rank" name="rank" min="1"
+                    value="1">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label>Description</label>
+                  <input type="text" class="form-control" id="id_description" name="description" placeholder="Result"
+                    value="FisrstName + dot + LastName">
+                </div>
+              </div>
+            </div>
+
+            <button id="submitBtn" class="btn btn-fill btn-primary">Add pattern</button>
+          </form>
+        </div>
+        <div class="card-footer">
+          {% if success==False %}
+          <div class="alert alert-warning">
+            <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close">
+              <i class="tim-icons icon-simple-remove"></i>
+            </button>
+            <span><b> Warning - </b> {{ msg }}</span>
+          </div>
+          {% elif success==True %}
+          <div class="alert alert-success">
+            <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close">
+              <i class="tim-icons icon-simple-remove"></i>
+            </button>
+            <span><b> Success - </b> {{ msg }}</span>
+          </div>
+          {% else %}
+
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <div class="card ">
+        <div class="card-header">
+          <h4 class="card-title"> Patterns List</h4>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table tablesorter " id="">
+              <thead class=" text-primary">
+                <tr>
+                  <th>
+                    No
+                  </th>
+                  <th>
+                    Type
+                  </th>
+                  <th>
+                    Pattern
+                  </th>
+                  <th>
+                    Priority
+                  </th>
+                  <th>
+                    Description
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for pattern in patterns %}
+                <tr>
+                  <td>
+                    {{ loop.index }}
+                  </td>
+                  <td>
+                    {{ pattern.type }}
+                  </td>
+                  <td>
+                    {{ pattern.pattern }}
+                  </td>
+                  <td>
+                    {{ pattern.rank }}
+                  </td>
+                  <td>
+                    {{ pattern.description }}
+                  </td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+<!-- <script src="/apps/static/assets/js/pages/patterns.js"> -->
+<script>
+  document.getElementById('submitBtn').addEventListener("click", function (event) {
+    event.preventDefault(); // Prevent default form submission
+
+    // Get form data
+    const pattern = document.getElementById('id_pattern').value;
+    const type = document.getElementById('id_type').value;
+    const rank = document.getElementById('id_rank').value;
+    const description = document.getElementById('id_description').value;
+
+    // Create an object with the form data
+    const formData = {
+      pattern: pattern,
+      type: type,
+      rank: rank,
+      description: description
+    };
+
+    // Send AJAX request
+    fetch('/pattern', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formData)
+    })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(response.status);
+          response.json()
+        }
+      })
+      .then(data => {
+        // Process the response data
+        console.log("success");
+        window.location.reload();
+      })
+      .catch(error => {
+        // Handle any errors
+        console.error("error");
+      });
+  });
+
+</script>
+{% endblock javascripts %}
