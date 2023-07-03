@@ -336,4 +336,35 @@ class UserNameGenerator:
                 long_name_list.append(newname)
         return long_name_list
 
-        
+    def updated_username_generator(self):
+        self.translate()
+        self.name_list = []
+        # Split FullName and Favorite
+        splited_name = self.newsplitname()
+
+        splited_favorite = self.newsplitfavorite()
+        pattern_type = len(splited_name)  #  word_count
+    
+        if pattern_type < 5:
+            tailored_names = self.tailored_generator(splited_name,pattern_type)
+            self.name_list.extend(tailored_names)
+            if self.favorite != "":
+                for favorite in splited_favorite:
+                    favorite_birthday = self.favorite_birthday_generator(favorite)
+                    self.name_list.extend(favorite_birthday)
+            if self.birthday !="":
+                name_birthday = self.name_birthday_generator(tailored_names)
+                self.name_list.extend(name_birthday)
+            general_names = self.general_generator(splited_name,pattern_type)
+            # self.name_list.extend(general_names)
+        else:
+            if self.favorite != "":
+                for favorite in splited_favorite:
+                    favorite_birthday = self.favorite_birthday_generator(favorite)
+                    self.name_list.extend(favorite_birthday)
+
+            name_pair_list = self.long_name(splited_name)
+            for name_pair in name_pair_list:
+                self.name_list.extend(self.generate_long_username(name_pair,len(name_pair)))
+            
+        return self.name_list
