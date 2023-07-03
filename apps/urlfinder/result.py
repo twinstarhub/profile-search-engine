@@ -1,4 +1,4 @@
-"""Sherlock Result Module
+""" Result Module
 
 This module defines various objects for recording the results of queries.
 """
@@ -86,3 +86,6 @@ class QueryResult():
             status += f" ({self.context})"
 
         return status
+
+    def isclaimed(self):
+        return str(self.status) == "Claimed"
