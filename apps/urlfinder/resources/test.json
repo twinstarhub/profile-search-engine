@@ -1,0 +1,13 @@
+{
+    "Linkedin": {
+        "errorMsg": [
+            "Join to view full profiles for free",
+            "could not be found."
+        ],
+        "errorType": "message",
+        "url": "https://linkedin.com/in/{}/",
+        "urlMain": "https://linkedin.com/",
+        "username_claimed": "blue",
+        "username_unclaimed": "noonewouldeverusethis7"
+    }
+}

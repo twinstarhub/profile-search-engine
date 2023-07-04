@@ -12,6 +12,10 @@ from flask import render_template, request,jsonify
 from flask_login import login_required
 from jinja2 import TemplateNotFound
 from apps.common.generator import UserNameGenerator
+from apps.urlfinder.urlfinder import UrlFinder
+
+
+
 search_result=[]
 @blueprint.route('/index')
 @login_required
@@ -30,19 +34,13 @@ def urlfinder():
         print("post")
         data = request.get_json()
         username     = data['username']
-        command = ['python3','sherlock',username]
-        dir = os.path.dirname(os.path.abspath(__file__))
-        working_dir = os.path.dirname(dir)
-        # Execute the command
-        result = subprocess.run(command, capture_output=True, text=True,cwd=working_dir)
-        output = result.stdout
-        print(output)
-        array = output.split('\n')
-        error = result.stderr
-        returncode = result.returncode
-        # for element in splited_result:
-        #     result.append(json.dumps(element))
-        return jsonify(array)
+        namelist = username.split()
+        result = []
+        urlfinder = UrlFinder(namelist)
+        result = urlfinder.multiple_search()
+        print(result)
+        return jsonify(result)
+    
     else:
         # Read from the data.json
         # dir = os.path.dirname(os.path.abspath(__file__))

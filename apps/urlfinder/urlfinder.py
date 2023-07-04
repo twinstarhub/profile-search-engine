@@ -5,9 +5,10 @@ import requests
 from torrequest import TorRequest
 from time import monotonic
 from requests_futures.sessions import FuturesSession
-from sites import SitesInformation
-from result import QueryStatus
-from result import QueryResult
+from .sites import SitesInformation
+from .result import QueryStatus
+from .result import QueryResult
+
 
 def get_response(request_future, error_type, social_network):
     # Default for Response object if some failure occurs.
@@ -20,6 +21,18 @@ def get_response(request_future, error_type, social_network):
         if response.status_code:
             # Status code exists in response object
             error_context = None
+
+            # Check for redirection for instagram, linkedin
+            # if response.history:
+            #     # Redirection occurred
+            #     print("Redirection occurred:")
+            #     for redirect in response.history:
+            #         print(redirect.status_code, redirect.url)
+            #     print("Final URL:", response.url)
+
+            #     error_context = "Redirection"
+            #     exception_text = "Redirection"
+
     except requests.exceptions.HTTPError as errh:
         error_context = "HTTP Error"
         exception_text = str(errh)
@@ -35,6 +48,7 @@ def get_response(request_future, error_type, social_network):
     except requests.exceptions.RequestException as err:
         error_context = "Unknown Error"
         exception_text = str(err)
+
 
     return response, error_context, exception_text
 
@@ -99,6 +113,7 @@ class UrlFinder:
 
     def find_profile(self,username,tor=False, unique_tor=False,proxy=None,timeout=60):
         # Create session based on request methodology
+        sites = []
         sites = SitesInformation(os.path.join(os.path.dirname(__file__), "resources/platform_list.json"))
         site_data_all = {site.name: site.information for site in sites}
         site_data = site_data_all
@@ -123,13 +138,20 @@ class UrlFinder:
         # Results from analysis of all sites
         results_total = {}
 
+
+
+        #######################################################################################
+        #
+        #                Checking Profiles from profile URL
+        #
+        #######################################################################################
+
         # First create futures for all requests. This allows for the requests to run in parallel
         for social_network, net_info in site_data.items():
             # Results from analysis of this specific site
             results_site = {"url_main": net_info.get("urlMain")}
-            print('--->',results_site)
-            # Record URL of main site
 
+            # Record URL of main site
             # A user agent is needed because some sites don't return the correct
             # information since they think that we are bots (Which we actually are...)
             headers = {
@@ -228,7 +250,6 @@ class UrlFinder:
 
                 # Store future in data for access later
                 net_info["request_future"] = future
-                print(future)
                 # Reset identify for tor (if needed)
                 if unique_tor:
                     underlying_request.reset_identity()
@@ -260,6 +281,7 @@ class UrlFinder:
             r, error_text, exception_text = get_response(request_future=future,
                                                         error_type=error_type,
                                                         social_network=social_network)
+
             # Get response time for response of our request.
             try:
                 response_time = r.elapsed
@@ -282,6 +304,7 @@ class UrlFinder:
             elif error_type == "message":
                 # error_flag True denotes no error found in the HTML
                 # error_flag False denotes error found in the HTML
+                print(r.text)
                 error_flag = True
                 errors = net_info.get("errorMsg")
                 # errors will hold the error message
@@ -319,6 +342,11 @@ class UrlFinder:
                 # match the request.  Instead, we will ensure that the response
                 # code indicates that the request was successful (i.e. no 404, or
                 # forward to some odd redirect).
+                print(r.status_code)
+
+                ####
+                #
+                ###
                 if 200 <= r.status_code < 300:
                     query_status = QueryStatus.CLAIMED
                 else:
@@ -341,9 +369,12 @@ class UrlFinder:
             # else:
             #     continue
             # Save status of request
-            print(result,results_site.get("url_user"))
+            # print(result,results_site.get("url_user"))
+
+
+            profile_url.append(results_site.get("url_user"))
+            
             results_site["status"] = result
-           
             
             # Save results from request
             results_site["http_status"] = http_status
@@ -351,11 +382,15 @@ class UrlFinder:
 
             # Add this site's results into final dictionary with all of the other results.
             results_total[social_network] = results_site
-        return results_total
+        return profile_url
+
+
     def multiple_search(self):
         result = []
         for username in self.username_list:
             sub_result = self.find_profile(username)
             result.extend(sub_result)
+        return result
+
 
 

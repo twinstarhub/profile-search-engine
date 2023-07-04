@@ -158,9 +158,6 @@
                     No
                   </th>
                   <th>
-                    Site Name
-                  </th>
-                  <th>
                     Profile_URL
                   </th>
                   
@@ -197,15 +194,16 @@
     for (var i = 0; i < data.length; i++) {
       var row = document.createElement('tr');
       var cell1 = document.createElement('td');
-      var cell2 = document.createElement('td');
+      // var cell2 = document.createElement('td');
       var cell3 = document.createElement('td');
-      json_data = JSON.parse(data[i])
       cell1.textContent = i + 1;
-      cell2.textContent = json_data['site_name'];
-      cell3.textContent = json_data['site_url'];
+      // cell2.textContent = json_data['site_name'];
+      cell3.textContent = data[i];
       row.appendChild(cell1);
-      row.appendChild(cell2);
+      // row.appendChild(cell2);
       row.appendChild(cell3);
+
+      // row.appendChild('<a href="'+cell3+'">'+cell3+'</a>');
       document.getElementsByTagName('tbody')[0].appendChild(row);
     }
   }
@@ -236,7 +234,6 @@
       })
       .then(data => {
         // Process the response data
-        console.log("success");
         showPage()
         generateTableContent(data)
 
