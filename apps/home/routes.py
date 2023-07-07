@@ -14,6 +14,8 @@ from jinja2 import TemplateNotFound
 from apps.common.generator import UserNameGenerator
 from apps.urlfinder.urlfinder import UrlFinder
 
+from apps.scraper.facebook import FbScraper
+from apps.scraper.twitter import TwScraper
 
 
 search_result=[]
@@ -23,7 +25,37 @@ def index():
 
     return render_template('home/index.html', segment='index')
 
-
+#****************************************************************
+#   URL finder Router
+#****************************************************************
+@blueprint.route('/scrapper', methods=['GET', 'POST'])
+@login_required
+def scrapper():
+    if request.method == 'POST':
+        print("post")
+        data = request.get_json()
+        profile_url     = data['profile_url']
+        # namelist = profile_url.split()
+        # fb_scrapper = FbScraper
+        twitter = TwScraper()
+        twitter.scrape('michael')
+        
+        result = []
+        return jsonify(result)
+    
+    else:
+        # Read from the data.json
+        # dir = os.path.dirname(os.path.abspath(__file__))
+        # working_dir = os.path.dirname(dir)
+        # site_info_filename = working_dir+'/sherlock/resources/data.json'
+        
+        # with open(site_info_filename,'r') as file:
+        #     json_site_info =  json.load(file)
+        
+        # key_names = json_site_info.keys()
+        # print(json_site_info[0])
+        # return render_template('home/urlfinder.html', segment='urlfinder', available_sites=json_site_info)
+        return render_template('home/scrapper.html', segment='scrapper')
 #****************************************************************
 #   URL finder Router
 #****************************************************************

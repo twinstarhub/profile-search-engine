@@ -1,0 +1,264 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} User Profile {% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}
+<style type="text/css">
+  .btn-status {
+    background-color: #7c7676;
+    /* Green */
+    width: 10px;
+    border-radius: 100%;
+    height: 14px;
+    cursor: pointer;
+  }
+
+  #loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+    margin: -76px 0 0 -76px;
+    border: 6px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 6px solid #e14eca;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+  }
+
+  @-webkit-keyframes spin {
+    0% {
+      -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  /* Add animation to "page content" */
+  .animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s;
+  }
+
+  @-webkit-keyframes animatebottom {
+    from {
+      bottom: -100px;
+      opacity: 0;
+    }
+
+    to {
+      bottom: 0px;
+      opacity: 1;
+    }
+  }
+
+  @keyframes animatebottom {
+    from {
+      bottom: -100px;
+      opacity: 0;
+    }
+
+    to {
+      bottom: 0;
+      opacity: 1;
+    }
+  }
+</style>
+{% endblock stylesheets %}
+
+{% block content %}
+<div class="content">
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="title">Social Profile Scrapper</h5>
+        </div>
+
+        <div class="card-body">
+          <form method="" action="" id="patternForm">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label>Profile URL</label>
+                  <input type="text" class="form-control" id="id_profile_url" name="profile_url" placeholder="ex: twinstar"
+                    value="twinstar">
+                </div>
+              </div>
+            </div>
+            <!-- <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label>Description</label>
+                  <input type="text" class="form-control" id="id_description" name="description" placeholder="Result"
+                    value="FisrstName + dot + LastName">
+                </div>
+              </div>
+            </div> -->
+
+            <button id="id_scrap" class="btn btn-fill btn-primary">Scrap</button>
+            <button id="id_scrap" class="btn btn-fill btn-primary">Facebook</button>
+            <button id="id_scrap" class="btn btn-fill btn-primary">Youtube</button>
+            <button id="id_scrap" class="btn btn-fill btn-primary">Twitter</button>
+            <button id="id_scrap" class="btn btn-fill btn-primary">Instagram</button>
+            <button id="id_scrap" class="btn btn-fill btn-primary">Instagram</button>
+          </form>
+        </div>
+        <div class="card-footer">
+          {% if success==False %}
+          <div class="alert alert-warning">
+            <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close">
+              <i class="tim-icons icon-simple-remove"></i>
+            </button>
+            <span><b> Warning - </b> {{ msg }}</span>
+          </div>
+          {% elif success==True %}
+          <div class="alert alert-success">
+            <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close">
+              <i class="tim-icons icon-simple-remove"></i>
+            </button>
+            <span><b> Success - </b> {{ msg }}</span>
+          </div>
+          {% else %}
+
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="row">
+    <div id="loader" style="display: none"></div>
+
+    <div class="col-md-12">
+      <div class="card ">
+        <div class="card-header">
+          <h4 class="card-title">Scrapped Profile</h4>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table tablesorter " id="id_siteslist">
+              <thead class=" text-primary">
+                <tr>
+                    <th>
+                        No
+                      </th>
+                  <th>
+                    Key
+                  </th>
+                  <th>
+                    Value
+                  </th>
+                  
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+<!-- <script src="/apps/static/assets/js/pages/patterns.js"> -->
+<script>
+  var myVar;
+
+  function myFunction() {
+    myVar = setTimeout(showPage, 3000);
+  }
+
+  function showPage() {
+    document.getElementById("loader").style.display = "none";
+  }
+  function generateTableContent(data) {
+    // insert data to table'
+    document.getElementsByTagName('tbody')[0].innerHTML = "";
+    for (var i = 0; i < data.length; i++) {
+      var row = document.createElement('tr');
+      var cell1 = document.createElement('td');
+      var cell2 = document.createElement('td');
+      var cell3 = document.createElement('td');
+      cell1.textContent = i + 1;
+    //   cell2.textContent = data['site_name'];
+    //   cell3.textContent = data[i];
+      row.appendChild(cell1);
+      row.appendChild(cell2);
+      row.appendChild(cell3);
+
+      // row.appendChild('<a href="'+cell3+'">'+cell3+'</a>');
+      document.getElementsByTagName('tbody')[0].appendChild(row);
+    }
+  }
+  document.getElementById('id_scrap').addEventListener("click", function (event) {
+    event.preventDefault(); // Prevent default form submission
+
+    // Get form data
+    const username = document.getElementById('id_profile_url').value;
+    // Get Items 
+    table = document.getElementById('id_siteslist'); // Issue: Incorrect syntax for getElementById
+    // Send AJAX request
+    const formData = {
+      profile_url: username,
+    };
+    document.getElementById("loader").style.display = "block";
+    fetch('/scrapper', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formData)
+    })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(response.status);
+        }
+        return response.json(); // Move response.json() outside the if condition
+      })
+      .then(data => {
+        // Process the response data
+        showPage()
+        generateTableContent(data)
+
+        // row.cells[4].textContent = data["url"]; // Update the text content using textContent property
+      })
+      .catch(error => {
+        // Handle any errors
+        console.error("error");
+      });
+    // for (var i = 0; i < table_siteslist.rows.length; i++) {
+    // // for (var i = 0; i < 5; i++) {
+    //   var row = table.rows[i]; // Issue: Incorrect variable name, should be "table_siteslist" instead of "table"
+    //   var platform = row.cells[1].textContent;
+    // }
+
+
+  });
+
+</script>
+{% endblock javascripts %}

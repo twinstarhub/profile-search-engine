@@ -304,7 +304,6 @@ class UrlFinder:
             elif error_type == "message":
                 # error_flag True denotes no error found in the HTML
                 # error_flag False denotes error found in the HTML
-                print(r.text)
                 error_flag = True
                 errors = net_info.get("errorMsg")
                 # errors will hold the error message
@@ -342,7 +341,7 @@ class UrlFinder:
                 # match the request.  Instead, we will ensure that the response
                 # code indicates that the request was successful (i.e. no 404, or
                 # forward to some odd redirect).
-                print(r.status_code)
+                # print(r.status_code)
 
                 ####
                 #
