@@ -1,6 +1,7 @@
 import os
 import re
 import requests
+import threading
 
 from torrequest import TorRequest
 from time import monotonic
@@ -9,6 +10,7 @@ from .sites import SitesInformation
 from .result import QueryStatus
 from .result import QueryResult
 
+import concurrent.futures
 
 def get_response(request_future, error_type, social_network):
     # Default for Response object if some failure occurs.
@@ -109,7 +111,8 @@ class UrlFinder:
         # username_list: generated usernames (4000)
         #
         self.username_list = username_list
-
+        self.result_url_list = []
+        self.event = threading.Event()
 
     def find_profile(self,username,tor=False, unique_tor=False,proxy=None,timeout=60):
         # Create session based on request methodology
@@ -128,8 +131,8 @@ class UrlFinder:
             underlying_request = requests.Request()
         # Limit number of workers to 20.
         # This is probably vastly overkill.
-        if len(site_data) >= 20:
-            max_workers = 20
+        if len(site_data) >= 300:
+            max_workers = 300
         else:
             max_workers = len(site_data)
         
@@ -232,6 +235,8 @@ class UrlFinder:
                     # The final result of the request will be what is available.
                     allow_redirects = True
 
+                proxy = 'http://7b26afa746c5aa85d837d1440875a2c44279615a:@proxy.zenrows.com:8001'
+
                 # This future starts running the request in a new thread, doesn't block the main thread
                 if proxy is not None:
                     proxies = {"http": proxy, "https": proxy}
@@ -297,7 +302,8 @@ class UrlFinder:
                 response_text = r.text.encode(r.encoding or "UTF-8")
             except:
                 response_text = ""
-
+            
+            query_status = QueryStatus.UNKNOWN
             error_context = None
             if error_text is not None:
                 error_context = error_text
@@ -370,11 +376,9 @@ class UrlFinder:
             # Save status of request
             # print(result,results_site.get("url_user"))
 
-
-            profile_url.append(results_site.get("url_user"))
-            
             results_site["status"] = result
-            
+            # if result == QueryStatus.CLAIMED:
+            profile_url.append({username, results_site.get("url_user")})
             # Save results from request
             results_site["http_status"] = http_status
             results_site["response_text"] = response_text
@@ -383,13 +387,75 @@ class UrlFinder:
             results_total[social_network] = results_site
         return profile_url
 
+    def handle_find_profile(self,username):
+        result = self.find_profile(username)
+        self.result_url_list.append(result) 
+        print(len(self.result_url_list))
+        print(self.result_url_list)
+
+        # if len(self.result_url_list) == len(self.username_list):
+        if len(self.result_url_list) == 30:
+            # All results have been collected, set the event
+            self.event.set()
 
     def multiple_search(self):
-        result = []
-        for username in self.username_list:
-            sub_result = self.find_profile(username)
-            result.extend(sub_result)
-        return result
+        print('max_workers 20')
+        max_workers = 30  # Adjust this value as per your requirements
+        with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
+            # Submit each username to the executor as a separate task
+            # The executor will automatically schedule and run the tasks in parallel
+            futures = [executor.submit(self.handle_find_profile, username) for username in self.username_list]
+
+            # Wait for all tasks to complete
+            concurrent.futures.wait(futures)
+        print(self.result_url_list)
+        print("Ending Request")
+        return self.result_url_list
+
+    def multiple_search_(self):
+        print("--->multiple search")
+        self.result_url_list = []
+        # Create and start threads for each request
+        print("---> Create threading")
+
+        threads = []
+        for username in self.username_list[:30]:
+            thread = threading.Thread(target=self.handle_find_profile, args=(username,))
+            thread.start()
+            threads.append(thread)
+
+        print("---> Waiting")
+        # Wait for all threads to finish
+        for thread in threads:
+            thread.join()
+
+        print("---> Result Returing")
+
+        # Wait until all results are collected
+        self.event.wait()
+
+        print("---> Result")
+        # Process the collected results
+        # You can send them to the frontend or perform any other operations
+        # for profile_url in self.result_url_list:
+            # Process each result here
+            # print(profile_url)
+
+        # for username in self.username_list:
+        #     sub_result = self.find_profile(username)
+        #     result.extend(sub_result)
+        return self.result_url_list
+        # Create a ThreadPoolExecutor with the specified maximum workers
+       
+        # Maximum number of parallel workers
+        max_workers = 20  # Adjust this value as per your requirements
+        with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
+            # Submit each username to the executor as a separate task
+            # The executor will automatically schedule and run the tasks in parallel
+            futures = [executor.submit(self.find_profile, username) for username in self.username_list]
+
+            # Wait for all tasks to complete
+            concurrent.futures.wait(futures)
 
 
 

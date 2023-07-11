@@ -4,6 +4,7 @@ Copyright (c) 2019 - present trustle.us
 """
 import json,os
 import subprocess
+import time
 from apps import db
 from apps.home import blueprint
 from apps.home.forms import CreatePatternFrom, UserNameGeneratorForm
@@ -13,9 +14,9 @@ from flask_login import login_required
 from jinja2 import TemplateNotFound
 from apps.common.generator import UserNameGenerator
 from apps.urlfinder.urlfinder import UrlFinder
+from apps.scraper.scraper import Scraper
 
-from apps.scraper.facebook import FbScraper
-from apps.scraper.twitter import TwScraper
+
 
 
 search_result=[]
@@ -26,6 +27,62 @@ def index():
     return render_template('home/index.html', segment='index')
 
 #****************************************************************
+#   Profile Search
+#****************************************************************
+@blueprint.route('/search', methods=['GET', 'POST'])
+@login_required
+def search():
+    print(request.method)
+    if request.method == 'POST':
+        data = request.get_json()
+
+        action =  data['action']
+
+        fullname     = data['fullname']
+        favourite     = data['favourite']
+        birthday     = data['birthday']
+        count        = int(data['count'])
+        if action == "generate":
+            generator = UserNameGenerator(fullname,favourite,birthday,count)
+            # Get type from the entered name
+            username_name_list = generator.updated_username_generator()
+            print('generated username ---->')
+            return jsonify(username_name_list)
+        
+        elif action == "profileurl":
+            # Username Generator + URL finder 
+            generator = UserNameGenerator(fullname,favourite,birthday,count)
+            username_name_list = generator.updated_username_generator()
+            urlfinder = UrlFinder(username_name_list)
+            profileurl_group = urlfinder.multiple_search()
+            result = []
+            for profileurl_list in profileurl_group: 
+                result.extend(profileurl_list)
+                # for profile in profileurl_list:
+                    # result.append(list(profile)[0])
+            print(result)
+            return jsonify(result)
+        
+        else:
+            #  action == scrapprofile 
+            # U Gen + Url Finder + Scrapping Profile
+            # Username Generator + URL finder 
+            generator = UserNameGenerator(fullname,favourite,birthday,count)
+            username_name_list = generator.updated_username_generator()
+            urlfinder = UrlFinder(username_name_list)
+            profileurl_group = urlfinder.multiple_search()
+            profile_urls = []
+            for profileurl_list in profileurl_group: 
+                result.extend(profileurl_list)
+
+            scraper = Scraper(profile_urls)
+            scraper.search()
+
+            print('scrapping profiles ---->')
+
+    else:
+        return render_template('home/search.html', segment='search')
+#****************************************************************
 #   URL finder Router
 #****************************************************************
 @blueprint.route('/scrapper', methods=['GET', 'POST'])
@@ -35,26 +92,11 @@ def scrapper():
         print("post")
         data = request.get_json()
         profile_url     = data['profile_url']
-        # namelist = profile_url.split()
-        # fb_scrapper = FbScraper
-        twitter = TwScraper()
-        twitter.scrape('michael')
         
         result = []
         return jsonify(result)
     
     else:
-        # Read from the data.json
-        # dir = os.path.dirname(os.path.abspath(__file__))
-        # working_dir = os.path.dirname(dir)
-        # site_info_filename = working_dir+'/sherlock/resources/data.json'
-        
-        # with open(site_info_filename,'r') as file:
-        #     json_site_info =  json.load(file)
-        
-        # key_names = json_site_info.keys()
-        # print(json_site_info[0])
-        # return render_template('home/urlfinder.html', segment='urlfinder', available_sites=json_site_info)
         return render_template('home/scrapper.html', segment='scrapper')
 #****************************************************************
 #   URL finder Router
@@ -145,7 +187,11 @@ def generator():
         generator = UserNameGenerator(fullname,favourite,birthday,count)
         # Get type from the entered name
         username_name_list = generator.updated_username_generator()
-        
+        # for username in username_name_list:
+        #     scrape_user_data(username)
+        #     print("-----------------------")
+        #     time.sleep(0.01) 
+        result = []
         return jsonify(username_name_list)
 
     else:

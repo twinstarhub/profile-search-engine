@@ -1,0 +1,270 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Tables {% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+<div class="content">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="title">User Name Generator</h5>
+        </div>
+
+        <div class="card-body">
+          <form>
+
+            {% if not current_user.email %}
+            <div class="row">
+              <div class="col-md-6 pr-md-1">
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                  <p class="mb-0">
+                    Please add an email address.
+                  </p>
+                </div>
+              </div>
+            </div>
+            {% endif %}
+
+            <div class="row">
+
+              <div class="col-md-6 pr-md-1">
+                <div class="form-group">
+                  <label class="form-label {% if not current_user.email %} text-danger {% endif%}">Email Address</label>
+                  <input type="email" name="email" class="form-control" {% if current_user.email %} readonly {% endif %}
+                    placeholder="Your email Here"
+                    value="{% if current_user.email %} {{ current_user.email }} {% endif %}">
+                  <section class="display-error-message">
+                  </section>
+                </div>
+              </div>
+
+              <div class="col-md-6 pr-md-1">
+                <div class="form-group">
+                  <label>Username</label>
+                  <input type="text" class="form-control" value="{{current_user.username}}" readonly>
+                </div>
+              </div>
+
+            </div>
+            <div class="row">
+              <div class="col-md-9 pr-md-1">
+                <div class="form-group">
+                  <label>Full Name</label>
+                  <input type="text" class="form-control" placeholder="Full Name" id="id_fullname"
+                    value="Kasper Andersson">
+                </div>
+              </div>
+              <div class="col-md-3 pl-md-1">
+                <div class="form-group">
+                  <label>Count</label>
+                  <input type="number" class="form-control" placeholder="Count" id="id_count" min="1" max="4000"
+                    value="4000">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-9 pr-md-1">
+                <div class="form-group">
+                  <label>Favourite String</label>
+                  <input type="text" class="form-control" placeholder="Favorite String" id="id_favourite"
+                    value="twinstar">
+                </div>
+              </div>
+              <div class="col-md-3 pl-md-1">
+                <div class="form-group">
+                  <label>Birthday </label>
+                  <input type="date" class="form-control" placeholder="Birthday" id="id_birthday" value="1995-09-07">
+
+                  <!-- <input type="number" class="form-control" placeholder="Min suffix length" id="id_min_favo" min="1"
+                    max="10" value="1"> -->
+                </div>
+              </div><!-- 
+              <div class="col-md-3 pl-md-1">
+                <div class="form-group">
+                  <label>Max Suffix length </label>
+                  <input type="number" class="form-control" placeholder="Max suffix length" id="id_max_favo" min="1"
+                    max="10" value="6">
+                </div>
+              </div> -->
+            </div>
+          </form>
+        </div>
+        <div class="card-footer">
+          <button id="id_btn_generate" class="btn btn-fill btn-primary">Generate Username</button>
+          <button id="id_btn_profile_url" class="btn btn-fill btn-primary">Profile URL Search</button>
+          <button id="id_btn_scrap_profile" class="btn btn-fill btn-primary">Scrap Profile</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card card-user">
+        <div class="card-body">
+          <p class="card-text">
+          <div class="author">
+            <div class="block block-one"></div>
+            <div class="block block-two"></div>
+            <div class="block block-three"></div>
+            <div class="block block-four"></div>
+            <a href="javascript:void(0)">
+              <img class="avatar" src="{{ config.ASSETS_ROOT }}/img/Michael.jpg" alt="...">
+              <h5 class="title">Michael Bage</h5>
+            </a>
+            <p class="description">
+              Ceo/Co-Founder
+            </p>
+          </div>
+          </p>
+
+        </div>
+        <div class="card-footer">
+          <div class="button-container">
+            <button href="javascript:void(0)" class="btn btn-icon btn-round btn-facebook">
+              <i class="fab fa-facebook"></i>
+            </button>
+            <button href="javascript:void(0)" class="btn btn-icon btn-round btn-twitter">
+              <i class="fab fa-twitter"></i>
+            </button>
+            <button href="javascript:void(0)" class="btn btn-icon btn-round btn-google">
+              <i class="fab fa-google-plus"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card ">
+        <div class="card-header">
+          <h4 class="card-title"> Generated Usernames</h4>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table tablesorter">
+              <thead class=" text-primary">
+                <tr>
+                  <th>
+                    No
+                  </th>
+                  <th id="table-header">
+                    Username
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+<script>
+  function generateTableContent(data) {
+    // insert data to table'
+    document.getElementsByTagName('tbody')[0].innerHTML = "";
+    for (var i = 0; i < data.length; i++) {
+      var row = document.createElement('tr');
+      var cell1 = document.createElement('td');
+      var cell2 = document.createElement('td');
+      cell1.textContent = i + 1;
+      cell2.textContent = data[i];
+      row.appendChild(cell1);
+      row.appendChild(cell2);
+      document.getElementsByTagName('tbody')[0].appendChild(row);
+    }
+  }
+  function fetchData(action) {
+    event.preventDefault(); // Prevent default form submission
+    // Get form data
+    const fullname = document.getElementById('id_fullname').value;
+    const favourite = document.getElementById('id_favourite').value;
+    const birthday = document.getElementById('id_birthday').value;
+    const count = document.getElementById('id_count').value;
+
+    // Create an object with the form data
+    const formData = {
+      fullname: fullname,
+      favourite: favourite,
+      birthday: birthday,
+      count: count,
+      action: action
+    };
+
+    // Send AJAX request
+    fetch('/search', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formData)
+    })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(response.status);
+        }
+
+        return response.json(); // Parse the JSON response
+      })
+      .then(data => {
+        // Process the response data
+        if (action == "generate") {
+
+          generateTableContent(data)
+        }
+        else if (action == "profileurl") {
+          // profile URL Result
+          print(data)
+          generateTableContent(data)
+        }
+        else {
+          generateTableContent(data)
+        }
+      })
+      .catch(error => {
+        // Handle any errors
+        console.error("error");
+      });
+  }
+  document.getElementById('id_btn_generate').addEventListener("click", function (event) {
+    let action = "generate"
+    let title = document.getElementsByClassName("card-title")[0];
+    let table_header = document.getElementById("table-header");
+    title.innerHTML = "Generated Usernames";
+    table_header.innerHTML = "Username";
+    fetchData(action);
+  });
+  document.getElementById('id_btn_profile_url').addEventListener("click", function (event) {
+    // Generate Username And fetch Profile URLs
+    let action = "profileurl"
+    let title = document.getElementsByClassName("card-title")[0];
+    let table_header = document.getElementById("table-header");
+    title.innerHTML = "Searched Profiles";
+    table_header.innerHTML = "Profile URL";
+    fetchData(action);
+
+  });
+  document.getElementById('id_btn_scrap_profile').addEventListener("click", function (event) {
+    // Generate Username And fetch Profile URLs + Scrapping Profiles
+    let action = "scrapprofile"
+    fetchData(action);
+
+  });
+
+
+</script>
+{% endblock javascripts %}

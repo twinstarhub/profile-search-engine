@@ -1,9 +1,20 @@
 import re
 from random import randrange
-from googletrans import Translator
+
 from apps import db
 from apps.home.models import Patterns, BirthPattern
-
+from deep_translator import (GoogleTranslator,
+                             ChatGptTranslator,
+                             MicrosoftTranslator,
+                             PonsTranslator,
+                             LingueeTranslator,
+                             MyMemoryTranslator,
+                             YandexTranslator,
+                             PapagoTranslator,
+                             DeeplTranslator,
+                             QcriTranslator,
+                             single_detection,
+                             batch_detection)
 # Name = Micahel bage, Kasper Andersson
 # Max length = 30
 # Max word = 4
@@ -50,16 +61,14 @@ class UserNameGenerator:
         self.name_list = []
 
     def translate(self):
-        translator = Translator()
-       
         print(self.name)
-        if "Å" in self.name or "Ä" in self.name or "Ö" in self.name:
-            self.name = self.name.replace("Å", "AA")
-            self.name = self.name.replace("Ä", "AA")
-            self.name = self.name.replace("Ö", "OO")
-        else:
-            self.favorite = translator.translate(self.favorite, dest='en').text
-            self.name = translator.translate(self.name, dest='en').text
+        # if "Å" in self.name or "Ä" in self.name or "Ö" in self.name:
+        #     self.name = self.name.replace("Å", "AA")
+        #     self.name = self.name.replace("Ä", "AA")
+        #     self.name = self.name.replace("Ö", "OO")
+        # else:
+        #     self.favorite = GoogleTranslator(source='auto', target='en').translate(text=self.favorite)
+        #     self.name = GoogleTranslator(source='auto', target='en').translate(text=self.name)
     def get_date(self):
         self.year, self.month, self.day = self.birthday.split("-")
 
@@ -187,7 +196,7 @@ class UserNameGenerator:
     def new_generator(self, transformed_name,splited_name, pattern_type):
         result = [transformed_name]
         if len(self.name_list) > self.count:
-            return
+            return []
         # Parameters
         multi_patterns = ['FTX','STX','MTX','LTX']
         for idx,pattern in enumerate(multi_patterns):
@@ -212,6 +221,7 @@ class UserNameGenerator:
             # if len(self.general_name_list) > self.count - len(self.name_list):
             #     break
             transformed_name = self.transformation(pattern,splited_name,pattern_type)
+            print(transformed_name)
             self.name_list.extend(self.new_generator(transformed_name,splited_name, pattern_type))
             if len(self.name_list) > self.count :
                 return self.name_list
@@ -348,7 +358,7 @@ class UserNameGenerator:
         if pattern_type < 5:
             tailored_names = self.tailored_generator(splited_name,pattern_type)
             self.name_list.extend(tailored_names)
-            if self.favorite != "":
+            if self.favorite != "" and self.birthday != "":
                 for favorite in splited_favorite:
                     favorite_birthday = self.favorite_birthday_generator(favorite)
                     self.name_list.extend(favorite_birthday)
