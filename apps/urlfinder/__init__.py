@@ -1,5 +1,0 @@
-""" 
-
-Multi Threading Module
-
-"""
