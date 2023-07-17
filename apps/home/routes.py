@@ -12,10 +12,11 @@ from apps.home.models import Patterns
 from flask import render_template, request,jsonify
 from flask_login import login_required
 from jinja2 import TemplateNotFound
-from apps.common.generator import UserNameGenerator
+from apps.ugen.generator import UserNameGenerator
 from apps.urlfinder.urlfinder import UrlFinder
 from apps.scraper.scraper import Scraper
-
+from apps.googleapi.googleapi import search_profile
+import concurrent.futures
 
 
 
@@ -29,55 +30,67 @@ def index():
 #****************************************************************
 #   Profile Search
 #****************************************************************
+# Multi Processing Function
+
+def process_data(uname_list):
+            urlfinder = UrlFinder(uname_list)
+            profileurl_group = urlfinder.multiple_search()
+            return profileurl_group
+
 @blueprint.route('/search', methods=['GET', 'POST'])
 @login_required
 def search():
     print(request.method)
     if request.method == 'POST':
         data = request.get_json()
-
         action =  data['action']
-
         fullname     = data['fullname']
         favourite     = data['favourite']
         birthday     = data['birthday']
         count        = int(data['count'])
+
         if action == "generate":
             generator = UserNameGenerator(fullname,favourite,birthday,count)
             # Get type from the entered name
             username_name_list = generator.updated_username_generator()
-            print('generated username ---->')
             return jsonify(username_name_list)
         
         elif action == "profileurl":
             # Username Generator + URL finder 
+
+            # Time Measuring
+            start_time = time.time()
+
+            # Get Username List from Generator
             generator = UserNameGenerator(fullname,favourite,birthday,count)
             username_name_list = generator.updated_username_generator()
-            urlfinder = UrlFinder(username_name_list)
-            profileurl_group = urlfinder.multiple_search()
+            
+            def split_list_into_sublists(lst, sublist_size):
+                return [lst[i:i+sublist_size] for i in range(0, len(lst), sublist_size)]
+            
+            sublists = split_list_into_sublists(username_name_list, 30)
+           
+            print("Create thread Pool excutor")
+            with concurrent.futures.ProcessPoolExecutor() as executor:
+                results = executor.map(process_data, sublists)
             result = []
-            for profileurl_list in profileurl_group: 
-                result.extend(profileurl_list)
-                # for profile in profileurl_list:
-                    # result.append(list(profile)[0])
-            print(result)
+            for profileurl_group in list(results):
+                for profileurl in profileurl_group:
+                    result.append(profileurl)
+
+            response_time = time.time() - start_time
+            print(f"Username Count: {len(username_name_list)} ")
+            print(f"Response time: {response_time} seconds")
+
+
             return jsonify(result)
         
         else:
             #  action == scrapprofile 
             # U Gen + Url Finder + Scrapping Profile
-            # Username Generator + URL finder 
             generator = UserNameGenerator(fullname,favourite,birthday,count)
             username_name_list = generator.updated_username_generator()
-            urlfinder = UrlFinder(username_name_list)
-            profileurl_group = urlfinder.multiple_search()
-            profile_urls = []
-            for profileurl_list in profileurl_group: 
-                result.extend(profileurl_list)
-
-            scraper = Scraper(profile_urls)
-            scraper.search()
-
+          
             print('scrapping profiles ---->')
 
     else:
@@ -91,11 +104,9 @@ def scrapper():
     if request.method == 'POST':
         print("post")
         data = request.get_json()
-        profile_url     = data['profile_url']
-        
-        result = []
+        query     = data['query']
+        result = search_profile(query)
         return jsonify(result)
-    
     else:
         return render_template('home/scrapper.html', segment='scrapper')
 #****************************************************************
@@ -111,7 +122,10 @@ def urlfinder():
         namelist = username.split()
         result = []
         urlfinder = UrlFinder(namelist)
-        result = urlfinder.multiple_search()
+        profileurl_group = urlfinder.multiple_search()
+
+        for profileurl_list in profileurl_group: 
+            result.extend(profileurl_list)
         print(result)
         return jsonify(result)
     

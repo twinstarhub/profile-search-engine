@@ -100,8 +100,8 @@
               <div class="col-md-12">
                 <div class="form-group">
                   <label>Profile URL</label>
-                  <input type="text" class="form-control" id="id_profile_url" name="profile_url" placeholder="ex: twinstar"
-                    value="twinstar">
+                  <input type="text" class="form-control" id="id_profile_url" name="profile_url" placeholder="ex: Michael"
+                    value="Michael Bage">
                 </div>
               </div>
             </div>
@@ -116,11 +116,6 @@
             </div> -->
 
             <button id="id_scrap" class="btn btn-fill btn-primary">Scrap</button>
-            <button id="id_scrap" class="btn btn-fill btn-primary">Facebook</button>
-            <button id="id_scrap" class="btn btn-fill btn-primary">Youtube</button>
-            <button id="id_scrap" class="btn btn-fill btn-primary">Twitter</button>
-            <button id="id_scrap" class="btn btn-fill btn-primary">Instagram</button>
-            <button id="id_scrap" class="btn btn-fill btn-primary">Instagram</button>
           </form>
         </div>
         <div class="card-footer">
@@ -163,12 +158,14 @@
                         No
                       </th>
                   <th>
-                    Key
+                    Title
                   </th>
                   <th>
-                    Value
+                    Link
                   </th>
-                  
+                  <th>
+                    Snippet
+                  </th>
                 </tr>
               </thead>
               <tbody>
@@ -204,14 +201,16 @@
       var cell1 = document.createElement('td');
       var cell2 = document.createElement('td');
       var cell3 = document.createElement('td');
+      var cell4 = document.createElement('td');
       cell1.textContent = i + 1;
-    //   cell2.textContent = data['site_name'];
-    //   cell3.textContent = data[i];
+      cell2.textContent = data[i]['title'];
+      cell3.textContent = data[i]['link'];
+      cell4.textContent = data[i]['snippet'];
       row.appendChild(cell1);
       row.appendChild(cell2);
       row.appendChild(cell3);
+      row.appendChild(cell4);
 
-      // row.appendChild('<a href="'+cell3+'">'+cell3+'</a>');
       document.getElementsByTagName('tbody')[0].appendChild(row);
     }
   }
@@ -219,12 +218,12 @@
     event.preventDefault(); // Prevent default form submission
 
     // Get form data
-    const username = document.getElementById('id_profile_url').value;
+    const search_query = document.getElementById('id_profile_url').value;
     // Get Items 
     table = document.getElementById('id_siteslist'); // Issue: Incorrect syntax for getElementById
     // Send AJAX request
     const formData = {
-      profile_url: username,
+      query: search_query,
     };
     document.getElementById("loader").style.display = "block";
     fetch('/scrapper', {
@@ -243,6 +242,7 @@
       .then(data => {
         // Process the response data
         showPage()
+        console.log(data)
         generateTableContent(data)
 
         // row.cells[4].textContent = data["url"]; // Update the text content using textContent property

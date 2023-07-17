@@ -1,20 +1,19 @@
 import re
 from random import randrange
-
 from apps import db
 from apps.home.models import Patterns, BirthPattern
-from deep_translator import (GoogleTranslator,
-                             ChatGptTranslator,
-                             MicrosoftTranslator,
-                             PonsTranslator,
-                             LingueeTranslator,
-                             MyMemoryTranslator,
-                             YandexTranslator,
-                             PapagoTranslator,
-                             DeeplTranslator,
-                             QcriTranslator,
-                             single_detection,
-                             batch_detection)
+# from deep_translator import (GoogleTranslator,
+#                              ChatGptTranslator,
+#                              MicrosoftTranslator,
+#                              PonsTranslator,
+#                              LingueeTranslator,
+#                              MyMemoryTranslator,
+#                              YandexTranslator,
+#                              PapagoTranslator,
+#                              DeeplTranslator,
+#                              QcriTranslator,
+#                              single_detection,
+#                              batch_detection)
 # Name = Micahel bage, Kasper Andersson
 # Max length = 30
 # Max word = 4
@@ -63,9 +62,9 @@ class UserNameGenerator:
     def translate(self):
         print(self.name)
         # if "Å" in self.name or "Ä" in self.name or "Ö" in self.name:
-        #     self.name = self.name.replace("Å", "AA")
-        #     self.name = self.name.replace("Ä", "AA")
-        #     self.name = self.name.replace("Ö", "OO")
+        #     self.name = self.name.replace("Å", "A")
+        #     self.name = self.name.replace("Ä", "A")
+        #     self.name = self.name.replace("Ö", "O")
         # else:
         #     self.favorite = GoogleTranslator(source='auto', target='en').translate(text=self.favorite)
         #     self.name = GoogleTranslator(source='auto', target='en').translate(text=self.name)
