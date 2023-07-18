@@ -18,7 +18,13 @@ class Platform(ABC):
     def __init__(self, name, *args, **kwargs):
         self.name: str = name
         self.base_url: str = PLATFORM_METADATA[name]["url"]
-        self.headers = []
+        self.headers = [
+            ("User-Agent", " ".join([
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+                "AppleWebKit/537.36 (KHTML, like Gecko)",
+                "Chrome/114.0.0.0 Safari/537.36"])
+            )
+        ]
         self.proxies = []
         self.session = kwargs.get("session")
         self.request_log = []
@@ -42,6 +48,7 @@ class Platform(ABC):
             # Send the request.
             resp = await self.session.get(
                 self.base_url.format(username),
+                verify_ssl=False,
                 **kwargs
             )
             # Add the sent request to the log.

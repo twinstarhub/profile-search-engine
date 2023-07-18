@@ -9,26 +9,30 @@ class OnlyFans(Platform):
 
     def parse_response(self, username, response):
         """Parse the response from OnlyFans."""
-        soup = BeautifulSoup(response, 'html.parser')
+        try:
+            soup = BeautifulSoup(response, 'html.parser')
 
-        name_element = soup.select_one('h1.p-name')
-        name = name_element.text.strip() if name_element else "N/A"
-        images_element = soup.select_one('div.p-media-block[data-type="images"] span')
-        images_count = images_element.text.strip() if images_element else "N/A"
-        videos_element = soup.select_one('div.p-media-block[data-type="videos"] span')
-        videos_count = videos_element.text.strip() if videos_element else "N/A"
-        likes_element = soup.select_one('div.p-stats-block[data-type="likes"] span')
-        likes_count = likes_element.text.strip() if likes_element else "N/A"
-        followers_element = soup.select_one('div.p-stats-block[data-type="followers"] span')
-        followers_count = followers_element.text.strip() if followers_element else "N/A"
+            name_element = soup.select_one('h1.p-name')
+            name = name_element.text.strip() if name_element else "N/A"
+            images_element = soup.select_one('div.p-media-block[data-type="images"] span')
+            images_count = images_element.text.strip() if images_element else "N/A"
+            videos_element = soup.select_one('div.p-media-block[data-type="videos"] span')
+            videos_count = videos_element.text.strip() if videos_element else "N/A"
+            likes_element = soup.select_one('div.p-stats-block[data-type="likes"] span')
+            likes_count = likes_element.text.strip() if likes_element else "N/A"
+            followers_element = soup.select_one('div.p-stats-block[data-type="followers"] span')
+            followers_count = followers_element.text.strip() if followers_element else "N/A"
 
-        return {
-            "name": name,
-            "images_count": images_count,
-            "videos_count": videos_count,
-            "likes_count": likes_count,
-            "followers_count": followers_count
-        }
+            return {
+                "name": name,
+                "images_count": images_count,
+                "videos_count": videos_count,
+                "likes_count": likes_count,
+                "followers_count": followers_count
+            }
+        except AttributeError:
+            print(f'[{self.name}] Error: Some elements not found for user "{username}"')
+            return None
 
 # def scrape_onlyfans_account(url):
 #     response = requests.get(url)

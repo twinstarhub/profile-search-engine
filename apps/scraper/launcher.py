@@ -5,12 +5,13 @@ import aiohttp
 from apps.scraper.manual.lastfm import LastFM
 from apps.scraper.manual.onlyfans import OnlyFans
 from apps.scraper.manual.pornhub import Pornhub
+from apps.scraper.special.codecademy import CodeAcademy
 
 if TYPE_CHECKING:
     from apps.scraper.base_model import Platform
 
 
-PLATFORMS = [OnlyFans, Pornhub, LastFM]
+PLATFORMS = [OnlyFans, Pornhub, LastFM, CodeAcademy]
 
 
 async def scrape_account(usernames: list[str]):
