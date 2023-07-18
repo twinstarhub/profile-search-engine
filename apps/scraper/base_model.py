@@ -66,6 +66,7 @@ class Platform(ABC):
         return {
             "title": username,
             "link": self.base_url.format(username),
+            "platform": self.name,
             "snippet": json.dumps(self.parse_response(username, await response.text()))
         }
 
