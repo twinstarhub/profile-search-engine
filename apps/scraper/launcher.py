@@ -1,4 +1,5 @@
 import asyncio
+import time
 from typing import TYPE_CHECKING
 
 import aiohttp
@@ -18,6 +19,7 @@ PLATFORMS = [OnlyFans, Pornhub, LastFM, CodeAcademy, TikTok, Tumblr]
 
 async def scrape_account(usernames: list[str]):
     """Scrape a single account."""
+    st_time = time.monotonic()
     tasks = []
     # Use the same session to scrape all the platforms.
     # This will reduce the overhead of reinitializing the session.
@@ -33,5 +35,6 @@ async def scrape_account(usernames: list[str]):
                 tasks.append(task)
         # Wait for all the tasks to complete.
         responses = await asyncio.gather(*tasks)
+    print(f"Scraped [{len(usernames) * len(PLATFORMS)}] sources in [{time.monotonic() - st_time:.2f}s].")
     # Filter out the empty responses.
     return [response for response in responses if response]
