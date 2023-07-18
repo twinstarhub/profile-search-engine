@@ -7,7 +7,7 @@ class Pornhub(Platform):
     def __init__(self, *args, **kwargs):
         super().__init__("Pornhub", *args, **kwargs)
 
-    def parse_response(self, response):
+    def parse_response(self, username, response):
         """Parse the response from Pornhub."""
         soup = BeautifulSoup(response, 'html.parser')
 

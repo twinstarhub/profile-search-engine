@@ -7,7 +7,7 @@ class OnlyFans(Platform):
     def __init__(self, *args, **kwargs):
         super().__init__("OnlyFans", *args, **kwargs)
 
-    def parse_response(self, response):
+    def parse_response(self, username, response):
         """Parse the response from OnlyFans."""
         soup = BeautifulSoup(response, 'html.parser')
 
