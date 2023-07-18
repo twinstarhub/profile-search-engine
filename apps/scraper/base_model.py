@@ -1,9 +1,11 @@
-from abc import ABC, abstractmethod
+from abc import ABC, ABCMeta, abstractmethod
 import asyncio
 import json
 import os
 import random
 import aiohttp
+
+from apps.utils.custom_logger import get_logger
 
 
 dir_name = os.path.dirname(os.path.abspath(__file__))
@@ -13,7 +15,18 @@ with open(platform_metadata, "r") as file:
     PLATFORM_METADATA = json.load(file)
 
 
-class Platform(ABC):
+class LoggerSetter(type):
+    """A metaclass which sets the logger for the class."""
+    def __new__(cls, name, bases, attrs):
+        new_cls = super().__new__(cls, name, bases, attrs)
+        new_cls.logger = get_logger(new_cls.__name__)
+        return new_cls
+
+
+class AbstractLoggerSetter(LoggerSetter, ABCMeta):
+    pass
+
+class Platform(ABC, metaclass=AbstractLoggerSetter):
     """An Abstract Base Class which provides a skeleton for all scraping platforms."""
     def __init__(self, name, *args, **kwargs):
         self.name: str = name

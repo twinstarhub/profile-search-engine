@@ -31,5 +31,5 @@ class LastFM(Platform):
                 "scrobbles": scrobbles
             }
         except AttributeError:
-            print(f'[{self.name}][{username}] Error: Some elements not found for user.')
+            self.logger.warning('Some elements not found for user.', extra={"username": username})
             return None

@@ -31,7 +31,7 @@ class OnlyFans(Platform):
                 "followers_count": followers_count
             }
         except AttributeError:
-            print(f'[{self.name}][{username}] Error: Some elements not found for user.')
+            self.logger.warning('Some elements not found for user.', extra={"username": username})
             return None
 
 # def scrape_onlyfans_account(url):

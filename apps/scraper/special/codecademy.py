@@ -25,17 +25,17 @@ class CodeAcademy(Platform):
             username_text = None  # Assign a default value
             if username_element is not None:
                 username_text = username_element.find('span').text.strip()
-                print(f"[{self.name}][{username}] User name: {username_text}")
+                self.logger.debug("User name: %s", username_text, extra={"username": username})
             else:
-                print(f"[{self.name}][{username}] Username not found on the profile page.")
+                self.logger.debug("Username not found on the profile page.", extra={"username": username})
             # Find the element containing the fullname
             fullname_element = soup.find("p", {'data-testid': "full-name-section"})
             karma_text = None  # Assign a default value
             if fullname_element is not None:
                 karma_text = fullname_element.text.strip()
-                print(f"[{self.name}][{username}] Full Name: {karma_text}")
+                self.logger.debug("Full Name: %s", karma_text, extra={"username": username})
             else:
-                print(f"[{self.name}][{username}] Full Name not found on the profile page.")
+                self.logger.debug("Full Name not found on the profile page.", extra={"username": username})
             # Find the element containing the joined day
             date_section = soup.find('div', attrs={'data-testid': 'date-section'})
             last_active = None
@@ -44,10 +44,10 @@ class CodeAcademy(Platform):
                 for p_tag in date_section.find_all('p'):
                     if "Joined" in p_tag.text:
                         join_date = p_tag.text.strip().replace("Joined ", "")
-                        print(f"[{self.name}][{username}] Join Day: {join_date}")
+                        self.logger.debug("Join Day: %s", join_date, extra={"username": username})
                     if "Last active" in p_tag.text:
                         last_active = LAST_ACTIVE_PATT.search(p_tag.text).group(1)
-                        print(f"[{self.name}][{username}] Last Active: {last_active}")
+                        self.logger.debug("Last Active: %s", last_active, extra={"username": username})
             return {
                 "username": username_text,
                 "fullname": karma_text,
@@ -55,7 +55,7 @@ class CodeAcademy(Platform):
                 "last_active": last_active
             }
         except AttributeError:
-            print(f'[{self.name}][{username}] Error: Some elements not found for user.')
+            self.logger.warning('Some elements not found for user.', extra={"username": username})
             return None
 
 
