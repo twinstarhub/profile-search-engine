@@ -15,6 +15,12 @@
         "urlMain": "https://tiktok.com/",
         "username_claimed": "red"
     },
+    "Tumblr": {
+        "errorType": "status_code",
+        "url": "https://tumblr.com/{}",
+        "urlMain": "https://tumblr.com/",
+        "username_claimed": "red"
+    },
     "Snapchat": {
         "errorType": "status_code",
         "regexCheck": "^[a-z][a-z-_.]{3,15}",

@@ -7,12 +7,13 @@ from apps.scraper.manual.onlyfans import OnlyFans
 from apps.scraper.manual.pornhub import Pornhub
 from apps.scraper.special.codecademy import CodeAcademy
 from apps.scraper.special.tiktok import TikTok
+from apps.scraper.special.tumblr import Tumblr
 
 if TYPE_CHECKING:
     from apps.scraper.base_model import Platform
 
 
-PLATFORMS = [OnlyFans, Pornhub, LastFM, CodeAcademy, TikTok]
+PLATFORMS = [OnlyFans, Pornhub, LastFM, CodeAcademy, TikTok, Tumblr]
 
 
 async def scrape_account(usernames: list[str]):
