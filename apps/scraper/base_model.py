@@ -67,9 +67,13 @@ class Platform(ABC):
             "title": username,
             "link": self.base_url.format(username),
             "platform": self.name,
-            "snippet": json.dumps(self.parse_response(username, await response.text()))
+            "snippet": json.dumps(self.parse_response(username, await self.get_data(response)))
         }
 
+    async def get_data(self, response):
+        """Get the data from the response."""
+        data = await response.text()
+        return data
 
     @abstractmethod
     def parse_response(self, username, response):
