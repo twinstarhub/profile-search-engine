@@ -35,7 +35,7 @@ class TikTok(Platform):
                 "Link": link
             }
         except AttributeError:
-            print(f"[{self.name}] Error retrieving data for user: {username}")
+            print(f'[{self.name}][{username}] Error: Some elements not found for user.')
             return None
 
 # async def scrape_user_info(session, username):

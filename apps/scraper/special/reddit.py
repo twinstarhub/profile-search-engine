@@ -25,38 +25,38 @@ class Reddit(Platform):
             username_text = None  # Assign a default value
             if username_element is not None:
                 username_text = username_element.text.strip()
-                print(f"[{self.name}][{username}]Full Name: {username_text}")
+                print(f"[{self.name}][{username}] Full Name: {username_text}")
             else:
-                print(f"[{self.name}][{username}]Username not found on the profile page.")
+                print(f"[{self.name}][{username}] Username not found on the profile page.")
             # Find the element containing the karma
             karma_element = soup.find("span", id="profile--id-card--highlight-tooltip--karma")
             karma_text = None  # Assign a default value
             if karma_element is not None:
                 karma_text = karma_element.text.strip()
-                print(f"[{self.name}][{username}]Karma: {karma_text}")
+                print(f"[{self.name}][{username}] Karma: {karma_text}")
             else:
-                print(f"[{self.name}][{username}]Karma not found on the profile page.")
+                print(f"[{self.name}][{username}] Karma not found on the profile page.")
             # Find the element containing the cake day
             cake_day_element = soup.find("span", id="profile--id-card--highlight-tooltip--cakeday")
             cake_day_text = None  # Assign a default value
             account_age = None  # Assign a default value
             if cake_day_element is not None:
                 cake_day_text = cake_day_element.text.strip()
-                print(f"[{self.name}][{username}]Cake Day: {cake_day_text}")
+                print(f"[{self.name}][{username}] Cake Day: {cake_day_text}")
                 # Calculate the age of the account
                 current_year = datetime.now().year
                 cake_day = datetime.strptime(cake_day_text, "%B %d, %Y")
                 account_age = current_year - cake_day.year
-                print(f"[{self.name}][{username}]Age of Account: {account_age} years")
+                print(f"[{self.name}][{username}] Age of Account: {account_age} years")
             else:
-                print(f"[{self.name}][{username}]Cake Day not found on the profile page.")
+                print(f"[{self.name}][{username}] Cake Day not found on the profile page.")
             avatar = None  # Assign a default value
             avatar_element = soup.find("img", alt="User avatar")
             if avatar_element is not None:
                 avatar = avatar_element.get('src')
-                print(f"[{self.name}][{username}]Avatar: {avatar}")
+                print(f"[{self.name}][{username}] Avatar: {avatar}")
             else:
-                print(f"[{self.name}][{username}]Avatar not found on the profile page.")
+                print(f"[{self.name}][{username}] Avatar not found on the profile page.")
             return {
                 "username": username_text,
                 "avatar": avatar,
@@ -65,7 +65,7 @@ class Reddit(Platform):
                 "account_age": account_age
             }
         except AttributeError:
-            print(f'[{self.name}] Error: Some elements not found for user "{username}"')
+            print(f'[{self.name}][{username}] Error: Some elements not found for user.')
             return None
 
 # def scrape_user_data(username):

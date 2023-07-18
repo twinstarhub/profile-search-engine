@@ -55,7 +55,7 @@ class CodeAcademy(Platform):
                 "last_active": last_active
             }
         except AttributeError:
-            print(f'[{self.name}] Error: Some elements not found for user "{username}"')
+            print(f'[{self.name}][{username}] Error: Some elements not found for user.')
             return None
 
 

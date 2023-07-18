@@ -31,7 +31,7 @@ class Facebook(Platform):
                 "Friends": friends_count
             }
         except AttributeError:
-            print(f"[{self.name}] Error retrieving data for user: {username}")
+            print(f'[{self.name}][{username}] Error: Some elements not found for user.')
             return None
 
 # def scrape_facebook_profiles(profile_urls):
