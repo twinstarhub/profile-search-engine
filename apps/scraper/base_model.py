@@ -65,9 +65,24 @@ class Platform(ABC, metaclass=AbstractLoggerSetter):
                 **kwargs
             )
             # Add the sent request to the log.
-            self.request_log.append(self.base_url.format(username))
+            self.request_log.append({
+                "url": self.base_url.format(username),
+                "status": resp.status,
+                "platform": self.name
+            })
             return resp
-        except (aiohttp.ClientConnectorError, asyncio.TimeoutError):
+        except (
+            aiohttp.ClientConnectorError,
+            aiohttp.ClientOSError,
+            aiohttp.ServerDisconnectedError,
+            asyncio.TimeoutError,
+            ConnectionResetError
+        ):
+            self.request_log.append({
+                "url": self.base_url.format(username),
+                "status": 500,
+                "platform": self.name
+            })
             return None
 
     async def scrape(self, username: str, *args, **kwargs):
