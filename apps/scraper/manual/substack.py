@@ -39,12 +39,19 @@ class Substack(Platform):
                     'platform': btn['data-href'].split('/')[2],
                     'url': btn['data-href']
                 })
+            
+            # Extract the avatar
+            images = soup.find_all('img', src=lambda x: x.startswith('https://substackcdn.com/image'))
+            avatar = None
+            if images:
+                avatar = max(images, key=lambda x: int(x.get('width', 0))).get('src')
 
 
             return {
                 'name': name,
                 'username': username,
                 'bio': bio,
+                'avatar': avatar,
                 'socials_links': socials_links
             }
 
