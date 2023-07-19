@@ -11,6 +11,7 @@ from apps.scraper.manual.lastfm import LastFM
 from apps.scraper.manual.onlyfans import OnlyFans
 from apps.scraper.manual.pornhub import Pornhub
 from apps.scraper.manual.replit import Replit
+from apps.scraper.manual.telegram import Telegram
 from apps.scraper.special.codecademy import CodeAcademy
 from apps.scraper.special.facebook_ import Facebook
 from apps.scraper.special.reddit import Reddit
@@ -25,7 +26,7 @@ if TYPE_CHECKING:
 PLATFORMS = [
     OnlyFans, Pornhub, LastFM, CodeAcademy, TikTok,
     Tumblr, Facebook, Reddit, Youtube, Behance, DeviantArt,
-    Dribble, Github, Replit
+    Dribble, Github, Replit, Telegram
 ]
 
 
