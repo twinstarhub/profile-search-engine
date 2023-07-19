@@ -6,6 +6,7 @@ import aiohttp
 from apps.scraper.manual.behance import Behance
 from apps.scraper.manual.deviantart import DeviantArt
 from apps.scraper.manual.dribble import Dribble
+from apps.scraper.manual.github import Github
 from apps.scraper.manual.lastfm import LastFM
 from apps.scraper.manual.onlyfans import OnlyFans
 from apps.scraper.manual.pornhub import Pornhub
@@ -23,7 +24,7 @@ if TYPE_CHECKING:
 PLATFORMS = [
     OnlyFans, Pornhub, LastFM, CodeAcademy, TikTok,
     Tumblr, Facebook, Reddit, Youtube, Behance, DeviantArt,
-    Dribble
+    Dribble, Github
 ]
 
 
