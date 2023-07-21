@@ -27,6 +27,7 @@ from apps.scraper.special.youtube import Youtube
 from apps.ugen.generator import UserNameGenerator
 from apps.utils.analysis import analyse
 from apps.utils.cacher import Cacher
+from apps.utils.mongo import save_profiles
 
 if TYPE_CHECKING:
     from apps.scraper.base_model import Platform
@@ -72,15 +73,20 @@ class RequestTransformer:
 class AsyncScrapper:
     """A class to scrape multiple platforms asynchronously."""
 
-    def __init__(self, use_cache: bool = True, analyse_results: bool = True):
+    def __init__(self,
+        use_cache: bool = True,
+        analyse_results: bool = True,
+        save_data: bool = True
+    ):
         self.cacher = None
-        self.analyse_results = analyse_results
         if use_cache:
             self.cacher = Cacher(
                 host=os.getenv('REDIS_HOST', 'localhost'),
                 port=os.getenv('REDIS_PORT', 6379),
                 password=os.getenv('REDIS_PASSWORD', None)
             )
+        self.analyse_results = analyse_results
+        self.save_data = save_data
         self.platforms = [
             OnlyFans, Pornhub, LastFM, CodeAcademy, TikTok,
             Tumblr, Facebook, Reddit, Youtube, Behance, DeviantArt,
@@ -145,7 +151,10 @@ class AsyncScrapper:
         if self.analyse_results:
             analyse(sent_reqs)
         # Filter out the empty responses.
-        return [response for response in responses if response]
+        filtered_responses = [response for response in responses if response]
+        if self.save_data:
+            save_profiles(filtered_responses)
+        return filtered_responses
 
 
     @ensure_session
@@ -175,4 +184,6 @@ class AsyncScrapper:
             print(f"Retried [{len(sent_reqs)}] sources in [{time.monotonic() - st_time:.2f}s].")
             mapping = RequestTransformer.dictify_requests(req_map)
             await cacher.bulk_update_by_status(mapping)
-            return [response for response in responses if response]
+            filtered_responses = [response for response in responses if response]
+            if self.save_data:
+                save_profiles(filtered_responses)
