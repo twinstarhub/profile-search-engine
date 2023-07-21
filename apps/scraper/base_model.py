@@ -66,6 +66,7 @@ class Platform(ABC, metaclass=AbstractLoggerSetter):
             )
             # Add the sent request to the log.
             self.request_log.append({
+                "username": username,
                 "url": self.base_url.format(username),
                 "status": resp.status,
                 "platform": self.name
@@ -79,6 +80,7 @@ class Platform(ABC, metaclass=AbstractLoggerSetter):
             ConnectionResetError
         ):
             self.request_log.append({
+                "username": username,
                 "url": self.base_url.format(username),
                 "status": 500,
                 "platform": self.name
