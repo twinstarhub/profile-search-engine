@@ -24,7 +24,7 @@ def _analyse(sent_reqs):
     print(f"\nStatus Code Distribution:\n{_pretty_dataframe(status_counts)}\n")
     # Group by platform and display count of each status code, order by total non 200 status codes.
     platform_distribution = df.groupby("platform")["status"].value_counts().unstack()\
-        .fillna(0).astype(int).sort_values(by=200, ascending=True)
+        .fillna(0).astype(int)
     platform_distribution.columns.name = 'Platform'
     platform_distribution.index.name = None
     print(f"\nStatus Code Distribution by Platform:\n{_pretty_dataframe(platform_distribution)}\n")
