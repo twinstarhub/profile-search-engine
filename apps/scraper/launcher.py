@@ -49,10 +49,10 @@ class RequestTransformer:
     """A class to transform the requests to a specific format."""
 
     @classmethod
-    def flatten_response(cls, response: dict) -> chain:
+    def flatten_response(cls, response: dict) -> list:
         """Flatten the response."""
         response = response or {}
-        return chain.from_iterable(response.values())
+        return list(chain.from_iterable(response.values()))
 
     @classmethod
     def dictify_requests(cls, req_map):
