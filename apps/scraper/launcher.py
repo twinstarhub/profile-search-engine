@@ -76,7 +76,8 @@ class AsyncScrapper:
     def __init__(self,
         use_cache: bool = True,
         analyse_results: bool = True,
-        save_data: bool = True
+        save_data: bool = True,
+        test_mode: bool = False
     ):
         self.cacher = None
         if use_cache:
@@ -87,11 +88,20 @@ class AsyncScrapper:
             )
         self.analyse_results = analyse_results
         self.save_data = save_data
+        self.test_mode = test_mode
         self.platforms = [
             OnlyFans, Pornhub, LastFM, CodeAcademy, TikTok,
             Tumblr, Facebook, Reddit, Youtube, Behance, DeviantArt,
             Dribble, Github, Replit, Telegram
         ]
+        if self.test_mode:
+            self.cacher = None
+            self.save_data = False
+            self.analyse_results = True
+            self.platforms = [
+                CodeAcademy, Tumblr, Facebook,Reddit, Youtube,
+                Behance, DeviantArt, Dribble, Replit, Telegram
+            ]
         self.platform_mapping = {
             platform().name: platform
             for platform in self.platforms
@@ -122,6 +132,8 @@ class AsyncScrapper:
                 yield platform_cls, username
         else:
             usernames = UserNameGenerator(*key, 4000).updated_username_generator()
+            if self.test_mode:
+                usernames = usernames[:100]
             # For each username, create a task for each platform.
             for username in usernames:
                 for platform_cls in self.platforms:

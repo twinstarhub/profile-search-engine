@@ -109,7 +109,7 @@ def scrapper():
         query     = data['query']
         # result = search_profile(query)
         # TODO: Modify query to suit the generate endpoint
-        result = asyncio.run(AsyncScrapper().scrape_account(
+        result = asyncio.run(AsyncScrapper(test_mode=os.getenv("TEST_MODE")).scrape_account(
             key=[query, 'twinstar', '1995-09-07'])
         )
         return jsonify(result)
