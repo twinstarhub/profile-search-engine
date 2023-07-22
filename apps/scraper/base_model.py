@@ -72,13 +72,7 @@ class Platform(ABC, metaclass=AbstractLoggerSetter):
                 "platform": self.name
             })
             return resp
-        except (
-            aiohttp.ClientConnectorError,
-            aiohttp.ClientOSError,
-            aiohttp.ServerDisconnectedError,
-            asyncio.TimeoutError,
-            ConnectionResetError
-        ):
+        except Exception:
             self.request_log.append({
                 "username": username,
                 "url": self.base_url.format(username),
@@ -89,23 +83,67 @@ class Platform(ABC, metaclass=AbstractLoggerSetter):
 
     async def scrape(self, username: str, *args, **kwargs):
         """Perform the scraping for the platform."""
-        response = await self.send_request(username, *args, **kwargs)
-        # If the response is None, then the request failed.
-        if response is None:
+        try:
+            response = await self.send_request(username, *args, **kwargs)
+            # If the response is None or status is 40x or 50x, then the request failed.
+            if response is None or response.status >= 400:
+                return {}
+            return {
+                "title": username,
+                "link": self.base_url.format(username),
+                "platform": self.name,
+                "snippet": await self.get_snippet(username, response)
+            }
+        except Exception:
             return {}
-        return {
-            "title": username,
-            "link": self.base_url.format(username),
-            "platform": self.name,
-            "snippet": json.dumps(self.parse_response(username, await self.get_data(response)))
-        }
+
+    async def get_snippet(self, username, response):
+        """Get the snippet from the response."""
+        response = await self.get_data(response)
+        if response is None:
+            return None
+        snippet = self.parse_response(username, response) or {}
+        missing_fields = [key for key, value in snippet.items() if value is None]
+        if len(missing_fields) == len(snippet):
+            return None
+        elif missing_fields:
+            self.logger.warning(
+                "Following fields not found for user: [%s]",
+                ", ".join(missing_fields),
+                extra={"username": username}
+            )
+        return snippet
 
     async def get_data(self, response):
         """Get the data from the response."""
-        data = await response.text()
-        return data
+        try:
+            data = await response.text()
+            return data
+        except Exception:
+            return None
 
     @abstractmethod
     def parse_response(self, username, response):
         """Parse the response from the platform."""
         pass
+
+    @staticmethod
+    def numberize(text):
+        """Convert the text to a number."""
+        if text is None:
+            return None
+        if isinstance(text, (int, float)):
+            return text
+        try:
+            text = text.replace(',', '')
+            if "k" in text.lower():
+                return int(float(text.replace('k', '')) * 1000)
+            elif "m" in text.lower():
+                return int(float(text.replace('m', '')) * 1000000)
+            elif "b" in text.lower():
+                return int(float(text.replace('b', '')) * 1000000000)
+            elif "." in text:
+                return float(text)
+            return int(text)
+        except ValueError:
+            return text

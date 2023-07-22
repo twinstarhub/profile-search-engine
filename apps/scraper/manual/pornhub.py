@@ -1,4 +1,3 @@
-import requests
 from bs4 import BeautifulSoup
 from apps.scraper.base_model import Platform
 
@@ -7,60 +6,55 @@ class Pornhub(Platform):
     def __init__(self, *args, **kwargs):
         super().__init__("Pornhub", *args, **kwargs)
 
-    def parse_response(self, username, response):
+    def parse_response(self, name, response):
         """Parse the response from Pornhub."""
-        soup = BeautifulSoup(response, 'html.parser')
+        try:
+            soup = BeautifulSoup(response, 'html.parser')
+            name = None
+            name_element = soup.find('div', class_="profileUserName")
+            if name_element is not None:
+                name = name_element.find('a').text.strip()
+            avatar = None
+            avatar_element = soup.find('img', id='getAvatar')
+            if avatar_element is not None:
+                avatar = avatar_element.get('src')
+            bio = None
+            bio_element = soup.find('p', class_='aboutMeText')
+            if bio_element is not None:
+                bio = bio_element.text.strip()
+            subscriber_count = None
+            friends_count = None
+            videos_count = None
+            subs_info_element = soup.find('ul', class_='subViewsInfoContainer')
+            res = []
+            if subs_info_element:
+                res = [
+                    self.numberize(li.find('span', class_='number').text.strip() or 0)
+                    for li in subs_info_element.find_all('li')
+                ]
+            if len(res) == 3:
+                subscriber_count, friends_count, videos_count = res
+            more_info = soup.find('dl', class_='moreInformation')
+            more_metadata = {}
+            if more_info is not None:
+                more_metadata = {
+                    self._get_key(info_elem): self.numberize(info_elem.text.strip())
+                    for info_elem in more_info.find_all('dd')
+                }
+            return {
+                "name": name,
+                "avatar": avatar,
+                "bio": bio,
+                "subscriber_count": subscriber_count,
+                "friends_count": friends_count,
+                "videos_count": videos_count,
+                **more_metadata
+            }
+        except AttributeError:
+            self.logger.warning('Some elements not found for user.', extra={"username": name})
+            return None
 
-        name_element = soup.select_one('div.usernameWrap')
-        name = name_element.text.strip() if name_element else "N/A"
-        location_element = soup.select_one('div.userDetails dd.location')
-        location = location_element.text.strip() if location_element else "N/A"
-        views_element = soup.select_one('div.userDetails dd.views')
-        views_count = views_element.text.strip() if views_element else "N/A"
-        career_element = soup.select_one('div.userDetails dd.careerStatus')
-        career_status = career_element.text.strip() if career_element else "N/A"
-        gender_element = soup.select_one('div.userDetails dd.gender')
-        gender = gender_element.text.strip() if gender_element else "N/A"
-        birth_element = soup.select_one('div.userDetails dd.birthplace')
-        birth_place = birth_element.text.strip() if birth_element else "N/A"
-
-        return {
-            "name": name,
-            "location": location,
-            "views_count": views_count,
-            "career_status": career_status,
-            "gender": gender,
-            "birth_place": birth_place
-        }
-
-
-
-# def scrape_pornhub_account(url):
-#     response = requests.get(url)
-#     if response.status_code != 200:
-#         print("Failed to retrieve the profile page. Please check the URL and try again.")
-#         return
-
-#     soup = BeautifulSoup(response.content, 'html.parser')
-
-#     name_element = soup.select_one('div.usernameWrap')
-#     name = name_element.text.strip() if name_element else "N/A"
-#     location_element = soup.select_one('div.userDetails dd.location')
-#     location = location_element.text.strip() if location_element else "N/A"
-#     views_element = soup.select_one('div.userDetails dd.views')
-#     views_count = views_element.text.strip() if views_element else "N/A"
-#     career_element = soup.select_one('div.userDetails dd.careerStatus')
-#     career_status = career_element.text.strip() if career_element else "N/A"
-#     gender_element = soup.select_one('div.userDetails dd.gender')
-#     gender = gender_element.text.strip() if gender_element else "N/A"
-#     birth_element = soup.select_one('div.userDetails dd.birthplace')
-#     birth_place = birth_element.text.strip() if birth_element else "N/A"
-
-#     print("Pornhub Account Details:")
-#     print("Name:", name)
-#     print("City and Country:", location)
-#     print("Profile Views:", views_count)
-#     print("Career Status:", career_status)
-#     print("Gender:", gender)
-#     print("Birth Place:", birth_place)
-#     print("\n")
+    @staticmethod
+    def _get_key(info_elem):
+        """Get the key from the info element."""
+        return info_elem.find_previous_sibling('dt').text.strip().replace(':', '')

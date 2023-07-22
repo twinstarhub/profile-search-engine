@@ -9,25 +9,18 @@ from typing import TYPE_CHECKING
 
 import aiohttp
 
-from apps.scraper.manual.behance import Behance
-from apps.scraper.manual.deviantart import DeviantArt
-from apps.scraper.manual.dribble import Dribble
-from apps.scraper.manual.github import Github
-from apps.scraper.manual.lastfm import LastFM
-from apps.scraper.manual.onlyfans import OnlyFans
-from apps.scraper.manual.pornhub import Pornhub
-from apps.scraper.manual.replit import Replit
-from apps.scraper.manual.telegram import Telegram
-from apps.scraper.special.codecademy import CodeAcademy
-from apps.scraper.special.facebook_ import Facebook
-from apps.scraper.special.reddit import Reddit
-from apps.scraper.special.tiktok import TikTok
-from apps.scraper.special.tumblr import Tumblr
-from apps.scraper.special.youtube import Youtube
+from apps.scraper.manual import (
+    Behance, DeviantArt, Dribble, Github, LastFM,
+    Pornhub, Replit, Telegram,
+    # OnlyFans
+)
+from apps.scraper.special import (
+    CodeAcademy, Reddit,
+    TikTok, Tumblr, Youtube,
+    # Facebook
+)
 from apps.ugen.generator import UserNameGenerator
-from apps.utils.analysis import analyse
-from apps.utils.cacher import Cacher
-from apps.utils.mongo import save_profiles
+from apps.utils import analyse, Cacher, save_profiles
 
 if TYPE_CHECKING:
     from apps.scraper.base_model import Platform
@@ -39,7 +32,7 @@ def ensure_session(func):
     async def wrapper(self, *args, **kwargs):
         if self.session is None:
             self.session = aiohttp.ClientSession(
-                timeout=aiohttp.ClientTimeout(),
+                timeout=aiohttp.ClientTimeout(total=120.0),
                 connector=aiohttp.TCPConnector(limit=None)
             )
         return await func(self, *args, **kwargs)
@@ -90,8 +83,8 @@ class AsyncScrapper:
         self.save_data = save_data
         self.test_mode = test_mode
         self.platforms = [
-            OnlyFans, Pornhub, LastFM, CodeAcademy, TikTok,
-            Tumblr, Facebook, Reddit, Youtube, Behance, DeviantArt,
+            Pornhub, LastFM, CodeAcademy, TikTok,
+            Tumblr, Reddit, Youtube, Behance, DeviantArt,
             Dribble, Github, Replit, Telegram
         ]
         if self.test_mode:
@@ -99,7 +92,7 @@ class AsyncScrapper:
             self.save_data = False
             self.analyse_results = True
             self.platforms = [
-                CodeAcademy, Tumblr, Facebook,Reddit, Youtube,
+                CodeAcademy, Tumblr, Reddit, Youtube,
                 Behance, DeviantArt, Dribble, Replit, Telegram
             ]
         self.platform_mapping = {
