@@ -21,8 +21,10 @@ from apps.scraper.special import (
 )
 from apps.ugen.generator import UserNameGenerator
 from apps.utils import analyse, Cacher, save_profiles
+from apps.utils.custom_logger import BaseLogger
 
 if TYPE_CHECKING:
+    import logging
     from apps.scraper.base_model import Platform
 
 
@@ -102,6 +104,7 @@ class AsyncScrapper:
         # Use the same session to scrape all the platforms.
         # This will reduce the overhead of reinitializing the session.
         self.session = None
+        self.logger: logging.Logger = BaseLogger('AsyncScraper')
 
     async def _iterator(self, key: list[str]) -> tuple[type[Platform], str]:
         """
@@ -116,7 +119,7 @@ class AsyncScrapper:
         results = []
         if self.cacher is not None:
             async with self.cacher as cacher:
-                results = await cacher.get(key)
+                results = await cacher.get(key) or {}
         results = RequestTransformer.flatten_response(results)
         if results:
             for result in results:
@@ -148,7 +151,7 @@ class AsyncScrapper:
                 tasks.append(task)
             # Wait for all the tasks to complete.
             responses = await asyncio.gather(*tasks)
-        print(f"Scraped [{len(sent_reqs)}] sources in [{time.monotonic() - st_time:.2f}s].")
+        self.logger.success(f"Scraped [{len(sent_reqs)}] sources in [{time.monotonic() - st_time:.2f}s].")
         if self.cacher is not None:
             records = RequestTransformer.dictify_requests({Cacher.to_key(key): sent_reqs})
             async with self.cacher as cacher:
@@ -186,7 +189,7 @@ class AsyncScrapper:
                         tasks.append(task)
                 # Wait for all the tasks to complete.
                 responses = await asyncio.gather(*tasks)
-            print(f"Retried [{len(sent_reqs)}] sources in [{time.monotonic() - st_time:.2f}s].")
+            self.logger.success(f"Retried [{len(sent_reqs)}] sources in [{time.monotonic() - st_time:.2f}s].")
             mapping = RequestTransformer.dictify_requests(req_map)
             await cacher.bulk_update_by_status(mapping)
             filtered_responses = [response for response in responses if response]

@@ -1,11 +1,16 @@
+from __future__ import annotations
 from abc import ABC, ABCMeta, abstractmethod
-import asyncio
 import json
 import os
 import random
+from typing import TYPE_CHECKING
+
 import aiohttp
 
-from apps.utils.custom_logger import get_logger
+from apps.utils.custom_logger import PlatformLogger
+
+if TYPE_CHECKING:
+    import logging
 
 
 dir_name = os.path.dirname(os.path.abspath(__file__))
@@ -19,7 +24,7 @@ class LoggerSetter(type):
     """A metaclass which sets the logger for the class."""
     def __new__(cls, name, bases, attrs):
         new_cls = super().__new__(cls, name, bases, attrs)
-        new_cls.logger = get_logger(new_cls.__name__)
+        new_cls.logger: logging.Logger = PlatformLogger(new_cls.__name__)
         return new_cls
 
 
