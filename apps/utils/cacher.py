@@ -1,8 +1,29 @@
 """A wrapper to cache data in Redis."""
-import os
-from typing import Any
+from __future__ import annotations
+from functools import wraps
+from typing import Any, TYPE_CHECKING
 import redis.asyncio as redis
 from redis.commands.json.path import Path
+
+from apps.utils.custom_logger import CacherLogger
+
+if TYPE_CHECKING:
+    import logging
+
+
+def ensure_connection(func):
+    """Ensure that the connection to Redis is established before executing the function."""
+    @wraps(func)
+    async def wrapper(self, *args, **kwargs):
+        """Wrapper function."""
+        if not self.client:
+            self.logger.warning('Redis connection not established. Skipping caching.')
+            return
+        try:
+            return await func(self, *args, **kwargs)
+        except Exception as exp:
+            self.logger.error(f'Error while executing {func.__name__}:\n{exp}')
+    return wrapper
 
 
 class Cacher:
@@ -14,32 +35,42 @@ class Cacher:
         self.port = int(port)
         self.password = password
         self.client = None
+        self.logger: logging.Logger = CacherLogger()
 
     async def connect(self):
         """Connect to Redis."""
-        self.client = redis.Redis(
-            host=self.host,
-            port=self.port,
-            password=self.password,
-            decode_responses=True,
-            auto_close_connection_pool=False
-        )
+        try:
+            self.client = redis.Redis(
+                host=self.host,
+                port=self.port,
+                password=self.password,
+                decode_responses=True,
+                auto_close_connection_pool=False
+            )
+            await self.client.ping()
+            self.logger.info('Redis connection established.')
+        except redis.ConnectionError:
+            self.logger.warning('Unable to connect to Redis.')
 
     async def disconnect(self):
         """Disconnect from Redis."""
         await self.client.close()
+        self.logger.info('Redis connection closed.')
 
+    @ensure_connection
     async def get(self, key: list[str]):
         """Get a value from Redis asynchronously."""
         key = self.to_key(key)
         return await self.client.json().get(key)
 
+    @ensure_connection
     async def insert(self, key: list[str], values: list[dict[str, Any]]):
         """Writes to Redis asynchronously."""
         if isinstance(key, list):
             key = self.to_key(key)
         await self.client.json().set(key, Path.root_path(), values)
 
+    @ensure_connection
     async def search_by_status(self, status: str | int) -> list[dict]:
         """Search all the rquests for a specific status."""
         # First get all the keys
@@ -51,6 +82,7 @@ class Cacher:
             results[key] = record[str(status)]
         return results
 
+    @ensure_connection
     async def update_by_status(self, key: str, status: str | int, records: list[dict]):
         """Update the value of a specific status."""
         # First get the value for the key
@@ -60,6 +92,7 @@ class Cacher:
         # Then set the value back to the key
         await self.client.json().set(key, Path.root_path(), value)
 
+    @ensure_connection
     async def bulk_update_by_status(self, mapping: dict[str, str | list[dict]]):
         """Update the value of a specific status."""
         async with self.client.pipeline(transaction=True) as pipe:
@@ -76,6 +109,7 @@ class Cacher:
     async def __aexit__(self, *args):
         """Disconnect from Redis."""
         await self.disconnect()
+        return None
 
     @staticmethod
     def to_key(args):

@@ -202,10 +202,15 @@
       var cell2 = document.createElement('td');
       var cell3 = document.createElement('td');
       var cell4 = document.createElement('td');
+      var cell4Child = document.createElement('pre');
+      var call4Descendant = document.createElement('code');
       cell1.textContent = i + 1;
       cell2.textContent = data[i]['title'];
       cell3.textContent = data[i]['link'];
-      cell4.textContent = data[i]['snippet'];
+      call4Descendant.textContent = JSON.stringify(data[i]['snippet'], undefined, 3);
+      call4Descendant.setAttribute('class', 'language-json');
+      cell4Child.appendChild(call4Descendant);
+      cell4.appendChild(cell4Child);
       row.appendChild(cell1);
       row.appendChild(cell2);
       row.appendChild(cell3);

@@ -9,26 +9,22 @@ from typing import TYPE_CHECKING
 
 import aiohttp
 
-from apps.scraper.manual.behance import Behance
-from apps.scraper.manual.deviantart import DeviantArt
-from apps.scraper.manual.dribble import Dribble
-from apps.scraper.manual.github import Github
-from apps.scraper.manual.lastfm import LastFM
-from apps.scraper.manual.onlyfans import OnlyFans
-from apps.scraper.manual.pornhub import Pornhub
-from apps.scraper.manual.replit import Replit
-from apps.scraper.manual.telegram import Telegram
-from apps.scraper.special.codecademy import CodeAcademy
-from apps.scraper.special.facebook_ import Facebook
-from apps.scraper.special.reddit import Reddit
-from apps.scraper.special.tiktok import TikTok
-from apps.scraper.special.tumblr import Tumblr
-from apps.scraper.special.youtube import Youtube
+from apps.scraper.manual import (
+    Behance, DeviantArt, Dribble, Github, LastFM,
+    Pornhub, Replit, Telegram,
+    # OnlyFans
+)
+from apps.scraper.special import (
+    CodeAcademy, Reddit,
+    TikTok, Tumblr, Youtube,
+    # Facebook
+)
 from apps.ugen.generator import UserNameGenerator
-from apps.utils.analysis import analyse
-from apps.utils.cacher import Cacher
+from apps.utils import analyse, Cacher, save_profiles
+from apps.utils.custom_logger import BaseLogger
 
 if TYPE_CHECKING:
+    import logging
     from apps.scraper.base_model import Platform
 
 
@@ -38,7 +34,7 @@ def ensure_session(func):
     async def wrapper(self, *args, **kwargs):
         if self.session is None:
             self.session = aiohttp.ClientSession(
-                timeout=aiohttp.ClientTimeout(),
+                timeout=aiohttp.ClientTimeout(total=120.0),
                 connector=aiohttp.TCPConnector(limit=None)
             )
         return await func(self, *args, **kwargs)
@@ -72,20 +68,35 @@ class RequestTransformer:
 class AsyncScrapper:
     """A class to scrape multiple platforms asynchronously."""
 
-    def __init__(self, use_cache: bool = True, analyse_results: bool = True):
+    def __init__(self,
+        use_cache: bool = True,
+        analyse_results: bool = True,
+        save_data: bool = True,
+        test_mode: bool = False
+    ):
         self.cacher = None
-        self.analyse_results = analyse_results
         if use_cache:
             self.cacher = Cacher(
                 host=os.getenv('REDIS_HOST', 'localhost'),
                 port=os.getenv('REDIS_PORT', 6379),
                 password=os.getenv('REDIS_PASSWORD', None)
             )
+        self.analyse_results = analyse_results
+        self.save_data = save_data
+        self.test_mode = test_mode
         self.platforms = [
-            OnlyFans, Pornhub, LastFM, CodeAcademy, TikTok,
-            Tumblr, Facebook, Reddit, Youtube, Behance, DeviantArt,
+            Pornhub, LastFM, CodeAcademy, TikTok,
+            Tumblr, Reddit, Youtube, Behance, DeviantArt,
             Dribble, Github, Replit, Telegram
         ]
+        if self.test_mode:
+            self.cacher = None
+            self.save_data = False
+            self.analyse_results = True
+            self.platforms = [
+                CodeAcademy, Tumblr, Reddit, Youtube,
+                Behance, DeviantArt, Dribble, Replit, Telegram
+            ]
         self.platform_mapping = {
             platform().name: platform
             for platform in self.platforms
@@ -93,6 +104,7 @@ class AsyncScrapper:
         # Use the same session to scrape all the platforms.
         # This will reduce the overhead of reinitializing the session.
         self.session = None
+        self.logger: logging.Logger = BaseLogger('AsyncScraper')
 
     async def _iterator(self, key: list[str]) -> tuple[type[Platform], str]:
         """
@@ -107,7 +119,7 @@ class AsyncScrapper:
         results = []
         if self.cacher is not None:
             async with self.cacher as cacher:
-                results = await cacher.get(key)
+                results = await cacher.get(key) or {}
         results = RequestTransformer.flatten_response(results)
         if results:
             for result in results:
@@ -116,6 +128,8 @@ class AsyncScrapper:
                 yield platform_cls, username
         else:
             usernames = UserNameGenerator(*key, 4000).updated_username_generator()
+            if self.test_mode:
+                usernames = usernames[:100]
             # For each username, create a task for each platform.
             for username in usernames:
                 for platform_cls in self.platforms:
@@ -137,7 +151,7 @@ class AsyncScrapper:
                 tasks.append(task)
             # Wait for all the tasks to complete.
             responses = await asyncio.gather(*tasks)
-        print(f"Scraped [{len(sent_reqs)}] sources in [{time.monotonic() - st_time:.2f}s].")
+        self.logger.success(f"Scraped [{len(sent_reqs)}] sources in [{time.monotonic() - st_time:.2f}s].")
         if self.cacher is not None:
             records = RequestTransformer.dictify_requests({Cacher.to_key(key): sent_reqs})
             async with self.cacher as cacher:
@@ -145,7 +159,10 @@ class AsyncScrapper:
         if self.analyse_results:
             analyse(sent_reqs)
         # Filter out the empty responses.
-        return [response for response in responses if response]
+        filtered_responses = [response for response in responses if response]
+        if self.save_data:
+            save_profiles(filtered_responses)
+        return filtered_responses
 
 
     @ensure_session
@@ -172,7 +189,9 @@ class AsyncScrapper:
                         tasks.append(task)
                 # Wait for all the tasks to complete.
                 responses = await asyncio.gather(*tasks)
-            print(f"Retried [{len(sent_reqs)}] sources in [{time.monotonic() - st_time:.2f}s].")
+            self.logger.success(f"Retried [{len(sent_reqs)}] sources in [{time.monotonic() - st_time:.2f}s].")
             mapping = RequestTransformer.dictify_requests(req_map)
             await cacher.bulk_update_by_status(mapping)
-            return [response for response in responses if response]
+            filtered_responses = [response for response in responses if response]
+            if self.save_data:
+                save_profiles(filtered_responses)

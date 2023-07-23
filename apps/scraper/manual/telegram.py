@@ -1,5 +1,3 @@
-import asyncio
-import aiohttp
 from bs4 import BeautifulSoup
 
 from apps.scraper.base_model import Platform
@@ -12,56 +10,17 @@ class Telegram(Platform):
     def parse_response(self, username, response):
         try:
             soup = BeautifulSoup(response, 'html.parser')
-            name_element = soup.find('div', class_='tgme_page_title').find('span')
-            username_element = soup.find('div', class_='tgme_page_extra')
+            name_element = soup.find('div', class_='tgme_page_title')
             description_element = soup.find('div', class_='tgme_page_description')
-
-            name = name_element.get_text(strip=True) if name_element else "N/A"
-            username = username_element.get_text(strip=True) if username_element else "N/A"
-            description = description_element.get_text(strip=True) if description_element else "N/A"
-
+            avatar_element = soup.find('img', class_='tgme_page_photo_image')
+            name = name_element.get_text(strip=True) if name_element else None
+            description = description_element.get_text(strip=True) if (description_element and name) else None
+            avatar = avatar_element.get('src') if avatar_element else None
             return {
-                "Name": name,
-                "Username": username,
-                "Description": description
+                "name": name,
+                "description": description,
+                "avatar": avatar
             }
         except AttributeError:
             self.logger.warning('Some elements not found for user.', extra={"username": username})
             return None
-
-# # Define the list of user URLs to scrape
-# user_urls = [
-#     'https://t.me/twinstar',
-#     # Add more user URLs here
-# ]
-
-# # Define a function to scrape user information
-# async def scrape_user_info(url):
-#     async with aiohttp.ClientSession() as session:
-#         async with session.get(url) as response:
-#             if response.status == 200:
-#                 content = await response.text()
-#                 soup = BeautifulSoup(content, 'html.parser')
-#                 name_element = soup.find('div', class_='tgme_page_title').find('span')
-#                 username_element = soup.find('div', class_='tgme_page_extra')
-#                 description_element = soup.find('div', class_='tgme_page_description')
-
-#                 name = name_element.get_text(strip=True) if name_element else "N/A"
-#                 username = username_element.get_text(strip=True) if username_element else "N/A"
-#                 description = description_element.get_text(strip=True) if description_element else "N/A"
-
-#                 # Print the extracted information
-#                 print("Name:", name)
-#                 print("Username:", username)
-#                 print("Description:", description)
-#                 print("----------------------")
-
-#             else:
-#                 print(f"Failed to scrape user information from {url}. Status code: {response.status}")
-
-# # Create a list of coroutines for scraping user information concurrently
-# coroutines = [scrape_user_info(url) for url in user_urls]
-
-# # Run the coroutines concurrently
-# loop = asyncio.get_event_loop()
-# loop.run_until_complete(asyncio.gather(*coroutines))
