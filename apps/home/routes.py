@@ -15,8 +15,8 @@ from flask_login import login_required
 from jinja2 import TemplateNotFound
 from apps.ugen.generator import UserNameGenerator
 from apps.urlfinder.urlfinder import UrlFinder
-from apps.scraper.scraper import Scraper
-from apps.scraper.launcher import scrape_account
+# from apps.scraper.scraper import Scraper
+from apps.scraper.launcher import AsyncScrapper
 # from apps.googleapi.googleapi import search_profile
 import concurrent.futures
 
@@ -109,8 +109,9 @@ def scrapper():
         query     = data['query']
         # result = search_profile(query)
         # TODO: Modify query to suit the generate endpoint
-        usernames = UserNameGenerator(query, 'twinstar', '1995-09-07', 4000).updated_username_generator()
-        result = asyncio.run(scrape_account(usernames))
+        result = asyncio.run(AsyncScrapper().scrape_account(
+            key=[query, 'twinstar', '1995-09-07'])
+        )
         return jsonify(result)
     else:
         return render_template('home/scrapper.html', segment='scrapper')
