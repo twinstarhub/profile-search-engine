@@ -73,3 +73,7 @@ Werkzeug==2.0.3
 wonderwords==2.2.0
 WTForms==3.0.1
 xxhash==3.2.0
+matplotlib==3.7.2
+seaborn==0.12.2
+tabulate==0.9.0
+scipy==1.11.1
