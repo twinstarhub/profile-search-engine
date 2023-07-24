@@ -1,5 +1,6 @@
 from __future__ import annotations
 from abc import ABC, ABCMeta, abstractmethod
+from datetime import datetime
 import json
 import os
 import random
@@ -74,7 +75,8 @@ class Platform(ABC, metaclass=AbstractLoggerSetter):
                 "username": username,
                 "url": self.base_url.format(username),
                 "status": resp.status,
-                "platform": self.name
+                "platform": self.name,
+                "sent_at": datetime.now()
             })
             return resp
         except Exception:
@@ -82,7 +84,8 @@ class Platform(ABC, metaclass=AbstractLoggerSetter):
                 "username": username,
                 "url": self.base_url.format(username),
                 "status": 500,
-                "platform": self.name
+                "platform": self.name,
+                "sent_at": datetime.now()
             })
             return None
 

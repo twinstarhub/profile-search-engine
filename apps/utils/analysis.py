@@ -4,54 +4,103 @@ Helper methods for analysis
 from ast import literal_eval
 from collections import Counter
 from itertools import chain
+import os
 import threading
 import pandas as pd
 from matplotlib import pyplot as plt
 import seaborn as sns
+from apps.utils.custom_logger import BaseLogger
 from apps.utils.markdown_handler import MarkdownHandler
 sns.set_theme(style="darkgrid")
 
 from apps.utils.mongo import MongoDBConnector
 
 
-def analyse(sent_reqs):
-    """Analyse the scraped data."""
-    analyser_thread = threading.Thread(target=_analyse, args=(sent_reqs,))
-    analyser_thread.start()
+class RequestAnalyser:
+    """A class to analyse status code trends of sent records."""
+    logger = BaseLogger("RequestAnalyser")
+
+    @classmethod
+    def analyse(cls, sent_reqs):
+        """Analyse the scraped data."""
+        analyser_thread = threading.Thread(target=cls._analyse, args=(sent_reqs,))
+        analyser_thread.start()
+
+    @classmethod
+    def _analyse(cls, sent_reqs):
+        """Analyse the scraped data."""
+        # Extract the request logs from the sent requests.
+        cls.logger.info("\nSTATUS CODE ANALYSIS\n")
+        data = [req.request_log[0] for req in sent_reqs]
+        # Convert the list of dictionaries to a DataFrame.
+        df = pd.DataFrame(data)
+        df['sent_at_sec'] = df['sent_at'].dt.round('1s')
+        cls._analyse_status_counts(df)
+        cls._analyse_platform_status(df)
+        platform_status_time_series = cls._analyse_platform_trend(df)
+        cls._analyse_status_trend(platform_status_time_series)
+
+    @classmethod
+    def _analyse_status_counts(cls, df):
+        """Analyse the status code counts."""
+        status_counts = df["status"].value_counts().rename_axis("Status").reset_index(name="Count")
+        status_counts.index = [''] * len(status_counts)
+        cls.logger.info(
+            "\nStatus Code Distribution:\n"
+            f"{cls._pretty_dataframe(status_counts)}\n"
+        )
+
+    @classmethod
+    def _analyse_platform_status(cls, df):
+        """Analyse the status code distribution by platform."""
+        platform_distribution = df.groupby("platform")["status"].value_counts().unstack()\
+            .fillna(0).astype(int)
+        platform_distribution.columns.name = 'Platform'
+        platform_distribution.index.name = None
+        cls.logger.info(
+            "\nStatus Code Distribution by Platform:\n"
+            f"{cls._pretty_dataframe(platform_distribution)}\n"
+        )
+
+    @classmethod
+    def _analyse_platform_trend(cls, df):
+        """Analyse the platform status trend."""
+        platform_status_time_series = df.groupby(['platform', 'sent_at_sec'])['status']\
+            .apply(lambda x: x.mode().iloc[0])
+        cls.logger.info(
+            "\nPlatform Status Trend:\n"
+            f"{cls._pretty_dataframe(platform_status_time_series)}\n"
+        )
+        
+        return platform_status_time_series
+
+    @classmethod
+    def _analyse_status_trend(cls, platform_status_time_series):
+        """Analyse the status code trend."""
+        status_distribution_over_time = platform_status_time_series.groupby(['sent_at_sec', 'status'])\
+            .size().unstack().fillna(0).astype(int)
+        status_distribution_over_time.index.name = None
+        status_distribution_over_time.columns.name = 'Time'
+        cls.logger.info(
+            "\nStatus Code Distribution over Time:\n"
+            f"{cls._pretty_dataframe(status_distribution_over_time)}\n"
+        )
+
+    @classmethod
+    def _pretty_dataframe(cls, df: pd.DataFrame):
+        """Pretty print a DataFrame."""
+        lines = df.to_string().splitlines()
+        lines.insert(1, '-' * len(lines[0]))
+        return '\n'.join(lines)
 
 
-def _analyse(sent_reqs):
-    """Analyse the scraped data."""
-    # Extract the request logs from the sent requests.
-    print("\nSTATUS CODE ANALYSIS\n")
-    data = [req.request_log[0] for req in sent_reqs]
-    # Convert the list of dictionaries to a DataFrame.
-    df = pd.DataFrame(data)
-    # Get counts for each unique status code.
-    status_counts = df["status"].value_counts().rename_axis("Status").reset_index(name="Count")
-    status_counts.index = [''] * len(status_counts)
-    print(f"\nStatus Code Distribution:\n{_pretty_dataframe(status_counts)}\n")
-    # Group by platform and display count of each status code, order by total non 200 status codes.
-    platform_distribution = df.groupby("platform")["status"].value_counts().unstack()\
-        .fillna(0).astype(int)
-    platform_distribution.columns.name = 'Platform'
-    platform_distribution.index.name = None
-    print(f"\nStatus Code Distribution by Platform:\n{_pretty_dataframe(platform_distribution)}\n")
-
-
-def _pretty_dataframe(df: pd.DataFrame):
-    """Pretty print a DataFrame."""
-    lines = df.to_string().splitlines()
-    lines.insert(1, '-' * len(lines[0]))
-    return '\n'.join(lines)
-
-
-class Analyser:
+class ResponseAnalyser:
     """A class to analyse the scraped results."""
     def __init__(self, report_name: str = "report.md"):
         self.report_name = report_name
         self.markdown_handler = MarkdownHandler(report_name)
         self.df = None
+        self.logger = BaseLogger("ResponseAnalyser")
 
     def analyse_results(self):
         """Analyse the scraped results."""
@@ -65,7 +114,11 @@ class Analyser:
             self._write_platform_vs_metadata(report_file)
             self._write_metadata_analysis(report_file)
             self._write_value_analysis(report_file)
-            print("Finished writing report. Please check the report.md file for the results.")
+            self.logger.success(
+                "Finished writing report. "
+                "Please check this file for the results:\n%s",
+                os.path.abspath(self.report_name)
+            )
 
     def _write_intro(self, report_file: MarkdownHandler):
         unique_platforms = self.df['platform'].unique()
@@ -204,5 +257,6 @@ class Analyser:
         plt.tight_layout()
         self.markdown_handler.save_image(plt)
 
+
 if __name__ == "__main__":
-    Analyser("../../report.md").analyse_results()
+    ResponseAnalyser("../../report.md").analyse_results()

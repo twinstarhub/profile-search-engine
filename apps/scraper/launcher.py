@@ -20,7 +20,7 @@ from apps.scraper.special import (
     # Facebook
 )
 from apps.ugen.generator import UserNameGenerator
-from apps.utils import analyse, Cacher, save_profiles
+from apps.utils import RequestAnalyser, Cacher, save_profiles
 from apps.utils.custom_logger import BaseLogger
 
 if TYPE_CHECKING:
@@ -163,7 +163,7 @@ class AsyncScrapper:
             async with self.cacher as cacher:
                 await cacher.insert(key, records[Cacher.to_key(key)])
         if self.analyse_results:
-            analyse(sent_reqs)
+            RequestAnalyser.analyse(sent_reqs)
         # Filter out the empty responses.
         filtered_responses = [response for response in responses if response]
         if self.save_data:
