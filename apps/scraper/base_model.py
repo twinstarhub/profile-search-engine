@@ -152,3 +152,7 @@ class Platform(ABC, metaclass=AbstractLoggerSetter):
             return int(text)
         except ValueError:
             return text
+
+    def user_check(self, username, tracked_usernames):
+        """Check if request must be sent for a user."""
+        return True
