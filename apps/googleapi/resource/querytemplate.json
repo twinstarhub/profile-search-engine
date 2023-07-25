@@ -1,0 +1,39 @@
+{
+    "facebook": [
+        "site:facebook.com/ {$QUERY}",
+        "site:facebook.com/ {$QUERY}/videos"
+    ],
+    "Twitter": [
+        "site:twitter.com/ {$QUERY}"
+    ],
+    "TikTok": [
+        "site:tiktok.com/@ {$QUERY}"
+    ],
+    "Instagram": [
+        "site:instagram.com/ {$QUERY}",
+        "site:picuki.com/profile {$QUERY}"
+    ],
+    "youtube": [
+        "site:googleapis.com/youtube/v3/channels {$QUERY}",
+        "site:youtube.com {$QUERY}",
+        "site:youtube.com/c/ {$QUERY}",
+        "site:youtube.com/user/ {$QUERY}",
+        "site:youtube.com/@ {$QUERY}"
+    ],
+    "linkedin":[
+        "site:linkedin.com/in/ \"{$QUERY}\"",
+        "site:linkedin.com/ \"$query\""
+    ],
+    "Reddit":[
+        "site:reddit.com/user/ \"{$QUERY}\"",
+        "site:reddit.com/ \"$query\""
+    ],
+    "Others":[
+        "site:t.me \"{$QUERY}\"",
+        "site:ask.fm/ \"{$QUERY}\"",
+        "site:duolingo.com/profile/ \"{$QUERY}\"",
+        "site:duolingo.com \"{$QUERY}\"",
+        "site:soundcloud.com/ \"{$QUERY}\""
+
+    ]
+}
