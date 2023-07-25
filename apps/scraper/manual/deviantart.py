@@ -33,3 +33,9 @@ class DeviantArt(Platform):
         except AttributeError:
             self.logger.warning('Some elements not found for user.', extra={"username": username})
             return None
+
+    def user_check(self, username, tracked_usernames):
+        """Prevent duplicate records for usernames with underscores."""
+        if username.replace("_", "") in (user.replace("_", "") for user in tracked_usernames):
+            return False
+        return True

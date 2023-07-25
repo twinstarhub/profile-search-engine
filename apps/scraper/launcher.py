@@ -20,7 +20,7 @@ from apps.scraper.special import (
     # Facebook
 )
 from apps.ugen.generator import UserNameGenerator
-from apps.utils import analyse, Cacher, save_profiles
+from apps.utils import RequestAnalyser, Cacher, save_profiles
 from apps.utils.custom_logger import BaseLogger
 
 if TYPE_CHECKING:
@@ -105,6 +105,7 @@ class AsyncScrapper:
         # This will reduce the overhead of reinitializing the session.
         self.session = None
         self.logger: logging.Logger = BaseLogger('AsyncScraper')
+        self.tracked_usernames: dict[str, set] = {}
 
     async def _iterator(self, key: list[str]) -> tuple[type[Platform], str]:
         """
@@ -146,9 +147,14 @@ class AsyncScrapper:
         async with self.session as session:
             async for platform_cls, username in self._iterator(key):
                 platform: Platform = platform_cls(session=session)
+                if not platform.user_check(username, self.tracked_usernames.get(platform.name, set())):
+                    continue
                 task = asyncio.create_task(platform.scrape(username))
                 sent_reqs.append(platform)
                 tasks.append(task)
+                if platform.name not in self.tracked_usernames:
+                    self.tracked_usernames[platform.name] = set()
+                self.tracked_usernames[platform.name].add(username)
             # Wait for all the tasks to complete.
             responses = await asyncio.gather(*tasks)
         self.logger.success(f"Scraped [{len(sent_reqs)}] sources in [{time.monotonic() - st_time:.2f}s].")
@@ -157,7 +163,7 @@ class AsyncScrapper:
             async with self.cacher as cacher:
                 await cacher.insert(key, records[Cacher.to_key(key)])
         if self.analyse_results:
-            analyse(sent_reqs)
+            RequestAnalyser.analyse(sent_reqs)
         # Filter out the empty responses.
         filtered_responses = [response for response in responses if response]
         if self.save_data:
