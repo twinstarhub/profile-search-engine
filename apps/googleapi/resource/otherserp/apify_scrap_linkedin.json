@@ -1,0 +1,2656 @@
+[
+    {
+        "#debug": {
+            "requestId": "F0TYI1bk5OH2xmh",
+            "url": "http://www.google.com/search?num=100&q=site:linkedin.com/in/%20%22Michael%20Bage%22",
+            "loadedUrl": "http://www.google.com/search?num=100&q=site:linkedin.com/in/%20%22Michael%20Bage%22",
+            "method": "GET",
+            "retryCount": 0,
+            "errorMessages": [],
+            "statusCode": 200
+        },
+        "#error": false,
+        "searchQuery": {
+            "term": "site:linkedin.com/in/ \"Michael Bage\"",
+            "url": "http://www.google.com/search?num=100&q=site:linkedin.com/in/%20%22Michael%20Bage%22",
+            "device": "DESKTOP",
+            "page": 1,
+            "type": "SEARCH",
+            "domain": "google.com",
+            "countryCode": "US",
+            "languageCode": null,
+            "locationUule": null,
+            "resultsPerPage": "100"
+        },
+        "url": "http://www.google.com/search?num=100&q=site:linkedin.com/in/%20%22Michael%20Bage%22",
+        "hasNextPage": true,
+        "serpProviderCode": "N",
+        "resultsTotal": 192,
+        "relatedQueries": [],
+        "paidResults": [],
+        "paidProducts": [],
+        "organicResults": [
+            {
+                "title": "MICHAEL BAGE - Owner of the Company",
+                "url": "https://www.linkedin.com/in/michael-bage-10214a112",
+                "displayedUrl": "https://www.linkedin.com \u203a michael-bage-10214a112",
+                "description": "MICHAEL BAGE. PRESIDENT at IMPERIAL CONSTRUCTION & SUPPLY CO. MAPLELEAF ASSOCIATESOld Dominion University. Norfolk, Virginia, United States.",
+                "emphasizedKeywords": [
+                    "MICHAEL BAGE"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "type": "organic",
+                "position": 1
+            },
+            {
+                "title": "Michael Bage - Business Development Specialist",
+                "url": "https://www.linkedin.com/in/michael-bage-242a6b204",
+                "displayedUrl": "https://www.linkedin.com \u203a michael-bage-242a6b204",
+                "description": "Michael Bage. Business Development Specialist with 25+Years of Safety Experience - Las Vegas, Nevada. Ritz SafetyChaffey College\u00a0...",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "type": "organic",
+                "position": 2
+            },
+            {
+                "title": "Michael Bage - Mechanic/Service Manage - Bage Golf Cars",
+                "url": "https://www.linkedin.com/in/michael-bage-4781a970",
+                "displayedUrl": "https://www.linkedin.com \u203a michael-bage-4781a970",
+                "description": "Michael Bage. Mechanic/Service Manager/Co-Owner at Bage Golf Cars. Bage Golf CarsNew Smyrna Beach High School. New Smyrna Beach, Florida, United States.",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "type": "organic",
+                "position": 3
+            },
+            {
+                "title": "Mike Bage - United States | Professional Profile",
+                "url": "https://www.linkedin.com/in/mike-bage-78757532",
+                "displayedUrl": "https://www.linkedin.com \u203a mike-bage-78757532",
+                "description": "Michael B\u00e5ge. Investment Banking, Pareto Securities. Stockholm. Michael Bage. Business Development Specialist with 25+Years of Safety Experience - Las Vegas\u00a0...",
+                "emphasizedKeywords": [
+                    "Michael B\u00e5ge",
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "type": "organic",
+                "position": 4
+            },
+            {
+                "title": "Michael Bage - Mechanic - Noble Drilling",
+                "url": "https://uk.linkedin.com/in/michael-bage-13125447",
+                "displayedUrl": "https://uk.linkedin.com \u203a michael-bage-13125447",
+                "description": "Michael Bage. Mechanic at Noble Drilling. Noble DrillingSt Patricks Comprehensive. Greater Portsmouth Area. 227 followers 227 connections.",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Greater Portsmouth Area",
+                    "jobTitle": "Mechanic",
+                    "companyName": "Noble Drilling",
+                    "rawText": "Greater Portsmouth Area \u00b7 Mechanic \u00b7 Noble Drilling"
+                },
+                "type": "organic",
+                "position": 5
+            },
+            {
+                "title": "Michael Bage CGLI TMIET - Technical Instructor",
+                "url": "https://uk.linkedin.com/in/michael-bage-cgli-tmiet-33b87643",
+                "displayedUrl": "https://uk.linkedin.com \u203a michael-bage-cgli-tmiet-33b87...",
+                "description": "Michael Bage CGLI TMIET. Technical Instructor at Resource Group. Resource Group Training SolutionsDefence School of Aeronautical Engineering. Walton, England,\u00a0...",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Walton, England, United Kingdom",
+                    "jobTitle": "Technical Instructor",
+                    "companyName": "Resource Group Training Solutions",
+                    "rawText": "Walton, England, United Kingdom \u00b7 Technical Instructor \u00b7 Resource Group Training Solutions"
+                },
+                "type": "organic",
+                "position": 6
+            },
+            {
+                "title": "Michael Bage - OC Workshop - HM Forces",
+                "url": "https://uk.linkedin.com/in/michael-bage-8397154b",
+                "displayedUrl": "https://uk.linkedin.com \u203a michael-bage-8397154b",
+                "description": "Michael Bage. Capt at HM Forces. HM ForcesSouth Craven. United Kingdom. 136 followers 137 connections.",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "type": "organic",
+                "position": 7
+            },
+            {
+                "title": "Mike Bage - Retired Electrical & ET Supv",
+                "url": "https://uk.linkedin.com/in/mike-bage-357bb1b9",
+                "displayedUrl": "https://uk.linkedin.com \u203a ...",
+                "description": "Michael B\u00e5ge. Investment Banking, Pareto Securities. Kensington. Michael Bage. Mechanic at Noble Drilling. Greater Portsmouth Area. Michael Bage CGLI TMIET.",
+                "emphasizedKeywords": [
+                    "Michael B\u00e5ge",
+                    "Michael Bage",
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Greater Brighton and Hove Area",
+                    "jobTitle": "Retired Electrical & ET Supv",
+                    "companyName": "Transocean International",
+                    "rawText": "Greater Brighton and Hove Area \u00b7 Retired Electrical & ET Supv \u00b7 Transocean International"
+                },
+                "type": "organic",
+                "position": 8
+            },
+            {
+                "title": "Michael Bag\u00e9 - Porto Velho, Rond\u00f4nia, Brasil | Perfil profissional",
+                "url": "https://br.linkedin.com/in/michael-bag%C3%A9-576968122",
+                "displayedUrl": "https://br.linkedin.com \u203a michael-b...",
+                "description": "Michael B\u00e5ge. Investment Banking, Pareto Securities. Kensington \u00b7 Michael Bage. Mechanic at Noble Drilling. Portsmouth e Regi\u00e3o \u00b7 MICHAEL BAGE. PRESIDENT at\u00a0...",
+                "emphasizedKeywords": [
+                    "Michael B\u00e5ge",
+                    "Michael Bage",
+                    "MICHAEL BAGE"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "type": "organic",
+                "position": 9
+            },
+            {
+                "title": "Michael W. Smith - Drilling Superintendent - Noble Drilling",
+                "url": "https://www.linkedin.com/in/michael-w-smith-962301152",
+                "displayedUrl": "https://www.linkedin.com \u203a michael-w-smith-962301152",
+                "description": "Michael Bage. Mechanic at Noble Drilling. Greater Portsmouth Area. Explore collaborative articles. We're unlocking community knowledge in a new way.",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Alabama, United States",
+                    "jobTitle": "Drilling Superintendent",
+                    "companyName": "Noble Drilling",
+                    "rawText": "Alabama, United States \u00b7 Drilling Superintendent \u00b7 Noble Drilling"
+                },
+                "type": "organic",
+                "position": 10
+            },
+            {
+                "title": "gamer game - eating",
+                "url": "https://www.linkedin.com/in/gamer-game-97785b180?trk=public_profile_samename_mini-profile_title",
+                "displayedUrl": "https://www.linkedin.com \u203a ...",
+                "description": "Michael Bage. Mechanic/Service Manager/Co-Owner at Bage Golf Cars. New Smyrna Beach, FL \u00b7 Randy Beaver. Materials testing Supervisor at Holt Engineering,\u00a0...",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "New York City Metropolitan Area",
+                    "jobTitle": "eating",
+                    "companyName": "eating",
+                    "rawText": "New York City Metropolitan Area \u00b7 eating \u00b7 eating"
+                },
+                "type": "organic",
+                "position": 11
+            },
+            {
+                "title": "David Walsh - Mechanix Wear",
+                "url": "https://www.linkedin.com/in/david-walsh-297659253",
+                "displayedUrl": "https://www.linkedin.com \u203a david-walsh-297659253",
+                "description": "Michael Bage. Business Development Specialist with 25+Years of Safety Experience - Las Vegas, Nevada. Henderson, NV \u00b7 Magid de M\u00e9xico.",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Wakefield, Rhode Island, United States",
+                    "jobTitle": "Sr Director Government Programs",
+                    "companyName": "Mechanix Wear",
+                    "rawText": "Wakefield, Rhode Island, United States \u00b7 Sr Director Government Programs \u00b7 Mechanix Wear"
+                },
+                "type": "organic",
+                "position": 12
+            },
+            {
+                "title": "David Edingfield - Sales Rep - Ritz Safety",
+                "url": "https://www.linkedin.com/in/david-edingfield-baa7b17b",
+                "displayedUrl": "https://www.linkedin.com \u203a ...",
+                "description": "Michael Bage. Business Development Specialist with 25+Years of Safety Experience - Las Vegas, Nevada. Henderson, NV \u00b7 Trevor Cook.",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Edmond, Oklahoma, United States",
+                    "jobTitle": "Sales Rep",
+                    "companyName": "Ritz Safety",
+                    "rawText": "Edmond, Oklahoma, United States \u00b7 Sales Rep \u00b7 Ritz Safety"
+                },
+                "type": "organic",
+                "position": 13
+            },
+            {
+                "title": "Destiny Cordova - University of Nevada-Las Vegas",
+                "url": "https://www.linkedin.com/in/destiny-cordova-7346a420a",
+                "displayedUrl": "https://www.linkedin.com \u203a ...",
+                "description": "2020 - 2024. People also viewed. Michael Bage. Business Development Specialist with 25+Years of Safety Experience - Las Vegas, Nevada. Henderson, NV\u00a0...",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "type": "organic",
+                "position": 14
+            },
+            {
+                "title": "Alexander Eichbauer - Mine Geologist - Votorantim Cimentos",
+                "url": "https://www.linkedin.com/in/alexander-eichbauer-2a4488158",
+                "displayedUrl": "https://www.linkedin.com \u203a ...",
+                "description": "MICHAEL BAGE. PRESIDENT at IMPERIAL CONSTRUCTION & SUPPLY CO. Norfolk, VA \u00b7 Monica DeDad. Coordinator of Student Achievement Center at St. Francis de Sales\u00a0...",
+                "emphasizedKeywords": [
+                    "MICHAEL BAGE"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Columbia, South Carolina, United States",
+                    "jobTitle": "Mine Geologist",
+                    "companyName": "Votorantim Cimentos - St Marys Cement",
+                    "rawText": "Columbia, South Carolina, United States \u00b7 Mine Geologist \u00b7 Votorantim Cimentos - St Marys Cement"
+                },
+                "type": "organic",
+                "position": 15
+            },
+            {
+                "title": "PFG/TPC Glenn&Barb - Category Manager",
+                "url": "https://www.linkedin.com/in/pfg-tpc-glenn-barb-651280a1",
+                "displayedUrl": "https://www.linkedin.com \u203a ...",
+                "description": "People also viewed \u00b7 Charles F King \u00b7 Dr Nancie Chenoweth Dejmal \u00b7 Dorrel Bowler \u00b7 Jim Landrith \u00b7 Bill Lower \u00b7 Phil Huebner \u00b7 Cody Russell \u00b7 MICHAEL BAGE.",
+                "emphasizedKeywords": [
+                    "MICHAEL BAGE"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Bettendorf, Iowa, United States",
+                    "jobTitle": "Category Manager",
+                    "companyName": "PFG/TPC",
+                    "rawText": "Bettendorf, Iowa, United States \u00b7 Category Manager \u00b7 PFG/TPC"
+                },
+                "type": "organic",
+                "position": 16
+            },
+            {
+                "title": "Dr Nancie Chenoweth Dejmal - Vice President",
+                "url": "https://www.linkedin.com/in/dr-nancie-chenoweth-dejmal-b0679991",
+                "displayedUrl": "https://www.linkedin.com \u203a dr-nancie-chenoweth-dejmal...",
+                "description": "People also viewed \u00b7 Dorrel Bowler \u00b7 PFG/TPC Glenn&Barb \u00b7 Charles F King \u00b7 Jim Landrith \u00b7 Bill Lower \u00b7 Phil Huebner \u00b7 Cody Russell \u00b7 MICHAEL BAGE.",
+                "emphasizedKeywords": [
+                    "MICHAEL BAGE"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Springfield, Missouri, United States",
+                    "jobTitle": "Vice President",
+                    "companyName": "Dejmal Consulting",
+                    "rawText": "Springfield, Missouri, United States \u00b7 Vice President \u00b7 Dejmal Consulting"
+                },
+                "type": "organic",
+                "position": 17
+            },
+            {
+                "title": "Kaleb Cook - Project Estimator - Ryerson Concrete",
+                "url": "https://www.linkedin.com/in/kaleb-cook-55a2b0172",
+                "displayedUrl": "https://www.linkedin.com \u203a ...",
+                "description": "People also viewed \u00b7 Jesse Jin. Project Manager at Tradewinds Construction \u00b7 Michael Bage. Business Development Specialist with 25+Years of Safety Experience -\u00a0...",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "type": "organic",
+                "position": 18
+            },
+            {
+                "title": "Chrissy Smith - Sales Executive - Ritz Safety",
+                "url": "https://www.linkedin.com/in/chrissy-smith-5ba17411b",
+                "displayedUrl": "https://www.linkedin.com \u203a ...",
+                "description": "Michael Bage. Business Development Specialist with 25+Years of Safety Experience - Las Vegas, Nevada. Henderson, NV \u00b7 Donovan Scioneaux.",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Henderson, Nevada, United States",
+                    "jobTitle": "Sales Executive",
+                    "companyName": "Ritz Safety",
+                    "rawText": "Henderson, Nevada, United States \u00b7 Sales Executive \u00b7 Ritz Safety"
+                },
+                "type": "organic",
+                "position": 19
+            },
+            {
+                "title": "atef amari - lab technitian- material testing",
+                "url": "https://www.linkedin.com/in/atef-amari-09946622",
+                "displayedUrl": "https://www.linkedin.com \u203a atef-amari-09946622",
+                "description": "Michael Bage. Mechanic/Service Manager/Co-Owner at Bage Golf Cars. New Smyrna Beach, FL \u00b7 David Hernandez. Warehouse/Laydown yard at Zachry Group.",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Gretna, Louisiana, United States",
+                    "jobTitle": "lab technitian- material testing",
+                    "companyName": "eustis engineering co.",
+                    "rawText": "Gretna, Louisiana, United States \u00b7 lab technitian- material testing \u00b7 eustis engineering co."
+                },
+                "type": "organic",
+                "position": 20
+            },
+            {
+                "title": "Chris Barnett - Tower/Control room Operator - CEMEX USA",
+                "url": "https://www.linkedin.com/in/chris-barnett-913ab370",
+                "displayedUrl": "https://www.linkedin.com \u203a ...",
+                "description": "Michael Bage. Mechanic/Service Manager/Co-Owner at Bage Golf Cars. New Smyrna Beach, FL \u00b7 Ben Hummel. Field Member/ Laborer. Lebanon, TN \u00b7 Erick Nolasco.",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Weatherford, Texas, United States",
+                    "jobTitle": "Tower/Control room Operator",
+                    "companyName": "CEMEX USA",
+                    "rawText": "Weatherford, Texas, United States \u00b7 Tower/Control room Operator \u00b7 CEMEX USA"
+                },
+                "type": "organic",
+                "position": 21
+            },
+            {
+                "title": "Richard Thomas - Pest Control Technician",
+                "url": "https://uk.linkedin.com/in/richard-thomas-236a5144",
+                "displayedUrl": "https://uk.linkedin.com \u203a ...",
+                "description": "People also viewed \u00b7 Cheryl Burnley. Marine Administrator at UECC \u00b7 Michael Bage. Mechanic at Noble Drilling \u00b7 Thiago Morais. Desempregado \u00b7 David Gray. Sr. \u00b7 Erman\u00a0...",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Beenham, England, United Kingdom",
+                    "jobTitle": "Pest Control Technician",
+                    "companyName": "PESTPRO BIRD SOLUTIONS LIMITED",
+                    "rawText": "Beenham, England, United Kingdom \u00b7 Pest Control Technician \u00b7 PESTPRO BIRD SOLUTIONS LIMITED"
+                },
+                "type": "organic",
+                "position": 22
+            },
+            {
+                "title": "Mike Massey - Materials Supervisor - Desa",
+                "url": "https://www.linkedin.com/in/mike-massey-b02a504",
+                "displayedUrl": "https://www.linkedin.com \u203a ...",
+                "description": "Materials testing Supervisor at Holt Engineering, Inc. Austin, TX \u00b7 Michael Bage. Mechanic/Service Manager/Co-Owner at Bage Golf Cars. New Smyrna\u00a0...",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Town Creek, Alabama, United States",
+                    "jobTitle": "Materials Supervisor",
+                    "companyName": "Desa",
+                    "rawText": "Town Creek, Alabama, United States \u00b7 Materials Supervisor \u00b7 Desa"
+                },
+                "type": "organic",
+                "position": 23
+            },
+            {
+                "title": "Kris Gant - HR Administrator - Ritz Safety, LLC",
+                "url": "https://www.linkedin.com/in/kris-gant-34b53515b",
+                "displayedUrl": "https://www.linkedin.com \u203a ...",
+                "description": "Michael Bage. Business Development Specialist with 25+Years of Safety Experience - Las Vegas, Nevada. Henderson, NV \u00b7 Megan McDonald.",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Dayton, Ohio, United States",
+                    "jobTitle": "HR Administrator",
+                    "companyName": "Ritz Safety, LLC",
+                    "rawText": "Dayton, Ohio, United States \u00b7 HR Administrator \u00b7 Ritz Safety, LLC"
+                },
+                "type": "organic",
+                "position": 24
+            },
+            {
+                "title": "Russell McMackins - Renters Warehouse Hampton Roads",
+                "url": "https://www.linkedin.com/in/russell-mcmackins-808416103",
+                "displayedUrl": "https://www.linkedin.com \u203a russell-mcmackins-80841...",
+                "description": "Recommendations received. Click here to view MICHAEL BAGE's profile. MICHAEL BAGE. \u201cRUSSELL IS A GOOD BUSINESS INVESTOR AND SMART\u00a0...",
+                "emphasizedKeywords": [
+                    "MICHAEL BAGE's",
+                    "MICHAEL BAGE"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "type": "organic",
+                "position": 25
+            },
+            {
+                "title": "Ana Santos - Owner of the Company - Blackstone Property",
+                "url": "https://www.linkedin.com/in/ana-santos-75744a133",
+                "displayedUrl": "https://www.linkedin.com \u203a ...",
+                "description": "MICHAEL BAGE. PRESIDENT at IMPERIAL CONSTRUCTION & SUPPLY CO. Norfolk, VA \u00b7 Joyce Langston. Florida Realtor at Real Broker, LLC. Greater Orlando\u00a0...",
+                "emphasizedKeywords": [
+                    "MICHAEL BAGE"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Seattle, Washington, United States",
+                    "jobTitle": "Owner of the Company",
+                    "companyName": "Blackstone Property",
+                    "rawText": "Seattle, Washington, United States \u00b7 Owner of the Company \u00b7 Blackstone Property"
+                },
+                "type": "organic",
+                "position": 26
+            },
+            {
+                "title": "Edwin Suazo - Account Executive - Ritz Safety",
+                "url": "https://www.linkedin.com/in/edwin-suazo-73463924",
+                "displayedUrl": "https://www.linkedin.com \u203a edwin-suazo-73463924",
+                "description": "Michael Bage. Business Development Specialist with 25+Years of Safety Experience - Las Vegas, Nevada. Henderson, NV \u00b7 Allison Cunningham.",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "United States",
+                    "jobTitle": "Account Executive",
+                    "companyName": "Ritz Safety",
+                    "rawText": "United States \u00b7 Account Executive \u00b7 Ritz Safety"
+                },
+                "type": "organic",
+                "position": 27
+            },
+            {
+                "title": "Justin Rose - Senior System Specialist - Caliber Home ...",
+                "url": "https://www.linkedin.com/in/justinrussellrose",
+                "displayedUrl": "https://www.linkedin.com \u203a justinrussellrose",
+                "description": "Michael Bage. Mechanic/Service Manager/Co-Owner at Bage Golf Cars. New Smyrna Beach, FL \u00b7 Julian Hernandez. TBA at NO-DIGTEC, LLC. Dallas, TX\u00a0...",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Mansfield, Texas, United States",
+                    "jobTitle": "Senior System Specialist",
+                    "companyName": "Caliber Home Loans, Inc.",
+                    "rawText": "Mansfield, Texas, United States \u00b7 Senior System Specialist \u00b7 Caliber Home Loans, Inc."
+                },
+                "type": "organic",
+                "position": 28
+            },
+            {
+                "title": "Troy Darks - Business Development Specialist - Ritz Safety",
+                "url": "https://www.linkedin.com/in/troy-darks-0288676",
+                "displayedUrl": "https://www.linkedin.com \u203a troy-darks-0288676",
+                "description": "Michael Bage. Business Development Specialist with 25+Years of Safety Experience - Las Vegas, Nevada. Henderson, NV \u00b7 Laike Wallace.",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "type": "organic",
+                "position": 29
+            },
+            {
+                "title": "Richard Higby - owner- company president",
+                "url": "https://www.linkedin.com/in/richard-higby-17028621",
+                "displayedUrl": "https://www.linkedin.com \u203a richard-higby-17028621",
+                "description": "MICHAEL BAGE. PRESIDENT at IMPERIAL CONSTRUCTION & SUPPLY CO. Norfolk, VA \u00b7 Erick Martinez. --. Myrtle Beach, SC \u00b7 Roger Hungerman. Owner of company.",
+                "emphasizedKeywords": [
+                    "MICHAEL BAGE"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "United States",
+                    "jobTitle": "owner- company president",
+                    "companyName": "higby electric",
+                    "rawText": "United States \u00b7 owner- company president \u00b7 higby electric"
+                },
+                "type": "organic",
+                "position": 30
+            },
+            {
+                "title": "Jen Bohn - Anchorage, Alaska, United States",
+                "url": "https://www.linkedin.com/in/jen-bohn-b54277229?trk=public_profile_browsemap",
+                "displayedUrl": "https://www.linkedin.com \u203a jen-bohn-b54277229",
+                "description": "Michael Bage. Business Development Specialist with 25+Years of Safety Experience - Las Vegas, Nevada. Henderson, NV \u00b7 W.D. Layne. Executive Vice President.",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "type": "organic",
+                "position": 31
+            },
+            {
+                "title": "Matthew Moody - Project Manager - ECS Dallas, LLC",
+                "url": "https://www.linkedin.com/in/matthew-moody-74487613",
+                "displayedUrl": "https://www.linkedin.com \u203a matthew-moody-74487613",
+                "description": "People also viewed \u00b7 Michael Bage \u00b7 Verde Norman \u00b7 Andy Sutphin \u00b7 Jason Parker, RPLS \u00b7 Neil Caudle \u00b7 Robert J. DelPrete \u00b7 Bernard Adeshina \u00b7 Montego Butler.",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Addison, Texas, United States",
+                    "jobTitle": "Project Manager",
+                    "companyName": "ECS Dallas, LLC",
+                    "rawText": "Addison, Texas, United States \u00b7 Project Manager \u00b7 ECS Dallas, LLC"
+                },
+                "type": "organic",
+                "position": 32
+            },
+            {
+                "title": "Bruce Wahl - North Texas Municipal Water District",
+                "url": "https://www.linkedin.com/in/bruce-wahl-7408387b",
+                "displayedUrl": "https://www.linkedin.com \u203a ...",
+                "description": "Michael Bage. Mechanic/Service Manager/Co-Owner at Bage Golf Cars. New Smyrna Beach, FL \u00b7 Milleysha Molina. SDPT. Fairfax, VA \u00b7 LeVis Consulting Group.",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Dallas-Fort Worth Metroplex",
+                    "jobTitle": "Construction Inspector",
+                    "companyName": "North Texas Municipal Water District",
+                    "rawText": "Dallas-Fort Worth Metroplex \u00b7 Construction Inspector \u00b7 North Texas Municipal Water District"
+                },
+                "type": "organic",
+                "position": 33
+            },
+            {
+                "title": "Bryan Call - Carpet Cleaner - Stanley Steemer",
+                "url": "https://www.linkedin.com/in/bryan-call-03a7a214a?trk=people-guest_profile-result-card_result-card_full-click",
+                "displayedUrl": "https://www.linkedin.com \u203a ...",
+                "description": "MICHAEL BAGE. PRESIDENT at IMPERIAL CONSTRUCTION & SUPPLY CO. Norfolk, VA \u00b7 Ryan Kletz. Vice President at Classic Air's One Hour Heating and A/C.",
+                "emphasizedKeywords": [
+                    "MICHAEL BAGE"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Hampton, Virginia, United States",
+                    "jobTitle": "Carpet Cleaner",
+                    "companyName": "Stanley Steemer",
+                    "rawText": "Hampton, Virginia, United States \u00b7 Carpet Cleaner \u00b7 Stanley Steemer"
+                },
+                "type": "organic",
+                "position": 34
+            },
+            {
+                "title": "Elizabeth Pizza, SHRM-SCP - Connecticut College",
+                "url": "https://www.linkedin.com/in/elizabeth-pizza-shrm-scp-00737715",
+                "displayedUrl": "https://www.linkedin.com \u203a elizabeth-pizza-shrm-scp-00...",
+                "description": "People also viewed \u00b7 Ryan Meyers. Software Developer at K\u00f6rber Supply Chain \u00b7 Brenden Hurd. Sales professional \u00b7 Michael Bage. Mechanic/Service Manager/Co-Owner at\u00a0...",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "type": "organic",
+                "position": 35
+            },
+            {
+                "title": "Guyo Thorson - Maintenance Manager - Rapat Corporation",
+                "url": "https://www.linkedin.com/in/guyo-thorson-39140b148",
+                "displayedUrl": "https://www.linkedin.com \u203a ...",
+                "description": "MICHAEL BAGE. PRESIDENT at IMPERIAL CONSTRUCTION & SUPPLY CO. Norfolk, VA \u00b7 Richard Powers, BSME. Mechanical Design Engineer\u25bbProject Engineer, NPD Engineer.",
+                "emphasizedKeywords": [
+                    "MICHAEL BAGE"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Moorhead, Minnesota, United States",
+                    "jobTitle": "Maintenance Manager",
+                    "companyName": "Rapat Corporation",
+                    "rawText": "Moorhead, Minnesota, United States \u00b7 Maintenance Manager \u00b7 Rapat Corporation"
+                },
+                "type": "organic",
+                "position": 36
+            },
+            {
+                "title": "Patty Vandeputte - Account Executive - Ritz Safety",
+                "url": "https://www.linkedin.com/in/patty-vandeputte-933a39b",
+                "displayedUrl": "https://www.linkedin.com \u203a ...",
+                "description": "Michael Bage - Q.S.S.P.. Safety & Risk Management Consulting / Sales and Distribution Specialist. United States \u00b7 Tom Dotson.",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Pompano Beach, Florida, United States",
+                    "jobTitle": "Account Executive",
+                    "companyName": "Ritz Safety",
+                    "rawText": "Pompano Beach, Florida, United States \u00b7 Account Executive \u00b7 Ritz Safety"
+                },
+                "type": "organic",
+                "position": 37
+            },
+            {
+                "title": "Jeremy Mills - Drilling Foreman - JMAKE Consulting LLC",
+                "url": "https://www.linkedin.com/in/jeremy-mills-20b72954",
+                "displayedUrl": "https://www.linkedin.com \u203a ...",
+                "description": "Michael Bage. Mechanic at Noble Drilling. Greater Portsmouth Area \u00b7 Adam Shoemaker. floor hand at H&P Drilling. Martins Ferry, OH \u00b7 Bobby Humphreys.",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "type": "organic",
+                "position": 38
+            },
+            {
+                "title": "Adam Haroun - Driver - any",
+                "url": "https://www.linkedin.com/in/adam-haroun-58a7b6171",
+                "displayedUrl": "https://www.linkedin.com \u203a ...",
+                "description": "People also viewed \u00b7 ADOLPH MATA \u00b7 Mark Watson \u00b7 Billy Cope \u00b7 Kevin Hunter \u00b7 Joe McDonald \u00b7 MICHAEL BAGE \u00b7 Robin Flaherty \u00b7 Tony Angel.",
+                "emphasizedKeywords": [
+                    "MICHAEL BAGE"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Grand Rapids Metropolitan Area",
+                    "jobTitle": "Driver",
+                    "companyName": "any",
+                    "rawText": "Grand Rapids Metropolitan Area \u00b7 Driver \u00b7 any"
+                },
+                "type": "organic",
+                "position": 39
+            },
+            {
+                "title": "CRIO AMAL RAJ RYMONS - Gulf Marine Services PLC",
+                "url": "https://in.linkedin.com/in/crio-amal-raj-rymons-99340516a",
+                "displayedUrl": "https://in.linkedin.com \u203a ...",
+                "description": "Michael Bage. Mechanic at Noble Drilling. Greater Portsmouth Area \u00b7 Rastin Jesu. Rigger at ADNOC Offshore. Chennai \u00b7 Darshan tandel.",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "type": "organic",
+                "position": 40
+            },
+            {
+                "title": "KieKie Strickland - Owner/ President - Self-Employed",
+                "url": "https://www.linkedin.com/in/flipstylezfashions",
+                "displayedUrl": "https://www.linkedin.com \u203a flipstylezfashions",
+                "description": "MICHAEL BAGE. PRESIDENT at IMPERIAL CONSTRUCTION & SUPPLY CO. Norfolk, VA \u00b7 Russell Sanders. -- WE BUY HOUSES, FAST CASH, WHOLESALERS GET PAID$$$$\u00a0...",
+                "emphasizedKeywords": [
+                    "MICHAEL BAGE"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "type": "organic",
+                "position": 41
+            },
+            {
+                "title": "Erol Ozyurt",
+                "url": "https://www.linkedin.com/in/erol-ozyurt-5bb8b79a",
+                "displayedUrl": "https://www.linkedin.com \u203a ...",
+                "description": "Michael Bage. Mechanic/Service Manager/Co-Owner at Bage Golf Cars. New Smyrna Beach, FL \u00b7 Randy Ehart. Field Technician for CMJ Engineering Inc.",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "type": "organic",
+                "position": 42
+            },
+            {
+                "title": "Jarrod Post - Business Development Specialist - Ritz Safety",
+                "url": "https://www.linkedin.com/in/jarrod-post-52a86a72",
+                "displayedUrl": "https://www.linkedin.com \u203a ...",
+                "description": "Michael Bage. Business Development Specialist with 25+Years of Safety Experience - Las Vegas, Nevada. Henderson, NV \u00b7 Erin Remington.",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Henderson, Nevada, United States",
+                    "jobTitle": "Business Development Specialist",
+                    "companyName": "Ritz Safety",
+                    "rawText": "Henderson, Nevada, United States \u00b7 Business Development Specialist \u00b7 Ritz Safety"
+                },
+                "type": "organic",
+                "position": 43
+            },
+            {
+                "title": "Bob Oei - materials testing lab superviser - County of Santa ...",
+                "url": "https://www.linkedin.com/in/bob-oei-2a6b21a",
+                "displayedUrl": "https://www.linkedin.com \u203a ...",
+                "description": "Materials testing Supervisor at Holt Engineering, Inc. Austin, TX \u00b7 Michael Bage. Mechanic/Service Manager/Co-Owner at Bage Golf Cars. New Smyrna\u00a0...",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "San Jose, California, United States",
+                    "jobTitle": "materials testing lab superviser",
+                    "companyName": "County of Santa Clara",
+                    "rawText": "San Jose, California, United States \u00b7 materials testing lab superviser \u00b7 County of Santa Clara"
+                },
+                "type": "organic",
+                "position": 44
+            },
+            {
+                "title": "Ray Giraitis - National Accounts Representative - Ritz Safety",
+                "url": "https://www.linkedin.com/in/ray-giraitis-b2731137",
+                "displayedUrl": "https://www.linkedin.com \u203a ray-giraitis-b2731137",
+                "description": "People also viewed \u00b7 Donovan Scioneaux \u00b7 Michael Bage \u00b7 Thomas Cannon \u00b7 James Gilliand \u00b7 Jeff Charyak \u00b7 Ken Fisher \u00b7 W.D. Layne \u00b7 Jacob Crawford.",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Jacksonville, Florida, United States",
+                    "jobTitle": "National Accounts Representative",
+                    "companyName": "Ritz Safety",
+                    "rawText": "Jacksonville, Florida, United States \u00b7 National Accounts Representative \u00b7 Ritz Safety"
+                },
+                "type": "organic",
+                "position": 45
+            },
+            {
+                "title": "Joel Thomas - Superintendent - BRNB Construction",
+                "url": "https://www.linkedin.com/in/joel-thomas-971243b4",
+                "displayedUrl": "https://www.linkedin.com \u203a ...",
+                "description": "Michael Bage. Mechanic/Service Manager/Co-Owner at Bage Golf Cars. New Smyrna Beach, FL \u00b7 Julian Hernandez. TBA at NO-DIGTEC, LLC. Dallas, TX\u00a0...",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Arlington, Texas, United States",
+                    "jobTitle": "Superintendent",
+                    "companyName": "BRNB Construction",
+                    "rawText": "Arlington, Texas, United States \u00b7 Superintendent \u00b7 BRNB Construction"
+                },
+                "type": "organic",
+                "position": 46
+            },
+            {
+                "title": "Donna Wray - Caterer - Wood Fire Breads",
+                "url": "https://www.linkedin.com/in/donna-wray-0bbb1310a",
+                "displayedUrl": "https://www.linkedin.com \u203a ...",
+                "description": "MICHAEL BAGE. PRESIDENT at IMPERIAL CONSTRUCTION & SUPPLY CO. Norfolk, VA \u00b7 Ryan Kletz. Vice President at Classic Air's One Hour Heating and A/C.",
+                "emphasizedKeywords": [
+                    "MICHAEL BAGE"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Hampton, Virginia, United States",
+                    "jobTitle": "Caterer",
+                    "companyName": "Wood Fire Breads",
+                    "rawText": "Hampton, Virginia, United States \u00b7 Caterer \u00b7 Wood Fire Breads"
+                },
+                "type": "organic",
+                "position": 47
+            },
+            {
+                "title": "Tim Begole (Jr) - CMT Department Manager - Alpha Testing",
+                "url": "https://www.linkedin.com/in/tim-begole-jr-26635a10",
+                "displayedUrl": "https://www.linkedin.com \u203a ...",
+                "description": "Michael Bage. Mechanic/Service Manager/Co-Owner at Bage Golf Cars. New Smyrna Beach, FL \u00b7 Julian Hernandez. TBA at NO-DIGTEC, LLC. Dallas, TX\u00a0...",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "type": "organic",
+                "position": 48
+            },
+            {
+                "title": "Tiffany Smith - Claims Associate II - Mr. Cooper",
+                "url": "https://www.linkedin.com/in/tiffany-smith-58175b148",
+                "displayedUrl": "https://www.linkedin.com \u203a ...",
+                "description": "Michael Bage. Mechanic/Service Manager/Co-Owner at Bage Golf Cars. New Smyrna Beach, FL \u00b7 Andrea Jackson. Lending Manager. Fort Worth, TX \u00b7 Andrew Montes.",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Bedford, Texas, United States",
+                    "jobTitle": "Claims Associate II",
+                    "companyName": "Mr. Cooper",
+                    "rawText": "Bedford, Texas, United States \u00b7 Claims Associate II \u00b7 Mr. Cooper"
+                },
+                "type": "organic",
+                "position": 49
+            },
+            {
+                "title": "Daniel Christiansen - Construction Manager - Freese and ...",
+                "url": "https://www.linkedin.com/in/daniel-christiansen-995a1a18a",
+                "displayedUrl": "https://www.linkedin.com \u203a ...",
+                "description": "Michael Bage. Mechanic/Service Manager/Co-Owner at Bage Golf Cars. New Smyrna Beach, FL \u00b7 Kaily O'Connor. CVL Cosmetics North America.",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Dallas, Texas, United States",
+                    "jobTitle": "Construction Manager",
+                    "companyName": "Freese and Nichols",
+                    "rawText": "Dallas, Texas, United States \u00b7 Construction Manager \u00b7 Freese and Nichols"
+                },
+                "type": "organic",
+                "position": 50
+            },
+            {
+                "title": "Martreyvis Lyons - Miami-Fort Lauderdale Area",
+                "url": "https://www.linkedin.com/in/martreyvis-lyons-3ab224182",
+                "displayedUrl": "https://www.linkedin.com \u203a ...",
+                "description": "Michael Bage. Business Development Specialist with 27+Years of Safety Experience - Las Vegas, Nevada. Henderson, NV \u00b7 Uni Bryant.",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "type": "organic",
+                "position": 51
+            },
+            {
+                "title": "James Gilliand - Ritz Safety",
+                "url": "https://www.linkedin.com/in/james-gilliand-4782941b",
+                "displayedUrl": "https://www.linkedin.com \u203a ...",
+                "description": "Michael Bage. Business Development Specialist with 25+Years of Safety Experience - Las Vegas, Nevada. Henderson, NV \u00b7 Pawel Albrecht.",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Green Cove Springs, Florida, United States",
+                    "jobTitle": "Business Development Specialist",
+                    "companyName": "Ritz Safety",
+                    "rawText": "Green Cove Springs, Florida, United States \u00b7 Business Development Specialist \u00b7 Ritz Safety"
+                },
+                "type": "organic",
+                "position": 52
+            },
+            {
+                "title": "Anthony J Paparella - Branch Manager - United Land ...",
+                "url": "https://www.linkedin.com/in/anthony-j-paparella-976934180",
+                "displayedUrl": "https://www.linkedin.com \u203a anthony-j-paparella-976934...",
+                "description": "Michael Bage. Mechanic/Service Manager/Co-Owner at Bage Golf Cars. New Smyrna Beach, FL \u00b7 Christine Westenhaver. University of Florida Agricultural\u00a0...",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Port St Lucie, Florida, United States",
+                    "jobTitle": "Branch Manager",
+                    "companyName": "United Land Services",
+                    "rawText": "Port St Lucie, Florida, United States \u00b7 Branch Manager \u00b7 United Land Services"
+                },
+                "type": "organic",
+                "position": 53
+            },
+            {
+                "title": "Chip Webb - General Manager - SolusH2O",
+                "url": "https://www.linkedin.com/in/chip-webb-2269a032",
+                "displayedUrl": "https://www.linkedin.com \u203a ...",
+                "description": "Michael Bage. Business Development Specialist with 27+Years of Safety Experience. Henderson, NV \u00b7 Felicia Marshall. Rental & Sales Representative at H&E\u00a0...",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "type": "organic",
+                "position": 54
+            },
+            {
+                "title": "Daniel Crotty - Ritz Safety",
+                "url": "https://www.linkedin.com/in/daniel-crotty-7b65b835",
+                "displayedUrl": "https://www.linkedin.com \u203a ...",
+                "description": "Michael Bage. Business Development Specialist with 25+Years of Safety Experience - Las Vegas, Nevada. Henderson, NV \u00b7 Peter Merkl. VP at Ritz Safety.",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Dayton, Ohio, United States",
+                    "jobTitle": "Ritz Safety",
+                    "rawText": "Dayton, Ohio, United States \u00b7 Ritz Safety"
+                },
+                "type": "organic",
+                "position": 55
+            },
+            {
+                "title": "Pete Lopez",
+                "url": "https://www.linkedin.com/in/pete-lopez-50b093204",
+                "displayedUrl": "https://www.linkedin.com \u203a ...",
+                "description": "Michael Bage. Business Development Specialist with 25+Years of Safety Experience - Las Vegas, Nevada. Henderson, NV \u00b7 Donovan Scioneaux.",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "type": "organic",
+                "position": 56
+            },
+            {
+                "title": "Bob Glick - PIRANHA HOSE PRODUCTS",
+                "url": "https://www.linkedin.com/in/bob-glick-7a143153",
+                "displayedUrl": "https://www.linkedin.com \u203a ...",
+                "description": "Michael Bage. Business Development Specialist with 27+Years of Safety Experience - Las Vegas, Nevada. Henderson, NV \u00b7 Jan Vrey. Sales Manager at TVH Parts\u00a0...",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "United States",
+                    "jobTitle": "Product Specialist",
+                    "companyName": "PIRANHA  HOSE PRODUCTS",
+                    "rawText": "United States \u00b7 Product Specialist \u00b7 PIRANHA  HOSE PRODUCTS"
+                },
+                "type": "organic",
+                "position": 57
+            },
+            {
+                "title": "Robert Riggs - Subsea Surveyor",
+                "url": "https://www.linkedin.com/in/robert-riggs-9991006a",
+                "displayedUrl": "https://www.linkedin.com \u203a ...",
+                "description": "Michael Bage. Mechanic at Noble Drilling. Greater Portsmouth Area \u00b7 Andrew Doecke. Operator Maintainer - PACMAN - ESSO Bass Strait at UGL C&P Tea.",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Alvin, Texas, United States",
+                    "jobTitle": "Subsea Surveyor",
+                    "companyName": "Subsea Solutions",
+                    "rawText": "Alvin, Texas, United States \u00b7 Subsea Surveyor \u00b7 Subsea Solutions"
+                },
+                "type": "organic",
+                "position": 58
+            },
+            {
+                "title": "EUGENIA POPE-GENES - Norfolk State University",
+                "url": "https://www.linkedin.com/in/eugenia-pope-genes-a0805446",
+                "displayedUrl": "https://www.linkedin.com \u203a eugenia-pope-genes-a0805446",
+                "description": "MICHAEL BAGE. PRESIDENT at IMPERIAL CONSTRUCTION & SUPPLY CO. Norfolk, VA \u00b7 Marco A Marcano Soto. City of Norfolk Procurement Specialist,. Norfolk, VA\u00a0...",
+                "emphasizedKeywords": [
+                    "MICHAEL BAGE"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "type": "organic",
+                "position": 59
+            },
+            {
+                "title": "Krystyna Owen - Norfolk, Virginia, United States",
+                "url": "https://www.linkedin.com/in/krystyna-owen-6585a92",
+                "displayedUrl": "https://www.linkedin.com \u203a ...",
+                "description": "MICHAEL BAGE. PRESIDENT at IMPERIAL CONSTRUCTION & SUPPLY CO. Norfolk, VA \u00b7 Colleen Briley. Director of Sales & Marketing at HILTON Norfolk airport.",
+                "emphasizedKeywords": [
+                    "MICHAEL BAGE"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "type": "organic",
+                "position": 60
+            },
+            {
+                "title": "Matt Bruggeman - Ritz Safety",
+                "url": "https://www.linkedin.com/in/mattbruggeman",
+                "displayedUrl": "https://www.linkedin.com \u203a mattbruggeman",
+                "description": "Michael Bage. Business Development Specialist with 25+Years of Safety Experience - Las Vegas, Nevada. Henderson, NV \u00b7 Pete Lopez.",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "type": "organic",
+                "position": 61
+            },
+            {
+                "title": "Joe McDonald - Owner - Show Me Breakers",
+                "url": "https://www.linkedin.com/in/joe-mcdonald-7a3419125",
+                "displayedUrl": "https://www.linkedin.com \u203a ...",
+                "description": "He is an asset wherever he goes and whatever he does.\u201d Click here to view MICHAEL BAGE's profile. MICHAEL BAGE. \u201cJOE IS A GOOD SALESMAN AND GOOD\u00a0...",
+                "emphasizedKeywords": [
+                    "MICHAEL BAGE's",
+                    "MICHAEL BAGE"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Poplar Bluff, Missouri, United States",
+                    "jobTitle": "Owner",
+                    "companyName": "Show Me Breakers",
+                    "rawText": "Poplar Bluff, Missouri, United States \u00b7 Owner \u00b7 Show Me Breakers"
+                },
+                "type": "organic",
+                "position": 62
+            },
+            {
+                "title": "John Wisniewski",
+                "url": "https://www.linkedin.com/in/john-wisniewski-86249811",
+                "displayedUrl": "https://www.linkedin.com \u203a john-wisniewski-86249811",
+                "description": "Michael Bage. Mechanic/Service Manager/Co-Owner at Bage Golf Cars. New Smyrna Beach, FL \u00b7 Linda Brady. Project Accounting Supervisor at T&M Associates.",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "type": "organic",
+                "position": 63
+            },
+            {
+                "title": "Herb Niles - Board Member - HBPL",
+                "url": "https://www.linkedin.com/in/herb-niles-269b271a6",
+                "displayedUrl": "https://www.linkedin.com \u203a ...",
+                "description": "People also viewed \u00b7 Wallace Ronda \u00b7 katinka nugteren \u00b7 Chalsey Falk \u00b7 Sam Vaudrey \u00b7 Michael Bage \u00b7 Gavin Boorman \u00b7 Muhammed Gurhan Yerlikaya \u00b7 Wilian Glooriaa.",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Huntington Beach, California, United States",
+                    "jobTitle": "Board Member",
+                    "companyName": "HBPL",
+                    "rawText": "Huntington Beach, California, United States \u00b7 Board Member \u00b7 HBPL"
+                },
+                "type": "organic",
+                "position": 64
+            },
+            {
+                "title": "Rory Reynolds",
+                "url": "https://www.linkedin.com/in/rory-reynolds-2b672560",
+                "displayedUrl": "https://www.linkedin.com \u203a ...",
+                "description": "MICHAEL BAGE. PRESIDENT at IMPERIAL CONSTRUCTION & SUPPLY CO. Norfolk, VA \u00b7 Helena Kos\u0165ov\u00e1. Student at Fakulta mana\u017ementu Pre\u0161ovskej univerzity v Pre\u0161ove.",
+                "emphasizedKeywords": [
+                    "MICHAEL BAGE"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "type": "organic",
+                "position": 65
+            },
+            {
+                "title": "Marco A Marcano Soto - Procurement Specialist",
+                "url": "https://www.linkedin.com/in/marco-a-marcano-soto-24720820",
+                "displayedUrl": "https://www.linkedin.com \u203a marco-a-marcano-soto-2472...",
+                "description": "People also viewed \u00b7 MICHAEL BAGE. PRESIDENT at IMPERIAL CONSTRUCTION & SUPPLY CO \u00b7 Jonathan Johnson. Warehouse/Logistics Supervisor at IGM Resins \u00b7 LaCosher\u00a0...",
+                "emphasizedKeywords": [
+                    "MICHAEL BAGE"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Norfolk, Virginia, United States",
+                    "jobTitle": "Procurement Specialist",
+                    "companyName": "City of Norfolk, VA",
+                    "rawText": "Norfolk, Virginia, United States \u00b7 Procurement Specialist \u00b7 City of Norfolk, VA"
+                },
+                "type": "organic",
+                "position": 66
+            },
+            {
+                "title": "Joe Ruddy - Norfolk, Virginia, United States",
+                "url": "https://www.linkedin.com/in/joe-ruddy-ba305aa",
+                "displayedUrl": "https://www.linkedin.com \u203a ...",
+                "description": "Rob Cannizzaro. Chief Operating Officer at Intermodal Association of North America \u00b7 Kara Matzko. Director of Strategic Accounts \u00b7 MICHAEL BAGE. PRESIDENT at\u00a0...",
+                "emphasizedKeywords": [
+                    "MICHAEL BAGE"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "type": "organic",
+                "position": 67
+            },
+            {
+                "title": "Ryanne Murphy Davis - Senior Marketing Coordinator",
+                "url": "https://www.linkedin.com/in/ryanne-m-davis",
+                "displayedUrl": "https://www.linkedin.com \u203a ryanne-m-davis",
+                "description": "Michael Bage. Mechanic/Service Manager/Co-Owner at Bage Golf Cars. New Smyrna Beach, FL \u00b7 Madison Evans. Graphic Designer. Raleigh, NC\u00a0...",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Raleigh, North Carolina, United States",
+                    "jobTitle": "Senior Marketing Coordinator",
+                    "companyName": "Freese and Nichols",
+                    "rawText": "Raleigh, North Carolina, United States \u00b7 Senior Marketing Coordinator \u00b7 Freese and Nichols"
+                },
+                "type": "organic",
+                "position": 68
+            },
+            {
+                "title": "Roddy Perez - Territory Sales Manager - Portwest ...",
+                "url": "https://www.linkedin.com/in/roddy-perez-33785421",
+                "displayedUrl": "https://www.linkedin.com \u203a roddy-perez-33785421",
+                "description": "Michael Bage. Business Development Specialist with 25+Years of Safety Experience - Las Vegas, Nevada. Henderson, NV \u00b7 Sean Doyle. Ritz Safety.",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "type": "organic",
+                "position": 69
+            },
+            {
+                "title": "Donovan Scioneaux - Account Manager - Ritz Safety",
+                "url": "https://www.linkedin.com/in/donovanscioneaux",
+                "displayedUrl": "https://www.linkedin.com \u203a donovanscioneaux",
+                "description": "Michael Bage. Business Development Specialist with 25+Years of Safety Experience - Las Vegas, Nevada. Henderson, NV \u00b7 Chrissy Smith. Sales Executive at Ritz\u00a0...",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Mobile Metropolitan Area",
+                    "jobTitle": "Account Manager",
+                    "companyName": "Ritz Safety",
+                    "rawText": "Mobile Metropolitan Area \u00b7 Account Manager \u00b7 Ritz Safety"
+                },
+                "type": "organic",
+                "position": 70
+            },
+            {
+                "title": "Dan Scanlon DipNEBOSH, GradIOSH, MIIRSM",
+                "url": "https://uk.linkedin.com/in/dan-scanlon-dipnebosh-gradiosh-miirsm-25b30a163",
+                "displayedUrl": "https://uk.linkedin.com \u203a ...",
+                "description": "People also viewed \u00b7 Will Stanley. Senior Inspector - Defence Maritime Regulator \u00b7 Michael Pinhey. -- \u00b7 kenny Bates. CHP FSE at United Utilities \u00b7 Michael Bage.",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "type": "organic",
+                "position": 71
+            },
+            {
+                "title": "Rebecca Wolfe - Administrative Assistant",
+                "url": "https://www.linkedin.com/in/rebecca-wolfe-a26277179",
+                "displayedUrl": "https://www.linkedin.com \u203a rebecca-wolfe-a26277179",
+                "description": "Patricia Williams. Accounts Payable at Hammett Excavation Inc. Dallas-Fort Worth Metroplex \u00b7 Michael Bage. Mechanic/Service Manager\u00a0...",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Dallas-Fort Worth Metroplex",
+                    "jobTitle": "Administrative Assistant",
+                    "companyName": "Hammett Excavation",
+                    "rawText": "Dallas-Fort Worth Metroplex \u00b7 Administrative Assistant \u00b7 Hammett Excavation"
+                },
+                "type": "organic",
+                "position": 72
+            },
+            {
+                "title": "frederick bobbett - Warehouse Lead - Ritz Safety",
+                "url": "https://www.linkedin.com/in/frederick-bobbett-9a7a1675",
+                "displayedUrl": "https://www.linkedin.com \u203a ...",
+                "description": "People also viewed \u00b7 Jeremy Estrella. Warehouse Worker at Ritz Safety \u00b7 Michael Bage. Capt at HM Forces \u00b7 Mauricio Madrid. Territory Sales Manager - Florida, Latin\u00a0...",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Jacksonville, Florida, United States",
+                    "jobTitle": "Warehouse Lead",
+                    "companyName": "Ritz Safety",
+                    "rawText": "Jacksonville, Florida, United States \u00b7 Warehouse Lead \u00b7 Ritz Safety"
+                },
+                "type": "organic",
+                "position": 73
+            },
+            {
+                "title": "Ken Fisher - President - Ritz Safety",
+                "url": "https://www.linkedin.com/in/ken-fisher-9167886",
+                "displayedUrl": "https://www.linkedin.com \u203a ken-fisher-9167886",
+                "description": "Michael Bage. Business Development Specialist with 25+Years of Safety Experience - Las Vegas, Nevada. Henderson, NV \u00b7 Thomas Cannon.",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Dayton, Ohio, United States",
+                    "jobTitle": "President",
+                    "companyName": "Ritz Safety",
+                    "rawText": "Dayton, Ohio, United States \u00b7 President \u00b7 Ritz Safety"
+                },
+                "type": "organic",
+                "position": 74
+            },
+            {
+                "title": "Aarron Stevens - Power generation and distribution chief ...",
+                "url": "https://uk.linkedin.com/in/aarron-stevens-736780bb",
+                "displayedUrl": "https://uk.linkedin.com \u203a ...",
+                "description": "People also viewed \u00b7 Gareth Franklin. marine service engineer at Royal Navy \u00b7 Michael Bage. Mechanic at Noble Drilling \u00b7 Ryan Smith. Authorised technician Nordex.",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Greater Portsmouth Area",
+                    "jobTitle": "Power generation and distribution chief engineer",
+                    "companyName": "Royal Navy",
+                    "rawText": "Greater Portsmouth Area \u00b7 Power generation and distribution chief engineer \u00b7 Royal Navy"
+                },
+                "type": "organic",
+                "position": 75
+            },
+            {
+                "title": "Christopher O'Doherty - Marine Engineering Technician",
+                "url": "https://uk.linkedin.com/in/christopher-o-doherty-18aa9070",
+                "displayedUrl": "https://uk.linkedin.com \u203a ...",
+                "description": "Michael Bage. Mechanic at Noble Drilling. Greater Portsmouth Area \u00b7 Aarron Stevens. Power generation and distribution chief engineer at Royal Navy.",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "type": "organic",
+                "position": 76
+            },
+            {
+                "title": "Izael Quezada",
+                "url": "https://www.linkedin.com/in/izael-quezada-16a7b3120",
+                "displayedUrl": "https://www.linkedin.com \u203a ...",
+                "description": "MICHAEL BAGE. PRESIDENT at IMPERIAL CONSTRUCTION & SUPPLY CO. Norfolk, VA \u00b7 Chantel Ray. Owner at Canzell Realty. Virginia Beach, VA \u00b7 Frank Montgomery.",
+                "emphasizedKeywords": [
+                    "MICHAEL BAGE"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Tulsa, Oklahoma, United States",
+                    "jobTitle": "918 MVP",
+                    "rawText": "Tulsa, Oklahoma, United States \u00b7 918 MVP"
+                },
+                "type": "organic",
+                "position": 77
+            },
+            {
+                "title": "Matt Cody - Materials Testing and Inspection - GeoStrata LLC",
+                "url": "https://www.linkedin.com/in/matt-cody-70332a42",
+                "displayedUrl": "https://www.linkedin.com \u203a ...",
+                "description": "People also viewed \u00b7 Kayla Tucker \u00b7 Jared H Stapp \u00b7 Rajendra shah \u00b7 Jim Dunn \u00b7 Dan Savage \u00b7 Michael Bage \u00b7 Jeremy O'Burke, P.E. \u00b7 Tricia Marie Basinski.",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Riverton, Utah, United States",
+                    "jobTitle": "Materials Testing and Inspection",
+                    "companyName": "GeoStrata LLC",
+                    "rawText": "Riverton, Utah, United States \u00b7 Materials Testing and Inspection \u00b7 GeoStrata LLC"
+                },
+                "type": "organic",
+                "position": 78
+            },
+            {
+                "title": "Julian Hernandez - TBA - NO-DIGTEC, LLC",
+                "url": "https://www.linkedin.com/in/julian-hernandez-6a8399119",
+                "displayedUrl": "https://www.linkedin.com \u203a ...",
+                "description": "Operations Manager at Veilux Inc. Grand Prairie, TX \u00b7 Michael Bage. Mechanic/Service Manager/Co-Owner at Bage Golf Cars. New\u00a0...",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Dallas, Texas, United States",
+                    "jobTitle": "TBA",
+                    "companyName": "NO-DIGTEC, LLC",
+                    "rawText": "Dallas, Texas, United States \u00b7 TBA \u00b7 NO-DIGTEC, LLC"
+                },
+                "type": "organic",
+                "position": 79
+            },
+            {
+                "title": "Andrea Swanson - Gourmet Food Server - Aria @City Center",
+                "url": "https://www.linkedin.com/in/andrea-swanson-416962138",
+                "displayedUrl": "https://www.linkedin.com \u203a andrea-swanson-416962138",
+                "description": "Michael Bage. Business Development Specialist with 25+Years of Safety Experience - Las Vegas, Nevada. Henderson, NV \u00b7 Rhea Arzadon.",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Las Vegas, Nevada, United States",
+                    "jobTitle": "Gourmet Food Server",
+                    "companyName": "Aria @City Center",
+                    "rawText": "Las Vegas, Nevada, United States \u00b7 Gourmet Food Server \u00b7 Aria @City Center"
+                },
+                "type": "organic",
+                "position": 80
+            },
+            {
+                "title": "Brendan Ryan - Equipment Operator - Evolution Well ...",
+                "url": "https://www.linkedin.com/in/brendan-ryan-92525838",
+                "displayedUrl": "https://www.linkedin.com \u203a brendan-ryan-92525838",
+                "description": "People also viewed \u00b7 Michael Bage. Mechanic at Noble Drilling \u00b7 Mark Spradlin. Lead operator at Evolution Well Services \u00b7 Michael Spratling. Offshore Crane\u00a0...",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "United States",
+                    "jobTitle": "Equipment Operator",
+                    "companyName": "Evolution Well Services",
+                    "rawText": "United States \u00b7 Equipment Operator \u00b7 Evolution Well Services"
+                },
+                "type": "organic",
+                "position": 81
+            },
+            {
+                "title": "Henry Dixon MSOE MIPlantE",
+                "url": "https://uk.linkedin.com/in/henry-dixon-msoe-miplante-359009100",
+                "displayedUrl": "https://uk.linkedin.com \u203a henry-dixon-msoe-miplante-35...",
+                "description": "Michael Bage. Mechanic at Noble Drilling. Greater Portsmouth Area \u00b7 Shaun Dixon. Electrical Engineer. Plymouth \u00b7 Ian Schumacker.",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Hebburn, England, United Kingdom",
+                    "jobTitle": "A&P Group Limited",
+                    "rawText": "Hebburn, England, United Kingdom \u00b7 A&P Group Limited"
+                },
+                "type": "organic",
+                "position": 82
+            },
+            {
+                "title": "Ignacius Bakiyo - Mechanic - Larsen & Toubro",
+                "url": "https://in.linkedin.com/in/ignacius-bakiyo-389950222",
+                "displayedUrl": "https://in.linkedin.com \u203a ignacius-bakiyo-389950222",
+                "description": "Michael Bage. Mechanic at Noble Drilling. Greater Portsmouth Area \u00b7 PAWAN KUMAR. Oil and Gas Consultant at Adsun Offshore. Ahmedabad \u00b7 vignesh nallu.",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Kanyakumari district, Tamil Nadu, India",
+                    "jobTitle": "Mechanic",
+                    "companyName": "Larsen & Toubro",
+                    "rawText": "Kanyakumari district, Tamil Nadu, India \u00b7 Mechanic \u00b7 Larsen & Toubro"
+                },
+                "type": "organic",
+                "position": 83
+            },
+            {
+                "title": "Tj Sawyer",
+                "url": "https://www.linkedin.com/in/tj-sawyer-143b792b",
+                "displayedUrl": "https://www.linkedin.com \u203a ...",
+                "description": "Michael Bage. Business Development Specialist with 25+Years of Safety Experience - Las Vegas, Nevada. Henderson, NV \u00b7 W.D. Layne. Executive Vice President.",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "type": "organic",
+                "position": 84
+            },
+            {
+                "title": "W.D. Layne - Ritz Safety",
+                "url": "https://www.linkedin.com/in/w-d-layne-a0199b35",
+                "displayedUrl": "https://www.linkedin.com \u203a ...",
+                "description": "Michael Bage. Business Development Specialist with 25+Years of Safety Experience - Las Vegas, Nevada. Henderson, NV \u00b7 Pawel Albrecht.",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "type": "organic",
+                "position": 85
+            },
+            {
+                "title": "Gareth Franklin - marine service engineer - Royal Navy",
+                "url": "https://uk.linkedin.com/in/gareth-franklin-486aa868",
+                "displayedUrl": "https://uk.linkedin.com \u203a ...",
+                "description": "Experience. Royal Navy Graphic. marine service engineer. Royal Navy. People also viewed. Michael Bage. Mechanic at Noble Drilling. Greater Portsmouth Area\u00a0...",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Whiteley, England, United Kingdom",
+                    "jobTitle": "marine service engineer",
+                    "companyName": "Royal Navy",
+                    "rawText": "Whiteley, England, United Kingdom \u00b7 marine service engineer \u00b7 Royal Navy"
+                },
+                "type": "organic",
+                "position": 86
+            },
+            {
+                "title": "Heather Hans - Accounting Specialist - Ritz Safety",
+                "url": "https://www.linkedin.com/in/heather-hans-189188236",
+                "displayedUrl": "https://www.linkedin.com \u203a heather-hans-189188236",
+                "description": "Michael Bage. Business Development Specialist with 25+Years of Safety Experience - Las Vegas, Nevada. Henderson, NV \u00b7 Kris Gant. HR Administrator at Ritz\u00a0...",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Miamisburg, Ohio, United States",
+                    "jobTitle": "Accounting Specialist",
+                    "companyName": "Ritz Safety",
+                    "rawText": "Miamisburg, Ohio, United States \u00b7 Accounting Specialist \u00b7 Ritz Safety"
+                },
+                "type": "organic",
+                "position": 87
+            },
+            {
+                "title": "Drew Foreman - Design Engineer - Dynamic ...",
+                "url": "https://www.linkedin.com/in/drew-foreman-477872163",
+                "displayedUrl": "https://www.linkedin.com \u203a drew-foreman-477872163",
+                "description": "Michael Bage. Mechanic/Service Manager/Co-Owner at Bage Golf Cars. New Smyrna Beach, FL \u00b7 Kristen Holden. Assistant Controller at Dynamic Engineering\u00a0...",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Delray Beach, Florida, United States",
+                    "jobTitle": "Design Engineer",
+                    "companyName": "Dynamic Engineering Consultants, PC",
+                    "rawText": "Delray Beach, Florida, United States \u00b7 Design Engineer \u00b7 Dynamic Engineering Consultants, PC"
+                },
+                "type": "organic",
+                "position": 88
+            },
+            {
+                "title": "Jacqueline Blackwood - Musician - HM Forces",
+                "url": "https://uk.linkedin.com/in/jacqueline-blackwood-2b4121128",
+                "displayedUrl": "https://uk.linkedin.com \u203a ...",
+                "description": "Michael Bage. Capt at HM Forces. United Kingdom \u00b7 Adam Marshall. HSEQ Officer. Kirkcaldy \u00b7 Waisea Ravuravunisali. Military Professional.",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "type": "organic",
+                "position": 89
+            },
+            {
+                "title": "Sean Douple - Vice President of Operations - Ritz Safety",
+                "url": "https://www.linkedin.com/in/sean-douple-5b4239217",
+                "displayedUrl": "https://www.linkedin.com \u203a ...",
+                "description": "Michael Bage. Business Development Specialist with 25+Years of Safety Experience - Las Vegas, Nevada. Henderson, NV. Explore collaborative articles.",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Dayton, Ohio, United States",
+                    "jobTitle": "Vice President of Operations",
+                    "companyName": "Ritz Safety",
+                    "rawText": "Dayton, Ohio, United States \u00b7 Vice President of Operations \u00b7 Ritz Safety"
+                },
+                "type": "organic",
+                "position": 90
+            },
+            {
+                "title": "Thomas Cannon - District Operations and Sales Manager",
+                "url": "https://www.linkedin.com/in/thomas-cannon-abb58b9",
+                "displayedUrl": "https://www.linkedin.com \u203a ...",
+                "description": "Michael Bage. Business Development Specialist with 25+Years of Safety Experience - Las Vegas, Nevada. Henderson, NV \u00b7 Jennifer Maust.",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Mobile Metropolitan Area",
+                    "jobTitle": "District Operations and Sales Manager",
+                    "companyName": "Ritz Safety",
+                    "rawText": "Mobile Metropolitan Area \u00b7 District Operations and Sales Manager \u00b7 Ritz Safety"
+                },
+                "type": "organic",
+                "position": 91
+            },
+            {
+                "title": "Christopher Pleasance - Practical Training Technician",
+                "url": "https://uk.linkedin.com/in/christopher-pleasance-525a1912",
+                "displayedUrl": "https://uk.linkedin.com \u203a ...",
+                "description": "Michael Bage CGLI TMIET. Technical Instructor at Resource Group. Walton \u00b7 Alana Gordon. Project Manager. Bristol. Explore collaborative articles.",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Greater Norwich Area, United Kingdom",
+                    "jobTitle": "Practical Training Technician",
+                    "companyName": "KLMuk Engineering Technical College",
+                    "rawText": "Greater Norwich Area, United Kingdom \u00b7 Practical Training Technician \u00b7 KLMuk Engineering Technical College"
+                },
+                "type": "organic",
+                "position": 92
+            },
+            {
+                "title": "Destiny Beavers - Member of Master Plan Citizens ...",
+                "url": "https://www.linkedin.com/in/destiny-beavers-b647145b",
+                "displayedUrl": "https://www.linkedin.com \u203a ...",
+                "description": "People also viewed. Michael Bage. Business Development Specialist with 25+Years of Safety Experience - Las Vegas, Nevada. Henderson, NV \u00b7 Neil Johnstone.",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "type": "organic",
+                "position": 93
+            },
+            {
+                "title": "Doug Lara - Ritz Safety",
+                "url": "https://www.linkedin.com/in/doug-lara-02364031",
+                "displayedUrl": "https://www.linkedin.com \u203a doug-lara-02364031",
+                "description": "Michael Bage. Business Development Specialist with 25+Years of Safety Experience - Las Vegas, Nevada. Henderson, NV \u00b7 Tom Dotson.",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Tempe, Arizona, United States",
+                    "jobTitle": "Ritz Safety",
+                    "rawText": "Tempe, Arizona, United States \u00b7 Ritz Safety"
+                },
+                "type": "organic",
+                "position": 94
+            },
+            {
+                "title": "Daniel Schmidt",
+                "url": "https://www.linkedin.com/in/danielschmidt510",
+                "displayedUrl": "https://www.linkedin.com \u203a danielschmidt510",
+                "description": "Michael Bage. Mechanic at Noble Drilling. Greater Portsmouth Area \u00b7 Katie (Coyle) Atlas. E-Commerce Sales Manager at PepsiCo. Chicago, IL \u00b7 Lindsay Naple.",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "type": "organic",
+                "position": 95
+            },
+            {
+                "title": "George Parrott - Royal Navy Recruit",
+                "url": "https://uk.linkedin.com/in/george-parrott-7a441122a?trk=public_profile_browsemap",
+                "displayedUrl": "https://uk.linkedin.com \u203a ...",
+                "description": "Michael Bage. Capt at HM Forces. United Kingdom \u00b7 Adam Marshall. HSEQ Officer. Kirkcaldy \u00b7 Alan Nisbet. Plant fitter at Brigg Marine. Cardenden\u00a0...",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Cupar, Scotland, United Kingdom",
+                    "jobTitle": "Royal Navy Recruit",
+                    "companyName": "Royal Navy",
+                    "rawText": "Cupar, Scotland, United Kingdom \u00b7 Royal Navy Recruit \u00b7 Royal Navy"
+                },
+                "type": "organic",
+                "position": 96
+            },
+            {
+                "title": "Martyn Payne - Military Police Officer - HM Forces",
+                "url": "https://uk.linkedin.com/in/martyn-payne-45800b17a",
+                "displayedUrl": "https://uk.linkedin.com \u203a ...",
+                "description": "Michael Bage. Capt at HM Forces. United Kingdom \u00b7 Adam Marshall. Health and Safety Advisor | Construction Plant Operations. Kirkcaldy\u00a0...",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Kirkcaldy, Scotland, United Kingdom",
+                    "jobTitle": "Military Police Officer",
+                    "companyName": "HM Forces",
+                    "rawText": "Kirkcaldy, Scotland, United Kingdom \u00b7 Military Police Officer \u00b7 HM Forces"
+                },
+                "type": "organic",
+                "position": 97
+            },
+            {
+                "title": "Joseph Rockhold - R & D Testing Supervisor",
+                "url": "https://www.linkedin.com/in/joseph-rockhold-9252a1a",
+                "displayedUrl": "https://www.linkedin.com \u203a ...",
+                "description": "Michael Bage. Mechanic/Service Manager/Co-Owner at Bage Golf Cars. New Smyrna Beach, FL \u00b7 Sangho Lee. Civil Engineer and Materials Testing Supervisor, PE,\u00a0...",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Bates City, Missouri, United States",
+                    "jobTitle": "R & D Testing Supervisor",
+                    "companyName": "Ruskin Company",
+                    "rawText": "Bates City, Missouri, United States \u00b7 R & D Testing Supervisor \u00b7 Ruskin Company"
+                },
+                "type": "organic",
+                "position": 98
+            },
+            {
+                "title": "Seth Forti - Purchasing Manager - Crofton Industries",
+                "url": "https://www.linkedin.com/in/sethforti83935449",
+                "displayedUrl": "https://www.linkedin.com \u203a sethforti83935449",
+                "description": "MICHAEL BAGE. PRESIDENT at IMPERIAL CONSTRUCTION & SUPPLY CO. Norfolk, VA \u00b7 Marco A Marcano Soto. City of Norfolk Procurement Specialist,. Norfolk, VA\u00a0...",
+                "emphasizedKeywords": [
+                    "MICHAEL BAGE"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Norfolk, Virginia, United States",
+                    "jobTitle": "Purchasing Manager",
+                    "companyName": "Crofton Industries",
+                    "rawText": "Norfolk, Virginia, United States \u00b7 Purchasing Manager \u00b7 Crofton Industries"
+                },
+                "type": "organic",
+                "position": 99
+            }
+        ],
+        "peopleAlsoAsk": [],
+        "customData": {
+            "pageTitle": "site:linkedin.com/in/ \"Michael Bage\" - Google Search"
+        }
+    },
+    {
+        "#debug": {
+            "requestId": "mvbL3jnem6BHd9A",
+            "url": "http://www.google.com/search?num=100&q=site%3Alinkedin.com%2Fin%2F%20%22Michael%20Bage%22&start=100",
+            "loadedUrl": "http://www.google.com/search?num=100&q=site%3Alinkedin.com%2Fin%2F%20%22Michael%20Bage%22&start=100",
+            "method": "GET",
+            "retryCount": 0,
+            "errorMessages": [],
+            "statusCode": 200
+        },
+        "#error": false,
+        "searchQuery": {
+            "term": "site:linkedin.com/in/ \"Michael Bage\"",
+            "url": "http://www.google.com/search?num=100&q=site%3Alinkedin.com%2Fin%2F%20%22Michael%20Bage%22&start=100",
+            "device": "DESKTOP",
+            "page": 2,
+            "type": "SEARCH",
+            "domain": "google.com",
+            "countryCode": "US",
+            "languageCode": null,
+            "locationUule": null,
+            "resultsPerPage": "100"
+        },
+        "url": "http://www.google.com/search?num=100&q=site%3Alinkedin.com%2Fin%2F%20%22Michael%20Bage%22&start=100",
+        "hasNextPage": false,
+        "serpProviderCode": "O",
+        "resultsTotal": 151,
+        "relatedQueries": [],
+        "paidResults": [],
+        "paidProducts": [],
+        "organicResults": [
+            {
+                "title": "Bruce Wahl - North Texas Municipal Water District",
+                "url": "https://www.linkedin.com/in/bruce-wahl-7408387b",
+                "displayedUrl": "https://www.linkedin.com \u203a ...",
+                "description": "Michael Bage. Mechanic/Service Manager/Co-Owner at Bage Golf Cars. New Smyrna Beach, FL \u00b7 Milleysha Molina. SDPT. Fairfax, VA \u00b7 LeVis Consulting Group.",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Dallas-Fort Worth Metroplex",
+                    "jobTitle": "Construction Inspector",
+                    "companyName": "North Texas Municipal Water District",
+                    "rawText": "Dallas-Fort Worth Metroplex \u00b7 Construction Inspector \u00b7 North Texas Municipal Water District"
+                },
+                "type": "organic",
+                "position": 100
+            },
+            {
+                "title": "Ryanne Murphy Davis - Senior Marketing Coordinator",
+                "url": "https://www.linkedin.com/in/ryanne-m-davis",
+                "displayedUrl": "https://www.linkedin.com \u203a ryanne-m-davis",
+                "description": "Michael Bage. Mechanic/Service Manager/Co-Owner at Bage Golf Cars. New Smyrna Beach, FL \u00b7 Madison Evans. Graphic Designer. Raleigh, NC\u00a0...",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Raleigh, North Carolina, United States",
+                    "jobTitle": "Senior Marketing Coordinator",
+                    "companyName": "Freese and Nichols",
+                    "rawText": "Raleigh, North Carolina, United States \u00b7 Senior Marketing Coordinator \u00b7 Freese and Nichols"
+                },
+                "type": "organic",
+                "position": 101
+            },
+            {
+                "title": "Tj Sawyer",
+                "url": "https://www.linkedin.com/in/tj-sawyer-143b792b",
+                "displayedUrl": "https://www.linkedin.com \u203a ...",
+                "description": "Michael Bage. Business Development Specialist with 25+Years of Safety Experience - Las Vegas, Nevada. Henderson, NV \u00b7 W.D. Layne. Executive Vice President.",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "type": "organic",
+                "position": 102
+            },
+            {
+                "title": "Joe Ruddy - Norfolk, Virginia, United States",
+                "url": "https://www.linkedin.com/in/joe-ruddy-ba305aa",
+                "displayedUrl": "https://www.linkedin.com \u203a ...",
+                "description": "Rob Cannizzaro. Chief Operating Officer at Intermodal Association of North America \u00b7 Kara Matzko. Director of Strategic Accounts \u00b7 MICHAEL BAGE. PRESIDENT at\u00a0...",
+                "emphasizedKeywords": [
+                    "MICHAEL BAGE"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "type": "organic",
+                "position": 103
+            },
+            {
+                "title": "Andrea Swanson - Gourmet Food Server - Aria @City Center",
+                "url": "https://www.linkedin.com/in/andrea-swanson-416962138",
+                "displayedUrl": "https://www.linkedin.com \u203a andrea-swanson-416962138",
+                "description": "Michael Bage. Business Development Specialist with 25+Years of Safety Experience - Las Vegas, Nevada. Henderson, NV \u00b7 Rhea Arzadon.",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Las Vegas, Nevada, United States",
+                    "jobTitle": "Gourmet Food Server",
+                    "companyName": "Aria @City Center",
+                    "rawText": "Las Vegas, Nevada, United States \u00b7 Gourmet Food Server \u00b7 Aria @City Center"
+                },
+                "type": "organic",
+                "position": 104
+            },
+            {
+                "title": "Zander Miller - Marine Engineer - HM Forces",
+                "url": "https://uk.linkedin.com/in/zander-miller-88a178196",
+                "displayedUrl": "https://uk.linkedin.com \u203a ...",
+                "description": "Michael Bage. Capt at HM Forces. United Kingdom \u00b7 Adam Marshall. HSEQ Officer. Kirkcaldy. Explore collaborative articles.",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Rosyth, Scotland, United Kingdom",
+                    "jobTitle": "Marine Engineer",
+                    "companyName": "HM Forces",
+                    "rawText": "Rosyth, Scotland, United Kingdom \u00b7 Marine Engineer \u00b7 HM Forces"
+                },
+                "type": "organic",
+                "position": 105
+            },
+            {
+                "title": "Seth Forti - Purchasing Manager - Crofton Industries",
+                "url": "https://www.linkedin.com/in/sethforti83935449",
+                "displayedUrl": "https://www.linkedin.com \u203a sethforti83935449",
+                "description": "MICHAEL BAGE. PRESIDENT at IMPERIAL CONSTRUCTION & SUPPLY CO. Norfolk, VA \u00b7 Marco A Marcano Soto. City of Norfolk Procurement Specialist,. Norfolk, VA\u00a0...",
+                "emphasizedKeywords": [
+                    "MICHAEL BAGE"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Norfolk, Virginia, United States",
+                    "jobTitle": "Purchasing Manager",
+                    "companyName": "Crofton Industries",
+                    "rawText": "Norfolk, Virginia, United States \u00b7 Purchasing Manager \u00b7 Crofton Industries"
+                },
+                "type": "organic",
+                "position": 106
+            },
+            {
+                "title": "Gary Morgan - Mechanic - D.S.G.",
+                "url": "https://uk.linkedin.com/in/gary-morgan-817ba41b2",
+                "displayedUrl": "https://uk.linkedin.com \u203a ...",
+                "description": "Michael Bage. Mechanic at Noble Drilling. Greater Portsmouth Area \u00b7 steven lomax. mechanic at Monarch Aircraft Engineering. Stockport\u00a0...",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Motherwell, Scotland, United Kingdom",
+                    "jobTitle": "Mechanic",
+                    "companyName": "D.S.G.",
+                    "rawText": "Motherwell, Scotland, United Kingdom \u00b7 Mechanic \u00b7 D.S.G."
+                },
+                "type": "organic",
+                "position": 107
+            },
+            {
+                "title": "W.D. Layne - Ritz Safety",
+                "url": "https://www.linkedin.com/in/w-d-layne-a0199b35",
+                "displayedUrl": "https://www.linkedin.com \u203a ...",
+                "description": "Michael Bage. Business Development Specialist with 25+Years of Safety Experience - Las Vegas, Nevada. Henderson, NV \u00b7 Pawel Albrecht.",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "type": "organic",
+                "position": 108
+            },
+            {
+                "title": "Destiny Beavers - Member of Master Plan Citizens ...",
+                "url": "https://www.linkedin.com/in/destiny-beavers-b647145b",
+                "displayedUrl": "https://www.linkedin.com \u203a ...",
+                "description": "People also viewed. Michael Bage. Business Development Specialist with 25+Years of Safety Experience - Las Vegas, Nevada. Henderson, NV \u00b7 Neil Johnstone.",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "type": "organic",
+                "position": 109
+            },
+            {
+                "title": "Joel Thomas - Superintendent - BRNB Construction",
+                "url": "https://www.linkedin.com/in/joel-thomas-971243b4",
+                "displayedUrl": "https://www.linkedin.com \u203a ...",
+                "description": "Michael Bage. Mechanic/Service Manager/Co-Owner at Bage Golf Cars. New Smyrna Beach, FL \u00b7 Julian Hernandez. TBA at NO-DIGTEC, LLC. Dallas, TX\u00a0...",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Arlington, Texas, United States",
+                    "jobTitle": "Superintendent",
+                    "companyName": "BRNB Construction",
+                    "rawText": "Arlington, Texas, United States \u00b7 Superintendent \u00b7 BRNB Construction"
+                },
+                "type": "organic",
+                "position": 110
+            },
+            {
+                "title": "Herb Niles - Board Member - HBPL",
+                "url": "https://www.linkedin.com/in/herb-niles-269b271a6",
+                "displayedUrl": "https://www.linkedin.com \u203a ...",
+                "description": "People also viewed \u00b7 Wallace Ronda \u00b7 katinka nugteren \u00b7 Chalsey Falk \u00b7 Sam Vaudrey \u00b7 Michael Bage \u00b7 Gavin Boorman \u00b7 Muhammed Gurhan Yerlikaya \u00b7 Wilian Glooriaa.",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Huntington Beach, California, United States",
+                    "jobTitle": "Board Member",
+                    "companyName": "HBPL",
+                    "rawText": "Huntington Beach, California, United States \u00b7 Board Member \u00b7 HBPL"
+                },
+                "type": "organic",
+                "position": 111
+            },
+            {
+                "title": "Sean Douple - Vice President of Operations - Ritz Safety",
+                "url": "https://www.linkedin.com/in/sean-douple-5b4239217",
+                "displayedUrl": "https://www.linkedin.com \u203a ...",
+                "description": "Michael Bage. Business Development Specialist with 25+Years of Safety Experience - Las Vegas, Nevada. Henderson, NV. Explore collaborative articles.",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Dayton, Ohio, United States",
+                    "jobTitle": "Vice President of Operations",
+                    "companyName": "Ritz Safety",
+                    "rawText": "Dayton, Ohio, United States \u00b7 Vice President of Operations \u00b7 Ritz Safety"
+                },
+                "type": "organic",
+                "position": 112
+            },
+            {
+                "title": "Paul Scott - Airframe and Powerplant Mechanic - VT Group",
+                "url": "https://uk.linkedin.com/in/paul-scott-48b093194",
+                "displayedUrl": "https://uk.linkedin.com \u203a ...",
+                "description": "People also viewed \u00b7 Jordan Colclough \u00b7 Pauliasi Veibulinaturaga \u00b7 Jason Thayer \u00b7 Michael Bage \u00b7 david harcus Eng Tech, AFCGI, MSOE, MIRTE, LGCI \u00b7 Oliver Powell \u00b7 Tony\u00a0...",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Greater Lincoln Area, United Kingdom",
+                    "jobTitle": "Airframe and Powerplant Mechanic",
+                    "companyName": "VT Group",
+                    "rawText": "Greater Lincoln Area, United Kingdom \u00b7 Airframe and Powerplant Mechanic \u00b7 VT Group"
+                },
+                "type": "organic",
+                "position": 113
+            },
+            {
+                "title": "Gordon McAndrew \u2013 Early Retired \u2013 Ex Ministry of Defence",
+                "url": "https://de.linkedin.com/in/gordon-mcandrew-2151543a",
+                "displayedUrl": "https://de.linkedin.com \u203a ...",
+                "description": "Ian Dale IEng MSOE MIRTE NILM. Maintenance Manager at Australian Defence Force \u00b7 Kirk Evans. Groundwork at Rnm \u00b7 Michael Bage. Capt at HM Forces \u00b7 John Morris.",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "type": "organic",
+                "position": 114
+            },
+            {
+                "title": "Anthony J Paparella - Branch Manager - United Land ...",
+                "url": "https://www.linkedin.com/in/anthony-j-paparella-976934180",
+                "displayedUrl": "https://www.linkedin.com \u203a anthony-j-paparella-976934...",
+                "description": "Michael Bage. Mechanic/Service Manager/Co-Owner at Bage Golf Cars. New Smyrna Beach, FL \u00b7 Christine Westenhaver. University of Florida Agricultural\u00a0...",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Port St Lucie, Florida, United States",
+                    "jobTitle": "Branch Manager",
+                    "companyName": "United Land Services",
+                    "rawText": "Port St Lucie, Florida, United States \u00b7 Branch Manager \u00b7 United Land Services"
+                },
+                "type": "organic",
+                "position": 115
+            },
+            {
+                "title": "Joe McDonald - Owner - Show Me Breakers",
+                "url": "https://www.linkedin.com/in/joe-mcdonald-7a3419125",
+                "displayedUrl": "https://www.linkedin.com \u203a ...",
+                "description": "He is an asset wherever he goes and whatever he does.\u201d Click here to view MICHAEL BAGE's profile. MICHAEL BAGE. \u201cJOE IS A GOOD SALESMAN AND GOOD\u00a0...",
+                "emphasizedKeywords": [
+                    "MICHAEL BAGE's",
+                    "MICHAEL BAGE"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Poplar Bluff, Missouri, United States",
+                    "jobTitle": "Owner",
+                    "companyName": "Show Me Breakers",
+                    "rawText": "Poplar Bluff, Missouri, United States \u00b7 Owner \u00b7 Show Me Breakers"
+                },
+                "type": "organic",
+                "position": 116
+            },
+            {
+                "title": "Julian Hernandez - TBA - NO-DIGTEC, LLC",
+                "url": "https://www.linkedin.com/in/julian-hernandez-6a8399119",
+                "displayedUrl": "https://www.linkedin.com \u203a ...",
+                "description": "Operations Manager at Veilux Inc. Grand Prairie, TX \u00b7 Michael Bage. Mechanic/Service Manager/Co-Owner at Bage Golf Cars. New\u00a0...",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Dallas, Texas, United States",
+                    "jobTitle": "TBA",
+                    "companyName": "NO-DIGTEC, LLC",
+                    "rawText": "Dallas, Texas, United States \u00b7 TBA \u00b7 NO-DIGTEC, LLC"
+                },
+                "type": "organic",
+                "position": 117
+            },
+            {
+                "title": "Tim Begole (Jr) - CMT Department Manager - Alpha Testing",
+                "url": "https://www.linkedin.com/in/tim-begole-jr-26635a10",
+                "displayedUrl": "https://www.linkedin.com \u203a ...",
+                "description": "Michael Bage. Mechanic/Service Manager/Co-Owner at Bage Golf Cars. New Smyrna Beach, FL \u00b7 Julian Hernandez. TBA at NO-DIGTEC, LLC. Dallas, TX\u00a0...",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "type": "organic",
+                "position": 118
+            },
+            {
+                "title": "Matt Cody - Materials Testing and Inspection - GeoStrata LLC",
+                "url": "https://www.linkedin.com/in/matt-cody-70332a42",
+                "displayedUrl": "https://www.linkedin.com \u203a ...",
+                "description": "People also viewed \u00b7 Kayla Tucker \u00b7 Jared H Stapp \u00b7 Rajendra shah \u00b7 Jim Dunn \u00b7 Dan Savage \u00b7 Michael Bage \u00b7 Jeremy O'Burke, P.E. \u00b7 Tricia Marie Basinski.",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Riverton, Utah, United States",
+                    "jobTitle": "Materials Testing and Inspection",
+                    "companyName": "GeoStrata LLC",
+                    "rawText": "Riverton, Utah, United States \u00b7 Materials Testing and Inspection \u00b7 GeoStrata LLC"
+                },
+                "type": "organic",
+                "position": 119
+            },
+            {
+                "title": "Jasmine Whitby - Customer Service Operator - HealthHero",
+                "url": "https://uk.linkedin.com/in/jasmine-whitby-63889a210",
+                "displayedUrl": "https://uk.linkedin.com \u203a ...",
+                "description": "People also viewed \u00b7 MICHAEL BAGE. PRESIDENT at IMPERIAL CONSTRUCTION & SUPPLY CO \u00b7 Peter Ramgolam. St Johns University \u00b7 Wei Shi. Software Engineer at Arctrade\u00a0...",
+                "emphasizedKeywords": [
+                    "MICHAEL BAGE"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "type": "organic",
+                "position": 120
+            },
+            {
+                "title": "Peter West - Team Leader - HM Forces",
+                "url": "https://uk.linkedin.com/in/peter-west-4268374a?trk=public_profile_featured_profiles_mini-profile_title",
+                "displayedUrl": "https://uk.linkedin.com \u203a ...",
+                "description": "Michael Bage. Capt at HM Forces. United Kingdom \u00b7 gareth evans. soldier at HM Forces. Greater Oxford Area \u00b7 Steve Bauress. Site Manager at G.LOOSEMORE & SON\u00a0...",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Greater Exeter Area",
+                    "jobTitle": "Team Leader",
+                    "companyName": "HM Forces",
+                    "rawText": "Greater Exeter Area \u00b7 Team Leader \u00b7 HM Forces"
+                },
+                "type": "organic",
+                "position": 121
+            },
+            {
+                "title": "Marco A Marcano Soto - Procurement Specialist",
+                "url": "https://www.linkedin.com/in/marco-a-marcano-soto-24720820",
+                "displayedUrl": "https://www.linkedin.com \u203a marco-a-marcano-soto-2472...",
+                "description": "People also viewed \u00b7 MICHAEL BAGE. PRESIDENT at IMPERIAL CONSTRUCTION & SUPPLY CO \u00b7 Jonathan Johnson. Warehouse/Logistics Supervisor at IGM Resins \u00b7 LaCosher\u00a0...",
+                "emphasizedKeywords": [
+                    "MICHAEL BAGE"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Norfolk, Virginia, United States",
+                    "jobTitle": "Procurement Specialist",
+                    "companyName": "City of Norfolk, VA",
+                    "rawText": "Norfolk, Virginia, United States \u00b7 Procurement Specialist \u00b7 City of Norfolk, VA"
+                },
+                "type": "organic",
+                "position": 122
+            },
+            {
+                "title": "Stu Vickrage - Field Services Superintendent - W\u00e4rtsil\u00e4",
+                "url": "https://uk.linkedin.com/in/stu-vickrage-82bb9650",
+                "displayedUrl": "https://uk.linkedin.com \u203a ...",
+                "description": "People also viewed. Michael Bage. Mechanic at Noble Drilling. Greater Portsmouth Area \u00b7 Gareth Franklin. marine service engineer at Royal Navy. Whiteley\u00a0...",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Greater Dundee Area",
+                    "jobTitle": "Field Services Superintendent",
+                    "companyName": "W\u00e4rtsil\u00e4",
+                    "rawText": "Greater Dundee Area \u00b7 Field Services Superintendent \u00b7 W\u00e4rtsil\u00e4"
+                },
+                "type": "organic",
+                "position": 123
+            },
+            {
+                "title": "paul kinnaird - trainer - pk fitness",
+                "url": "https://uk.linkedin.com/in/paul-kinnaird-34768349",
+                "displayedUrl": "https://uk.linkedin.com \u203a paul-kinnaird-34768349",
+                "description": "Michael Bage. Capt at HM Forces. United Kingdom. Explore collaborative articles. We're unlocking community knowledge in a new way.",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Glasgow, Scotland, United Kingdom",
+                    "jobTitle": "trainer",
+                    "companyName": "pk fitness",
+                    "rawText": "Glasgow, Scotland, United Kingdom \u00b7 trainer \u00b7 pk fitness"
+                },
+                "type": "organic",
+                "position": 124
+            },
+            {
+                "title": "Travis Hatmaker - Buyer - Ritz Safety",
+                "url": "https://www.linkedin.com/in/travis-hatmaker-59552b98",
+                "displayedUrl": "https://www.linkedin.com \u203a ...",
+                "description": "Michael Bage. Business Development Specialist with 25+Years of Safety Experience - Las Vegas, Nevada. Henderson, NV \u00b7 Daniel Crotty.",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Springboro, Ohio, United States",
+                    "jobTitle": "Buyer",
+                    "companyName": "Ritz Safety",
+                    "rawText": "Springboro, Ohio, United States \u00b7 Buyer \u00b7 Ritz Safety"
+                },
+                "type": "organic",
+                "position": 125
+            },
+            {
+                "title": "Jacob Crawford - Ritz Safety",
+                "url": "https://www.linkedin.com/in/the-jacob-crawford",
+                "displayedUrl": "https://www.linkedin.com \u203a the-jacob-crawford",
+                "description": "Michael Bage. Business Development Specialist with 25+Years of Safety Experience - Las Vegas, Nevada. Henderson, NV \u00b7 Donovan Scioneaux.",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "type": "organic",
+                "position": 126
+            },
+            {
+                "title": "Drew Foreman - Design Engineer - Dynamic ...",
+                "url": "https://www.linkedin.com/in/drew-foreman-477872163",
+                "displayedUrl": "https://www.linkedin.com \u203a drew-foreman-477872163",
+                "description": "Michael Bage. Mechanic/Service Manager/Co-Owner at Bage Golf Cars. New Smyrna Beach, FL \u00b7 Kristen Holden. Assistant Controller at Dynamic Engineering\u00a0...",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Delray Beach, Florida, United States",
+                    "jobTitle": "Design Engineer",
+                    "companyName": "Dynamic Engineering Consultants, PC",
+                    "rawText": "Delray Beach, Florida, United States \u00b7 Design Engineer \u00b7 Dynamic Engineering Consultants, PC"
+                },
+                "type": "organic",
+                "position": 127
+            },
+            {
+                "title": "Scott Stephenson - Section Manager",
+                "url": "https://uk.linkedin.com/in/scott-stephenson-93536a18",
+                "displayedUrl": "https://uk.linkedin.com \u203a ...",
+                "description": "Michael Bage. Mechanic at Noble Drilling. Greater Portsmouth Area \u00b7 Sarah Pearce. Events Management Officer University of Greenwich. London\u00a0...",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Shrewsbury, England, United Kingdom",
+                    "jobTitle": "Section Manager",
+                    "companyName": "CATERPILLAR SHREWSBURY LIMITED",
+                    "rawText": "Shrewsbury, England, United Kingdom \u00b7 Section Manager \u00b7 CATERPILLAR SHREWSBURY LIMITED"
+                },
+                "type": "organic",
+                "position": 128
+            },
+            {
+                "title": "Alex Park - General Manager Operations - Port Taranaki",
+                "url": "https://nz.linkedin.com/in/alexwjpark",
+                "displayedUrl": "https://nz.linkedin.com \u203a alexwjpark",
+                "description": "Michael Bage. Mechanic at Noble Drilling. Greater Portsmouth Area \u00b7 Marie Waite. Maintenance Administrator/Planner at Fonterra. New Zealand\u00a0...",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "New Zealand",
+                    "jobTitle": "General Manager Operations",
+                    "companyName": "Port Taranaki",
+                    "rawText": "New Zealand \u00b7 General Manager Operations \u00b7 Port Taranaki"
+                },
+                "type": "organic",
+                "position": 129
+            },
+            {
+                "title": "Heather Hans - Accounting Specialist - Ritz Safety",
+                "url": "https://www.linkedin.com/in/heather-hans-189188236",
+                "displayedUrl": "https://www.linkedin.com \u203a heather-hans-189188236",
+                "description": "Michael Bage. Business Development Specialist with 25+Years of Safety Experience - Las Vegas, Nevada. Henderson, NV \u00b7 Kris Gant. HR Administrator at Ritz\u00a0...",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Miamisburg, Ohio, United States",
+                    "jobTitle": "Accounting Specialist",
+                    "companyName": "Ritz Safety",
+                    "rawText": "Miamisburg, Ohio, United States \u00b7 Accounting Specialist \u00b7 Ritz Safety"
+                },
+                "type": "organic",
+                "position": 130
+            },
+            {
+                "title": "Edilson Chimilovski",
+                "url": "https://ca.linkedin.com/in/edilson-chimilovski-13766113",
+                "displayedUrl": "https://ca.linkedin.com \u203a edilson-chimilovski-13766113",
+                "description": "MICHAEL BAGE. PRESIDENT at IMPERIAL CONSTRUCTION & SUPPLY CO. Norfolk, VA \u00b7 Jeff Ouhl. VP Operations at Votorantim Cimentos North America. Detroit, MI\u00a0...",
+                "emphasizedKeywords": [
+                    "MICHAEL BAGE"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Greater Toronto Area, Canada",
+                    "jobTitle": "St Marys Cement Inc",
+                    "rawText": "Greater Toronto Area, Canada \u00b7 St Marys Cement Inc"
+                },
+                "type": "organic",
+                "position": 131
+            },
+            {
+                "title": "Ian Dryburgh MSc - Base Warrant Officer - Royal Navy",
+                "url": "https://uk.linkedin.com/in/ian-dryburgh-msc-a0306918",
+                "displayedUrl": "https://uk.linkedin.com \u203a ian-dryburgh-msc-a0306918",
+                "description": "Michael Bage. Mechanic at Noble Drilling. Greater Portsmouth Area \u00b7 Craig Davies MISTC LCGI. Navy Editor at NWP. Fareham\u00a0...",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Skipton, England, United Kingdom",
+                    "jobTitle": "Base Warrant Officer",
+                    "companyName": "Royal Navy",
+                    "rawText": "Skipton, England, United Kingdom \u00b7 Base Warrant Officer \u00b7 Royal Navy"
+                },
+                "type": "organic",
+                "position": 132
+            },
+            {
+                "title": "Andrew Davis - Service Manager - Sunbelt Fire",
+                "url": "https://www.linkedin.com/in/andrew-davis-9bba6819",
+                "displayedUrl": "https://www.linkedin.com \u203a ...",
+                "description": "Michael Bage. Business Development Specialist with 25+Years of Safety Experience - Las Vegas, Nevada. Henderson, NV \u00b7 Donovan Scioneaux.",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Mobile Metropolitan Area",
+                    "jobTitle": "Service Manager",
+                    "companyName": "Sunbelt Fire",
+                    "rawText": "Mobile Metropolitan Area \u00b7 Service Manager \u00b7 Sunbelt Fire"
+                },
+                "type": "organic",
+                "position": 133
+            },
+            {
+                "title": "Peter Chen - Software Development Engineer - Amazon",
+                "url": "https://www.linkedin.com/in/peter-chen-76b615133",
+                "displayedUrl": "https://www.linkedin.com \u203a ...",
+                "description": "MICHAEL BAGE. PRESIDENT at IMPERIAL CONSTRUCTION & SUPPLY CO. Norfolk, VA \u00b7 Chen michael. Software Engineer at Whirlpool Corporation. Shenzhen\u00a0...",
+                "emphasizedKeywords": [
+                    "MICHAEL BAGE"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Seattle, Washington, United States",
+                    "jobTitle": "Software Development Engineer",
+                    "companyName": "Amazon",
+                    "rawText": "Seattle, Washington, United States \u00b7 Software Development Engineer \u00b7 Amazon"
+                },
+                "type": "organic",
+                "position": 134
+            },
+            {
+                "title": "John Colquitt - Managing Director - Renewable Fuels L.L.C",
+                "url": "https://www.linkedin.com/in/johncolquitt",
+                "displayedUrl": "https://www.linkedin.com \u203a johncolquitt",
+                "description": "People also viewed \u00b7 Peeter Volke. CEO at United Loggers Ltd \u00b7 Lakshay (. Founder & CEO at Bigshot Consulting \u00b7 MICHAEL BAGE. PRESIDENT at IMPERIAL CONSTRUCTION &\u00a0...",
+                "emphasizedKeywords": [
+                    "MICHAEL BAGE"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Savannah, Georgia, United States",
+                    "jobTitle": "Managing Director",
+                    "companyName": "Renewable Fuels L.L.C",
+                    "rawText": "Savannah, Georgia, United States \u00b7 Managing Director \u00b7 Renewable Fuels L.L.C"
+                },
+                "type": "organic",
+                "position": 135
+            },
+            {
+                "title": "mitchell kauley - Operations Shift Manager - Kickapoo Casino",
+                "url": "https://www.linkedin.com/in/mitchell-kauley-622a70b4",
+                "displayedUrl": "https://www.linkedin.com \u203a ...",
+                "description": "MICHAEL BAGE. PRESIDENT at IMPERIAL CONSTRUCTION & SUPPLY CO. Norfolk, VA \u00b7 Russell Sanders. -- WE BUY HOUSES, FAST CASH, WHOLESALERS GET PAID$$$$\u00a0...",
+                "emphasizedKeywords": [
+                    "MICHAEL BAGE"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "type": "organic",
+                "position": 136
+            },
+            {
+                "title": "Megan McDonald - Concordia University-Portland",
+                "url": "https://www.linkedin.com/in/megan-mcdonald-58581b5b",
+                "displayedUrl": "https://www.linkedin.com \u203a ...",
+                "description": "Michael Bage. Business Development Specialist with 25+Years of Safety Experience - Las Vegas, Nevada. Henderson, NV \u00b7 Tom Dotson.",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "type": "organic",
+                "position": 137
+            },
+            {
+                "title": "Stefan Knudsen \u2013 S\u00e6lger \u2013 Maskiner A/S",
+                "url": "https://dk.linkedin.com/in/stefan-knudsen-3394a0b1",
+                "displayedUrl": "https://dk.linkedin.com \u203a ...",
+                "description": "Michael Bage. Business Development Specialist with 25+Years of Safety Experience - Las Vegas, Nevada. Henderson, NV. Andre med navnet Stefan Knudsen i\u00a0...",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Skjern, Midtjylland, Danmark",
+                    "jobTitle": "S\u00e6lger",
+                    "companyName": "Maskiner A/S",
+                    "rawText": "Skjern, Midtjylland, Danmark \u00b7 S\u00e6lger \u00b7 Maskiner A/S"
+                },
+                "type": "organic",
+                "position": 138
+            },
+            {
+                "title": "lisen b\u00e5ge - Micha\u00ebl Berglund Board Value AB",
+                "url": "https://se.linkedin.com/in/lisen-b%C3%A5ge-56b37a83",
+                "displayedUrl": "https://se.linkedin.com \u203a ...",
+                "description": "michael bage. -- \u00b7 Michael Bage. Capt at HM Forces \u00b7 Susanna Zeko. Secretary General and CEO at ICC Sweden \u00b7 Jacob Heneby. Global Markets Analyst at Cr\u00e9dit\u00a0...",
+                "emphasizedKeywords": [
+                    "michael bage",
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Greater Stockholm Metropolitan Area",
+                    "jobTitle": "utbildningsansvarig",
+                    "companyName": "Micha\u00ebl Berglund Board Value AB",
+                    "rawText": "Greater Stockholm Metropolitan Area \u00b7 utbildningsansvarig \u00b7 Micha\u00ebl Berglund Board Value AB"
+                },
+                "type": "organic",
+                "position": 139
+            },
+            {
+                "title": "Erik Wilking - Medical Doctor (Underl\u00e4kare)",
+                "url": "https://se.linkedin.com/in/erik-wilking-245251127",
+                "displayedUrl": "https://se.linkedin.com \u203a erik-wilkin...",
+                "description": "michael bage. --. Storbritannien och Nordirland \u00b7 Christian Zieth\u00e9n. Underl\u00e4kare at Stockholms Sjukhem ... Michael B\u00e5ge. --. Stockholm \u00b7 Karl Steinsvik.",
+                "emphasizedKeywords": [
+                    "michael bage",
+                    "Michael B\u00e5ge"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "type": "organic",
+                "position": 140
+            },
+            {
+                "title": "Erland Berninge - Project Manager - Voltiva AB",
+                "url": "https://se.linkedin.com/in/erland-berninge-7734205",
+                "displayedUrl": "https://se.linkedin.com \u203a erland-ber...",
+                "description": "Michael Bage. Capt at HM Forces. Storbritannien och Nordirland \u00b7 Max Olin. Seglarskolechef p\u00e5 Tr\u00e4lhavets B\u00e5tklubb. Stockholm\u00a0...",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Stockholm, Stockholm, Sverige",
+                    "jobTitle": "Project Manager",
+                    "companyName": "Voltiva AB",
+                    "rawText": "Stockholm, Stockholm, Sverige \u00b7 Project Manager \u00b7 Voltiva AB"
+                },
+                "type": "organic",
+                "position": 141
+            },
+            {
+                "title": "Ulrica Bergkvist - Bygglovskoordinator - \u00d6ster\u00e5kers kommun",
+                "url": "https://se.linkedin.com/in/ulrica-bergkvist-675309140",
+                "displayedUrl": "https://se.linkedin.com \u203a ulrica-berg...",
+                "description": "Andra har \u00e4ven bes\u00f6kt. Michael Bage. Capt at HM Forces. Storbritannien och Nordirland \u00b7 Max Olin. Seglarskolechef p\u00e5 Tr\u00e4lhavets B\u00e5tklubb. Stockholm\u00a0...",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Stockholm, Stockholm, Sverige",
+                    "jobTitle": "Bygglovskoordinator",
+                    "companyName": "\u00d6ster\u00e5kers kommun",
+                    "rawText": "Stockholm, Stockholm, Sverige \u00b7 Bygglovskoordinator \u00b7 \u00d6ster\u00e5kers kommun"
+                },
+                "type": "organic",
+                "position": 142
+            },
+            {
+                "title": "Max Olin - Front Desk Receptionist - Radisson Hotel Group",
+                "url": "https://se.linkedin.com/in/max-olin-803b16218",
+                "displayedUrl": "https://se.linkedin.com \u203a ...",
+                "description": "Michael Bage. Capt at HM Forces. Storbritannien och Nordirland \u00b7 Edith Grundberg. Studerar flitigt. Greater Stockholm Metropolitan Area\u00a0...",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "type": "organic",
+                "position": 143
+            },
+            {
+                "title": "Jesper Bergkvist - Lagermedarbetare - Mio AB",
+                "url": "https://se.linkedin.com/in/jesper-bergkvist-bb8485183",
+                "displayedUrl": "https://se.linkedin.com \u203a jesper-ber...",
+                "description": "Andra har \u00e4ven bes\u00f6kt \u00b7 Kim Hedberg. Kundservicemedarbetare p\u00e5 Mio AB \u00b7 Theo Klinga. Student p\u00e5 Link\u00f6pings universitet \u00b7 Michael Bage. Capt at HM Forces \u00b7 Max Olin.",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Stockholm, Sverige",
+                    "jobTitle": "Lagermedarbetare",
+                    "companyName": "Mio AB",
+                    "rawText": "Stockholm, Sverige \u00b7 Lagermedarbetare \u00b7 Mio AB"
+                },
+                "type": "organic",
+                "position": 144
+            },
+            {
+                "title": "Filip Lindkvist - Humboldt-Universit\u00e4t zu Berlin",
+                "url": "https://se.linkedin.com/in/filip-lindkvist-010619198",
+                "displayedUrl": "https://se.linkedin.com \u203a filip-lindk...",
+                "description": "Andra har \u00e4ven bes\u00f6kt \u00b7 Gustaf Ivarsson \u00b7 Ulrica Bergkvist \u00b7 Edvin Causevic \u00b7 Anton Berggren \u00b7 Michael Bage \u00b7 Arwin Azizi \u00b7 Loke Fransson \u00b7 Max Olin.",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "type": "organic",
+                "position": 145
+            },
+            {
+                "title": "Mats Edberg - Owner - Edberginnovation AB",
+                "url": "https://se.linkedin.com/in/mats-edberg-29292442",
+                "displayedUrl": "https://se.linkedin.com \u203a mats-edber...",
+                "description": "Michael Bage. Capt at HM Forces. Storbritannien och Nordirland \u00b7 Din Sirco. Founder/ Owner AdvaMach AB. Sk\u00e5ne, Sverige\u00a0...",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Sk\u00e5ne, Sverige",
+                    "jobTitle": "Owner",
+                    "companyName": "Edberginnovation AB",
+                    "rawText": "Sk\u00e5ne, Sverige \u00b7 Owner \u00b7 Edberginnovation AB"
+                },
+                "type": "organic",
+                "position": 146
+            },
+            {
+                "title": "Mats Edberg, PMP - Greater Stockholm Metropolitan Area",
+                "url": "https://se.linkedin.com/in/mats-edberg-pmp-b80542",
+                "displayedUrl": "https://se.linkedin.com \u203a mats-edber...",
+                "description": "Michael Bage. Capt at HM Forces. Storbritannien och Nordirland \u00b7 J\u00f6rgen H\u00e4llstrand. IT Service Manager at Billerud. Greater Norrk\u00f6ping Metropolitan Area\u00a0...",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "type": "organic",
+                "position": 147
+            },
+            {
+                "title": "David Vesterberg - Operations Advisor - Qliro",
+                "url": "https://se.linkedin.com/in/david-vesterberg-b2b7b41a9",
+                "displayedUrl": "https://se.linkedin.com \u203a ...",
+                "description": "Michael Bage. Capt at HM Forces. Storbritannien och Nordirland \u00b7 Adrian Mirgolozar. F\u00f6rs\u00e4kringsutredare p\u00e5 F\u00f6rs\u00e4kringskassan. V\u00e4ster\u00e5s \u00b7 Kazem Yaqoobi.",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Stockholm, Stockholm, Sverige",
+                    "jobTitle": "Operations Advisor",
+                    "companyName": "Qliro",
+                    "rawText": "Stockholm, Stockholm, Sverige \u00b7 Operations Advisor \u00b7 Qliro"
+                },
+                "type": "organic",
+                "position": 148
+            },
+            {
+                "title": "Lisen B\u00e5ge - CEO & Founder - B\u00e5ge & S\u00f6ner",
+                "url": "https://se.linkedin.com/in/lisen-b%C3%A5ge-82517289",
+                "displayedUrl": "https://se.linkedin.com \u203a lisen-b\u00e5ge-...",
+                "description": "michael bage. --. Storbritannien och Nordirland \u00b7 Giacomo Marongiu. Cabin Crew - Supervisor. Stockholm \u00b7 Anna Birke. Partner p\u00e5 Birke. Stockholm, Sverige\u00a0...",
+                "emphasizedKeywords": [
+                    "michael bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "Greater Stockholm Metropolitan Area",
+                    "jobTitle": "CEO & Founder",
+                    "companyName": "B\u00e5ge & S\u00f6ner",
+                    "rawText": "Greater Stockholm Metropolitan Area \u00b7 CEO & Founder \u00b7 B\u00e5ge & S\u00f6ner"
+                },
+                "type": "organic",
+                "position": 149
+            },
+            {
+                "title": "Eric Fraser - Ekonomiassistent - Axfood",
+                "url": "https://se.linkedin.com/in/eric-fraser-765a04200",
+                "displayedUrl": "https://se.linkedin.com \u203a ...",
+                "description": "Michael Bage. Capt at HM Forces. Storbritannien och Nordirland. Andra med namnet Eric Fraser. Eric Fraser. Directeur Strat\u00e9gies r\u00e9glementaires et tarifaires.",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "personalInfo": {
+                    "location": "J\u00f6nk\u00f6ping, J\u00f6nk\u00f6ping, Sverige",
+                    "jobTitle": "Ekonomiassistent",
+                    "companyName": "Axfood",
+                    "rawText": "J\u00f6nk\u00f6ping, J\u00f6nk\u00f6ping, Sverige \u00b7 Ekonomiassistent \u00b7 Axfood"
+                },
+                "type": "organic",
+                "position": 150
+            },
+            {
+                "title": "Linnea H\u00e5kansson - Vice Ordf\u00f6rande",
+                "url": "https://se.linkedin.com/in/linnea-h%C3%A5kansson-advocacy-manager",
+                "displayedUrl": "https://se.linkedin.com \u203a linnea-h\u00e5k...",
+                "description": "Michael Bage. Capt at HM Forces. Storbritannien och Nordirland \u00b7 Anneke Kooijmans. Stage begeleider bij APPELLA DIAKONEssenhuis. Bedum\u00a0...",
+                "emphasizedKeywords": [
+                    "Michael Bage"
+                ],
+                "siteLinks": [],
+                "productInfo": {},
+                "type": "organic",
+                "position": 151
+            }
+        ],
+        "peopleAlsoAsk": [],
+        "customData": {
+            "pageTitle": "site:linkedin.com/in/ \"Michael Bage\" - Google Search"
+        }
+    }
+]
