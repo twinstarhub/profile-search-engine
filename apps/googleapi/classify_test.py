@@ -118,7 +118,7 @@ instagram()
 # print(list)
 calc_similar()
 
-# input("bbb")
+
 
 print(result_list)
 print(len(result_list))

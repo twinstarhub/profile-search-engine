@@ -11,7 +11,7 @@ list4 = ["I like hiking in the mountains", "Nature is beautiful", "Hiking is goo
 
 
 # Encode the sentences into embeddings for all 100 lists
-all_embeddings = [model.encode(lst, convert_to_tensor=True) for lst in [list1, list2, ..., list100]]
+all_embeddings = [model.encode(lst, convert_to_tensor=True) for lst in [list1, list2, ..., list4]]
 all_sentences = [list1, list2, list3, list4]
 
 # Calculate the similarity between all combinations of one sentence from each list
