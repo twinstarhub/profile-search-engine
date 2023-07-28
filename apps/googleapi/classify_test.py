@@ -2,127 +2,87 @@ import spacy
 import json
 import time
 
-start = time.time()
 # Load pre-trained model
 nlp = spacy.load("en_core_web_md")
 
-list = []
-
-result_list = []
+result_dict = {}
 
 
-def linkedin():
-    with open('linkedin.json', "r") as file:
-        result = []
+def extract_data_from_json(filename, key):
+    with open(filename, "r", encoding="utf-8") as file:
         data = json.load(file)
-        sort_result = data[0]['organicResults']
-
-        for item in sort_result:
-            if len(item) == 0:
-                continue
-            else:
-                result.append([item["description"], item["url"]])
-
-        list.append(result)
+        return data.get(key, [])
 
 
-def instagram():
-    with open('instagram.json', "r", encoding="utf-8") as file:
-        result = []
-        data = json.load(file)
-        sort_result = data
-
-        for item in sort_result:
-            if len(item) == 0:
-                continue
-            else:
-                result.append([item["description"], item["url"]])
-
-        list.append(result)
+def extract_linkedin_data():
+    result_dict["linkedin"] = extract_data_from_json("linkedin.json", "organicResults")
 
 
-def tiktok():
-    with open('tiktok.json', "r", encoding="utf-8") as file:
-        result = []
-        data = json.load(file)
-        sort_result = data
-
-        for item in sort_result:
-            if len(item) == 0:
-                continue
-            else:
-                result.append([item["description"],item["url"]])
-
-        list.append(result)
+def extract_instagram_data():
+    result_dict["instagram"] = extract_data_from_json("instagram.json", "")
 
 
-def twitter():
-    with open('twitter.json', "r") as file:
-        result = []
-        data = json.load(file)
-        sort_result = data[0]['organicResults']
-
-        for item in sort_result:
-            if len(item) == 0:
-                continue
-            else:
-                result.append([item["description"],item["url"]])
-
-        list.append(result)
+def extract_tiktok_data():
+    result_dict["tiktok"] = extract_data_from_json("tiktok.json", "")
 
 
-def youtube():
-    with open('youtube.json', "r", encoding="utf-8") as file:
-        result = []
-        data = json.load(file)
-        sort_result = data[0]['organicResults']
+def extract_twitter_data():
+    result_dict["twitter"] = extract_data_from_json("twitter.json", "organicResults")
 
-        for item in sort_result:
-            if len(item) == 0:
-                continue
-            else:
-                result.append([item["description"],item["url"]])
 
-        list.append(result)
+def extract_youtube_data():
+    result_dict["youtube"] = extract_data_from_json("youtube.json", "organicResults")
 
 
 def calc_similar():
-    for main in list[0]:
+    result_list = []
+    websites = list(result_dict.keys())
+
+    for main_website in websites:
+        main_results = result_dict[main_website]
         result = []
-        for group_number in range(1, len(list)):
-            sen1 = nlp(main[0])
-            mylist = list[group_number]
-            for item in mylist:
-                sen2 = nlp(item[0])
+
+        for website in websites:
+            if website == main_website:
+                continue
+
+            other_results = result_dict[website]
+            for item in other_results[:]:
+                sen1 = nlp(main_results[0]["description"])
+                sen2 = nlp(item["description"])
                 try:
                     similarity = sen1.similarity(sen2)
-                    # print(similarity)
                     if similarity > 0.7:
-                        list[group_number].remove(item)
-                        result.append(item[1])
+                        other_results.remove(item)
+                        result.append(item["url"])
                         break
                 except:
                     pass
 
-        if len(result) > 0:
-            result.insert(0, main[1])
-            # list[0].remove(main)
+        if result:
+            result.insert(0, main_results[0]["url"])
             result_list.append(result)
 
-
-linkedin()
-tiktok()
-twitter()
-youtube()
-instagram()
-# print(list)
-calc_similar()
+    return result_list
 
 
+def main():
+    start = time.time()
 
-print(result_list)
-print(len(result_list))
+    extract_linkedin_data()
+    extract_tiktok_data()
+    extract_twitter_data()
+    extract_youtube_data()
+    extract_instagram_data()
 
-end = time.time()
+    result_list = calc_similar()
 
-print("running time", end - start)
+    print(result_list)
+    print(len(result_list))
+
+    end = time.time()
+    print("running time", end - start)
+
+
+if __name__ == "__main__":
+    main()

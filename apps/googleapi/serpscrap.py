@@ -3,6 +3,7 @@ import os
 import time
 import logging
 from apps.googleapi.actor import Actor
+from apps.ugen.generator import UserNameGenerator
 
 class Serpscrap():
     def __init__(self, query, *args, **kwargs):
@@ -39,4 +40,19 @@ class Serpscrap():
         insta_actor = Actor("instagram-profile-scraper",run_input)
         return insta_actor.run_actor()
 
-    
+    def generate_usernames(self):
+        # Create a UserNameGenerator instance and generate usernames
+        generator = UserNameGenerator(fullname, favorite, birthday, count)
+        all_usernames = generator.cycle_usernames()
+        return all_usernames
+
+    def integrate_google_search_result(self, all_usernames):
+        # Initialize a list to store the search results for each username
+        search_results = []
+
+        # Loop through each username and scrape Google search results
+        for username in all_usernames:
+            search_result = self.scrap_google_search_result(username)
+            search_results.append(search_result)
+
+        return search_results

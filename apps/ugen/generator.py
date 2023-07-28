@@ -183,6 +183,7 @@ class UserNameGenerator:
                 if len(self.name_list) > self.count :
                     return tailored_name_list
         return tailored_name_list
+    
     # Multiplex between two string list
     def multiplex_string(self,array1,array2,str):
         temp = []
@@ -191,6 +192,7 @@ class UserNameGenerator:
                 new_str = element1.replace(str, element2)
                 temp.append(new_str)
         return temp 
+    
     # To generate name with general_generator
     def new_generator(self, transformed_name,splited_name, pattern_type):
         result = [transformed_name]
@@ -377,3 +379,76 @@ class UserNameGenerator:
                 self.name_list.extend(self.generate_long_username(name_pair,len(name_pair)))
             
         return self.name_list
+    
+    def updated_username_generator(self, total_usernames=4000):
+        self.translate()
+        self.name_list = []
+        splited_name = self.newsplitname()
+        splited_favorite = self.newsplitfavorite()
+        pattern_type = len(splited_name)
+
+        if pattern_type < 5:
+            tailored_names = self.tailored_generator(splited_name, pattern_type)
+            self.name_list.extend(tailored_names)
+            if self.favorite != "" and self.birthday != "":
+                for favorite in splited_favorite:
+                    favorite_birthday = self.favorite_birthday_generator(favorite)
+                    self.name_list.extend(favorite_birthday)
+            if self.birthday != "":
+                name_birthday = self.name_birthday_generator(tailored_names)
+                self.name_list.extend(name_birthday)
+            general_names = self.general_generator(splited_name, pattern_type)
+            self.name_list.extend(general_names)
+        else:
+            if self.favorite != "":
+                for favorite in splited_favorite:
+                    favorite_birthday = self.favorite_birthday_generator(favorite)
+                    self.name_list.extend(favorite_birthday)
+
+            name_pair_list = self.long_name(splited_name)
+            for name_pair in name_pair_list:
+                self.name_list.extend(self.generate_long_username(name_pair, len(name_pair)))
+
+        # Generate usernames in batches using a loop
+        generated_usernames = []
+        batch_size = 100  # Adjust the batch size as needed
+        for i in range(0, total_usernames, batch_size):
+            batch_usernames = self.name_list[i:i + batch_size]
+            if not batch_usernames:
+                break
+            generated_usernames.extend(batch_usernames)
+
+        # You can also cycle through the generated_usernames list if needed
+        # This will repeat the usernames until you reach the total_usernames count
+        remaining_usernames = total_usernames - len(generated_usernames)
+        if remaining_usernames > 0:
+            generated_usernames.extend(generated_usernames[:remaining_usernames])
+
+        return generated_usernames
+
+    def cycle_usernames(self):
+        generated_usernames = []
+        remaining_usernames = self.count
+
+        while remaining_usernames > 0:
+            batch_size = min(len(self.name_list), remaining_usernames)
+            generated_usernames.extend(self.name_list[:batch_size])
+            self.name_list = self.name_list[batch_size:]
+            remaining_usernames -= batch_size
+
+            if not self.name_list:
+                self.name_list = self.updated_username_generator()  # Regenerate names if needed
+
+        return generated_usernames
+    
+
+fullname = "Michael Bage"
+favorite = "football"
+birthday = "2000-01-01"
+count = 4000
+
+generator = UserNameGenerator(fullname, favorite, birthday, count)
+all_usernames = generator.updated_username_generator()
+
+# Print the first 10 usernames as an example
+print(all_usernames[:10])
