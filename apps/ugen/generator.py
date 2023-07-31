@@ -1,4 +1,5 @@
 import re
+import os
 from random import randrange
 from apps import db
 from apps.home.models import Patterns, BirthPattern
@@ -211,11 +212,22 @@ class UserNameGenerator:
                 next_array.append(splited_name[idx][0:i])
             result = self.multiplex_string(result,next_array,pattern)
         return result
+    
+    # Generate number-mixing names
+    def number_name_generator(self,splited_name):
+        result = []
+        for item in splited_name:
+            for num in range(0, 999):
+                result.insert( randrange(0, len(result)+1), item + str(num))
+                result.insert( randrange(0, len(result)+1), item + "." + str(num))
+                result.insert( randrange(0, len(result)+1), item + "_" + str(num))
+        
+        return result
      
     # Generate general names with general pattern
     def general_generator(self,splited_name,pattern_type):
         pattern_list = self.fetch_general_pattern(pattern_type)
-
+        result = []
         for pattern in pattern_list:
             if "TX" not in pattern:
                 continue
@@ -223,9 +235,11 @@ class UserNameGenerator:
             #     break
             transformed_name = self.transformation(pattern,splited_name,pattern_type)
             print(transformed_name)
-            self.name_list.extend(self.new_generator(transformed_name,splited_name, pattern_type))
-            if len(self.name_list) > self.count :
-                return self.name_list
+            new_transfomed_name = self.new_generator(transformed_name,splited_name, pattern_type)
+            self.name_list.extend(new_transfomed_name)
+            result.extend( new_transfomed_name )
+            # if len(self.name_list) > self.count :
+        return result
 
     # Generate name combining with favorite and common string
     def favorite_common_generator(self):
@@ -367,6 +381,9 @@ class UserNameGenerator:
                 name_birthday = self.name_birthday_generator(tailored_names)
                 self.name_list.extend(name_birthday)
             general_names = self.general_generator(splited_name,pattern_type)
+            number_names = self.number_name_generator(splited_name)
+            self.name_list.extend(number_names)
+
             # self.name_list.extend(general_names)
         else:
             if self.favorite != "":
@@ -377,8 +394,12 @@ class UserNameGenerator:
             name_pair_list = self.long_name(splited_name)
             for name_pair in name_pair_list:
                 self.name_list.extend(self.generate_long_username(name_pair,len(name_pair)))
-            
-        return self.name_list
+        
+        name_list = []
+        for x in range(0, self.count):
+            name_list.append(self.name_list[x])
+        return name_list
+        # return self.name_list
     
     def updated_username_generator(self, total_usernames=4000):
         self.translate()

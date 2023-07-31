@@ -186,6 +186,14 @@
   }
   function fetchUserName() {
     event.preventDefault(); // Prevent default form submission
+
+    // Set the Info
+    // const fullname = "Hansel Petters"
+    // const favourite = "Witch Hunter"
+    //  Set form data
+    // document.getElementById('id_fullname').value = fullname 
+    // document.getElementById('id_favourite').value = favourite
+    
     // Get form data
     const fullname = document.getElementById('id_fullname').value;
     const favourite = document.getElementById('id_favourite').value;
@@ -217,6 +225,12 @@
       })
       .then(data => {
         // Process the response data
+        const favourite = data.pop()
+        const fullname = data.pop()
+        //  Set form data
+        document.getElementById('id_fullname').value = fullname 
+        document.getElementById('id_favourite').value = favourite
+    
         generateTableContent(data)
       })
       .catch(error => {
