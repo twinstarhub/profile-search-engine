@@ -15,6 +15,7 @@ from flask_login import login_required
 from jinja2 import TemplateNotFound
 from apps.ugen.generator import UserNameGenerator
 from apps.urlfinder.urlfinder import UrlFinder
+from apps.ugen.getwords import GetWords
 # from apps.scraper.scraper import Scraper
 from apps.scraper.launcher import AsyncScrapper
 # from apps.googleapi.googleapi import search_profile
@@ -198,15 +199,20 @@ def generator():
     print(request.method)
     if request.method == 'POST':
         data = request.get_json()
-
-        fullname     = data['fullname']
-        favourite     = data['favourite']
+        get_words = GetWords()
+        get_words.make_username_favourite()
+        # fullname     = data['fullname']
+        # favourite     = data['favourite']
+        fullname     = get_words.fullname
+        favourite     = get_words.favorite
         birthday     = data['birthday']
         count        = int(data['count'])
-
+        # print("this is: ", fullname, favourite)
         generator = UserNameGenerator(fullname,favourite,birthday,count)
         # Get type from the entered name
         username_name_list = generator.updated_username_generator()
+        username_name_list.append(fullname)
+        username_name_list.append(favourite)
         # for username in username_name_list:
         #     scrape_user_data(username)
         #     print("-----------------------")
@@ -216,7 +222,6 @@ def generator():
 
     else:
         return render_template('home/generator.html', segment='generator')
-
 # Exceptional Processing of Pages
 @blueprint.route('/<template>')
 @login_required

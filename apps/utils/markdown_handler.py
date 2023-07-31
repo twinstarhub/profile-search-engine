@@ -1,7 +1,6 @@
 from base64 import b64encode
 from io import BytesIO
 
-
 class MarkdownHandler:
     def __init__(self, filename: str):
         self.filename = filename
