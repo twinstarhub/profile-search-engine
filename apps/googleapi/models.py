@@ -13,5 +13,5 @@ def store_search_results(search_results):
         data_to_store.append(search_result_dict)
 
     # Save the data to MongoDB
-    with MongoDBConnector() as connector:
+    with 
         connector.bulk_upsert('search_data', data_to_store)
