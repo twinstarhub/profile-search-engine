@@ -1,4 +1,4 @@
-# Trustle Search Engine API Backend Service
+# Online Profile Network Search Engine API Backend Service
 Search-engine API
 ## Create/Edit `.env` file
 
